@@ -1,0 +1,169 @@
+*{
+    box-sizing:border-box;
+    padding: 0PX;
+    margin: 0px;
+}
+.container.full{
+    width: 1800px;
+    height: auto;
+    padding: 0px;
+}
+/***** THE HEADER CONTAINER ******/
+.container header{
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: auto;
+}
+.row.nav1{
+    height: 60px;
+    background-color: orange;
+    padding: 0px;
+    margin: 0px;
+}
+
+.row.importantInfo{
+    background: #012447;
+    width: 100%;
+    height: 50px;
+    padding: 0px;
+    margin: 0px;
+    font-size: 20px;
+    font-weight: 300;
+}
+.columnAlertInfo{
+    padding-left: 100px;
+}
+.alertInfo{
+    color: white;
+    font-size: 22px;
+    padding-left: 90px;
+    
+}
+.row.headerInfo{
+   background: url('../img/portal_backgrounds/tz.jpg');
+	background-size: 100% 100%;
+    width: 100%;
+    height: 110px;
+    padding: 0px;
+    margin: 0px;
+}
+h4{
+	color: white;
+}
+.row.nav2{
+    padding: 0px;
+    margin: 0px;
+    background-color: #012447;
+}
+.colnav2{
+    padding: 0px;
+    margin: 0px;
+}
+
+
+
+
+/***** THE CONTENT CONTAINER*********/
+.container content{
+    padding: 0px;
+    margin: 0px;
+    height: auto;
+	
+}
+.card content{
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+}
+.alertCard{
+	margin: 20px 10px 20px;
+	padding: 0px;
+    width: 90%;
+    height: auto;
+
+}
+.rowAlert{
+	padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: auto;
+}
+.columnAlert{
+	padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: auto;
+}
+.alert{
+	padding: 16px 10px ;
+    margin: 0px;
+    width: 100%;
+    height: 60px;
+}
+
+/***** THE FOOTER ************/
+
+.container footer{
+    width:430px;
+    height: auto;
+    padding: 0px;
+    margin: 0px;
+
+}
+.card .footer{
+    padding: 0px;
+    margin: 0px;
+}
+
+.row.part0{
+    background-color: #012447;
+    height: 80px;
+    padding: 10px 0px 20px 50px;
+    margin: 0px;
+}
+.p.followUs{
+    color: white;
+    padding-top: 10px;
+    margin: 10px;
+}
+span.fab{
+    color: white;
+    margin: 10px;
+}
+.row.part1{
+    background-color: #012951;
+    height: 300px;
+    padding: 20px;
+    margin: 0px;
+    font-size: 20px;
+    font-weight: 600;
+	color: white;
+
+}
+ul{
+	list-style-type: none;
+}
+h3{
+    
+	color: white;
+
+}
+.row.part1 a{
+    text-decoration: none;
+	color: white;
+}
+.row.part1 a:hover{
+    text-decoration: none;
+    opacity: 0.4;
+	color: white;
+}
+.row.part2{
+    background-color: #012447;
+    height: 50px;
+    padding: 10px 0px 10px 80px;
+    margin: 0px;
+	color: white;
+}
+

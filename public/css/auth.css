@@ -1,0 +1,170 @@
+/* font-families  */
+.serif {
+    font-family: "Times New Roman", Times, serif;
+}
+  
+.sansserif {
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.monospace {
+font-family: "Lucida Console", Courier, monospace;
+}
+
+
+#body1{
+    width: 100%;
+    background: url('../img/auth/img16.jpg');
+	background-size: 100% 100%;
+}
+#body2{
+    width: 100%;
+    background: url('../img/auth/img18.jpg');
+	background-size: 100% 100%;
+}
+.page-row{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+
+.login-info-section{
+    background-color: #f56942;
+    border-radius: 0px 0px 90% 0px;
+    margin: 0px;
+    padding: 0px;
+}
+@media only screen and (max-width: 767px) {
+    .login-info-section{
+        height: 290px;
+    }
+    .page-sprite-1,.page-sprite-2,.page-sprite-3,.page-sprite-4,.page-sprite-5,.page-sprite-6,.page-sprite-7,.page-sprite-8,.page-sprite-9,.page-sprite-10,.page-sprite-11,.page-sprite-12{
+        display: none; 
+    }
+}
+
+.page-sprite-1{
+    background-color: #ab0e1b;
+}
+.page-sprite-2{
+    background-color: #3299a8;
+}
+.login-info-section-title-bg{
+    color: white;
+    font-family: "Lucida Console";
+    font-size: 28px; 
+    font-weight: 400;
+    margin: 1%;
+    position: absolute;
+    z-index: 1;
+    left: 0%;
+    top: 3%;
+}
+.login-info-section-title-md{
+    display: none;
+    color: white;
+    font-family: "Lucida Console";
+    font-size: 28px; 
+    font-weight: 400;
+    margin: 1%;
+    position: absolute;
+    z-index: 1;
+    left: 0%;
+    top: 3%;
+}
+.login-info-section-title-sm{
+    display: none;
+    color: white;
+    font-family: "Lucida Console";
+    font-size: 28px; 
+    font-weight: 400;
+    margin: 1%;
+    position: absolute;
+    z-index: 1;
+    left: 23%;
+    top: 3%;
+}
+@media only screen and (max-width: 1270px) {
+    .login-info-section-title-md{
+        display: block;
+    }
+    .login-info-section-title-bg{
+        display: none;
+    }
+    .login-info-section-title-sm{
+        display: none;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .login-info-section-title-sm{
+        display: block;
+        left: 23%;
+    }
+    .login-info-section-title-md{
+        display: none;
+    }
+    .login-info-section-title-bg{
+        display: none;
+    }
+}
+
+.login-info-section-description-bg{
+    color: white;
+    font-family: "Lucida Console";
+    font-size: 28px; 
+    font-weight: 400;
+    margin: 1%;
+    position: absolute;
+    z-index: 1;
+    left: 0%;
+    top: 40%; 
+}
+.login-info-section-description-md{
+    display: none;
+    color: white;
+    font-family: "Lucida Console";
+    font-size: 28px; 
+    font-weight: 400;
+    margin: 1%;
+    position: absolute;
+    z-index: 1;
+    left: 0%;
+    top: 30%; 
+}
+.login-info-section-description-sm{
+    display: none;
+    color: white;
+    font-family: "Lucida Console";
+    font-size: 22px; 
+    font-weight: 400;
+    margin: 1%;
+    position: absolute;
+    z-index: 1;
+    left: 3%;
+    top: 20%; 
+}
+@media only screen and (max-width: 1270px) {
+    .login-info-section-description-md{
+        display: block;
+    }
+    .login-info-section-description-bg{
+        display: none;
+    }
+    .login-info-section-description-sm{
+        display: none;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .login-info-section-description-sm{
+        display: block;
+    }
+    .login-info-section-description-md{
+        display: none;
+    }
+    .login-info-section-description-bg{
+        display: none;
+    }
+}
+.login-form-col{
+    margin-top: 3%;
+}

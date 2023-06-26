@@ -1,0 +1,113 @@
+*{
+    box-sizing:border-box;
+    padding: 0PX;
+    margin: 0px;
+}
+.importantInforow{
+    background-color: #F4CC12;
+    width: 100%;
+    height: 50px;
+    padding: 0px;
+    margin: 0px;
+    font-size: 20px;
+    font-weight: 300;
+}
+.columnAlertInfoSmall{
+    display: none;
+}
+@media only screen and (max-width: 900px) {
+    .columnAlertInfoSmall{
+       display: block;
+    }
+  }
+.alertInfoSmall{
+    display: none;
+}
+@media only screen and (max-width: 900px) {
+    .alertInfoSmall{
+       display: block;
+       color: white;
+       font-size: 16px;
+       padding: 0px;
+    }
+  }
+
+.alertlearnmoreSmall{
+    display: none;
+ }
+ @media only screen and (max-width: 900px) {
+    .alertlearnmoreSmall{
+       display: block;
+    }
+  }
+.columnAlertInfo{
+    padding-left: 50px;
+}
+@media only screen and (max-width: 900px) {
+    .columnAlertInfoSmall{
+       display: none;
+    }
+  }
+.alertInfo{
+    color: white;
+    font-size: 22px;
+    padding-left: 90px;
+
+}
+@media only screen and (max-width: 900px) {
+    .alertInfo{
+       display: none;
+    }
+  }
+  @media only screen and (max-width: 900px) {
+    .alertlearnmore{
+       display: none;
+    }
+  }
+.columniconSection{
+    float: right;
+}
+.fa-user{
+    color: white;
+    margin-top: 20px;
+}
+@media only screen and (max-width: 900px) {
+    .fa-user{
+       display: none;
+    }
+  }
+.fa-user:hover{
+    color: orange;
+    margin-top: 20px;
+    padding: 0px;
+}
+.headerInforow{
+    background: url('../img/portal_backgrounds/tz.jpg') no-repeat;
+
+    background-size: 100% 115px;
+    width: 100%;
+    height: 110px;
+    padding: 0px;
+    margin: 0px;
+}
+@media only screen and (max-width: 900px) {
+    .emblemLogo{
+       display: none;
+    }
+  }
+.siteName{
+    color:white;
+    margin-top: 20px;
+    font-size: 40px;
+    font-weight: 700;
+}
+@media only screen and (max-width: 900px) {
+    .siteName{
+       display: none;
+    }
+  }
+.nav2row{
+    padding: 0px;
+    margin: 0px;
+    background-color: #012447;
+}

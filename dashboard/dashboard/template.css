@@ -1,0 +1,354 @@
+*{
+    box-sizing:border-box;
+    padding: 0PX;
+    margin: 0px;
+}
+.container.full{
+    width: 1800px;
+    height: auto;
+    padding: 0px;
+}
+/***** THE HEADER CONTAINER ******/
+.container header{
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: auto;
+}
+.row.nav1{
+    height: 60px;
+    background-color: orange;
+    padding: 0px;
+    margin: 0px;
+}
+.dropdownbtn1{
+    width: 20px;
+}
+.fa-align-justify{
+    color: white;
+    padding: 10px;
+}
+.iconSection{
+    float: right;
+}
+.fa-user{
+    color: white;
+    padding: 0px;
+}
+.fa-user:hover{
+    color: orange;
+    padding: 0px;
+}
+.row.importantInfo{
+    background: #012447;
+    width: 100%;
+    height: 50px;
+    padding: 0px;
+    margin: 0px;
+    font-size: 20px;
+    font-weight: 300;
+}
+.columnAlertInfo{
+    padding-left: 100px;
+}
+.alertInfo{
+    color: white;
+    font-size: 22px;
+    padding-left: 90px;
+    
+}
+.row.headerInfo{
+    background: lightblue url("tz.jpg") no-repeat;
+    background-size: 100% 115px;
+    width: 100%;
+    height: 110px;
+    padding: 0px;
+    margin: 0px;
+}
+h1{
+    color:white;
+}
+p{
+    color:white;
+}
+.row.nav2{
+    padding: 0px;
+    margin: 0px;
+    background-color: #012447;
+}
+.colnav2{
+    padding: 0px;
+    margin: 0px;
+}
+
+/* Dropdown Button */
+.dropbtn2 {
+    background-color: #012447;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown2 {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content2 {
+    display: none;
+    position: absolute;
+    background-color: orange;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content2 a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content2 a:hover {background-color: #ddd;}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown2:hover .dropdown-content2 {display: block;}
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown2:hover .dropbtn2 {background-color: orange;}
+.feedbackModal{
+    color: white;
+    padding: 12px 7px 0px 30px;
+}
+.feedbackModal:hover{
+    background-color: orange;
+    color: white;
+    padding: 12px 7px 0px 30px;
+}
+
+
+/***** THE CONTENT CONTAINER*********/
+.container content{
+    padding: 0px;
+    margin: 0px;
+    height: auto;
+}
+.card content{
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+}
+.row .galleryCarousel{
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+}
+.columnGalleryCarousel{
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+}
+.galleryCarousel{
+    height: 300px;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+}
+.galleryCarouselImage{
+    width:100%; 
+    height:300px;
+    padding: 0px;
+    margin: 0px;
+}
+.row .introduction{
+    width: 100%;
+    padding: 0px;
+    margin:0px;
+}
+.row .threesides{
+    width: 100%;
+    height: 400px;
+    padding: 0px;
+    margin: 0px;
+}
+.threesides .left{
+    width: 100%;
+    height:100%;
+    padding: 20px 0px;
+    margin: 0px;
+    
+}
+.profileImage{
+    width: 150px;
+    height: 150px;
+}
+
+.threesides .left h3{
+    text-align: center;
+    font-size: 24px;
+    color: darkblue;
+}
+.threesides .left p{
+    text-align: center;
+    font-size: 20px;
+    color: darkblue;
+}
+.threesides .center{
+    width: 100%;
+    height:100%;
+    padding: 15px;
+    margin: 0px;
+    text-align: center;
+}
+.threesides .center h2{
+    text-align: center;
+    color: darkblue;
+    font-size: 29px;
+    font-weight: 600;
+}
+.threesides .center p{
+    text-align: center;
+    font-size: 20px;
+    color: black;
+}
+.threesides .right{
+    width: 100%;
+    height:100%;
+    padding: 0px;
+    margin: 0px;
+}
+.threesides .right h4{
+    font-size: 20px;
+    color: darkblue;
+}
+.newsCarousel{
+    height: 100%;
+    width: 100%;
+    padding-top: 20px;
+}
+.newsCarouselImage{
+    width: 100%;
+    height: 300px;
+}
+.newsSections{
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+   
+}
+.imageSection{
+    width: 30%;
+    height: 100%;
+    float: left;
+}
+.descriptionSection{
+    width: 70%;
+    height: 100%;
+    float: right;
+    color: darkblue;
+}
+.serviceheader{
+    color: darkblue;
+}
+.servicecards{
+    height: 400px;
+    padding-left:20px;
+    padding-right:20px;
+    font-size: 20px;
+    color: darkblue;
+    
+}
+.card-img-top{
+    width: 97%;
+    margin-left: 5px;
+}
+.card-text{
+    color: darkblue;
+}
+.infoband{
+    margin: 100px 15px 50px 15px;
+    height: 300px;
+    width: 100%;
+    background-color: #af7200;
+}
+.infoVideo{
+    width: 30%;
+    height: 100%;
+    padding: 10px 20px 10px 20px;
+    border-right: 3px dotted #012447;
+    float: left;
+}
+.container.infoAccordion{
+    width: 70%;
+    height: auto;
+    padding: 10px 20px 20px 0px;
+    float: right;
+}
+#accordion{
+    width: 100%;
+    height:100px;
+    float: right;
+    padding: 10px 10px 10px 20px;
+}
+
+
+/***** THE FOOTER ************/
+
+.container footer{
+    width:430px;
+    height: auto;
+    padding: 0px;
+    margin: 0px;
+
+}
+.card .footer{
+    padding: 0px;
+    margin: 0px;
+}
+
+.row.part0{
+    background-color: #012447;
+    height: 80px;
+    padding: 10px 0px 20px 50px;
+    margin: 0px;
+}
+.p.followUs{
+    color: white;
+    padding-top: 10px;
+    margin: 10px;
+}
+span.fab{
+    color: white;
+    margin: 10px;
+}
+.row.part1{
+    background-color: #012951;
+    height: 300px;
+    padding: 20px;
+    margin: 0px;
+    font-size: 20px;
+    font-weight: 600;
+
+}
+.row.part1 a{
+    text-decoration: none;
+}
+.row.part1 a:hover{
+    text-decoration: none;
+    opacity: 0.4;
+}
+.row.part2{
+    background-color: #012447;
+    height: 50px;
+    padding: 10px 0px 10px 80px;
+    margin: 0px;
+}
+

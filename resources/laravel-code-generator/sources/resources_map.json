@@ -1,0 +1,1082 @@
+[
+    {
+        "model-name": "Gender",
+        "resource-file": "genders.json",
+        "table-name": "genders"
+    },
+    {
+        "model-name": "Religion",
+        "resource-file": "religions.json",
+        "table-name": "religions"
+    },
+    {
+        "model-name": "Denomination",
+        "resource-file": "denominations.json",
+        "table-name": "denominations"
+    },
+    {
+        "model-name": "EducationLevel",
+        "resource-file": "education_levels.json",
+        "table-name": "education_levels"
+    },
+    {
+        "model-name": "Language",
+        "resource-file": "languages.json",
+        "table-name": "languages"
+    },
+    {
+        "model-name": "Curriculum",
+        "resource-file": "curricula.json",
+        "table-name": "curricula"
+    },
+    {
+        "model-name": "CalendarYear",
+        "resource-file": "calendar_years.json",
+        "table-name": "calendar_years"
+    },
+    {
+        "model-name": "Funding",
+        "resource-file": "fundings.json",
+        "table-name": "fundings"
+    },
+    {
+        "model-name": "SchoolMode",
+        "resource-file": "school_modes.json",
+        "table-name": "school_modes"
+    },
+    {
+        "model-name": "SchoolGradeDivision",
+        "resource-file": "school_grade_divisions.json",
+        "table-name": "school_grade_divisions"
+    },
+    {
+        "model-name": "Stream",
+        "resource-file": "streams.json",
+        "table-name": "streams"
+    },
+    {
+        "model-name": "School",
+        "resource-file": "schools.json",
+        "table-name": "schools"
+    },
+    {
+        "model-name": "SchoolGrade",
+        "resource-file": "school_grades.json",
+        "table-name": "school_grades"
+    },
+    {
+        "model-name": "Subject",
+        "resource-file": "subjects.json",
+        "table-name": "subjects"
+    },
+    {
+        "model-name": "Topic",
+        "resource-file": "topics.json",
+        "table-name": "topics"
+    },
+    {
+        "model-name": "SubTopic",
+        "resource-file": "sub_topics.json",
+        "table-name": "sub_topics"
+    },
+    {
+        "model-name": "StudentGradeReason",
+        "resource-file": "student_grade_reasons.json",
+        "table-name": "student_grade_reasons"
+    },
+    {
+        "model-name": "Student",
+        "resource-file": "students.json",
+        "table-name": "students"
+    },
+    {
+        "model-name": "StudentGrade",
+        "resource-file": "student_grades.json",
+        "table-name": "student_grades"
+    },
+    {
+        "model-name": "StudentExercise",
+        "resource-file": "student_exercises.json",
+        "table-name": "student_exercises"
+    },
+    {
+        "model-name": "ExamType",
+        "resource-file": "exam_types.json",
+        "table-name": "exam_types"
+    },
+    {
+        "model-name": "StudentExamination",
+        "resource-file": "student_examinations.json",
+        "table-name": "student_examinations"
+    },
+    {
+        "model-name": "WeekDay",
+        "resource-file": "week_days.json",
+        "table-name": "week_days"
+    },
+    {
+        "model-name": "StudentAcademicEvaluation",
+        "resource-file": "student_academic_evaluations.json",
+        "table-name": "student_academic_evaluations"
+    },
+    {
+        "model-name": "SchoolGradeSubject",
+        "resource-file": "school_grade_subjects.json",
+        "table-name": "school_grade_subjects"
+    },
+    {
+        "model-name": "SchemeOfWorksSource",
+        "resource-file": "scheme_of_works_sources.json",
+        "table-name": "scheme_of_works_sources"
+    },
+    {
+        "model-name": "Book",
+        "resource-file": "books.json",
+        "table-name": "books"
+    },
+    {
+        "model-name": "SchoolDayPeriod",
+        "resource-file": "school_day_periods.json",
+        "table-name": "school_day_periods"
+    },
+    {
+        "model-name": "SchoolDayBreak",
+        "resource-file": "school_day_breaks.json",
+        "table-name": "school_day_breaks"
+    },
+    {
+        "model-name": "StreamTimeTable",
+        "resource-file": "stream_time_tables.json",
+        "table-name": "stream_time_tables"
+    },
+    {
+        "model-name": "Week",
+        "resource-file": "weeks.json",
+        "table-name": "weeks"
+    },
+    {
+        "model-name": "SchemeOfWork",
+        "resource-file": "scheme_of_works.json",
+        "table-name": "scheme_of_works"
+    },
+    {
+        "model-name": "LessonBreak",
+        "resource-file": "lesson_breaks.json",
+        "table-name": "lesson_breaks"
+    },
+    {
+        "model-name": "SystemNotification",
+        "resource-file": "system_notifications.json",
+        "table-name": "system_notifications"
+    },
+    {
+        "model-name": "SchoolHoliday",
+        "resource-file": "school_holidays.json",
+        "table-name": "school_holidays"
+    },
+    {
+        "model-name": "UserPersonalInfo",
+        "resource-file": "user_personal_infos.json",
+        "table-name": "user_personal_infos"
+    },
+    {
+        "model-name": "UserBirthInfo",
+        "resource-file": "user_birth_infos.json",
+        "table-name": "user_birth_infos"
+    },
+    {
+        "model-name": "UserFatherInfo",
+        "resource-file": "user_father_infos.json",
+        "table-name": "user_father_infos"
+    },
+    {
+        "model-name": "UserMotherInfo",
+        "resource-file": "user_mother_infos.json",
+        "table-name": "user_mother_infos"
+    },
+    {
+        "model-name": "UserGuardianInfo",
+        "resource-file": "user_guardian_infos.json",
+        "table-name": "user_guardian_infos"
+    },
+    {
+        "model-name": "UserResidenceInfo",
+        "resource-file": "user_residence_infos.json",
+        "table-name": "user_residence_infos"
+    },
+    {
+        "model-name": "UserEducationInfo",
+        "resource-file": "user_education_infos.json",
+        "table-name": "user_education_infos"
+    },
+    {
+        "model-name": "UserSkill",
+        "resource-file": "user_skills.json",
+        "table-name": "user_skills"
+    },
+    {
+        "model-name": "UserWorkExperience",
+        "resource-file": "user_work_experiences.json",
+        "table-name": "user_work_experiences"
+    },
+    {
+        "model-name": "BodyPart",
+        "resource-file": "body_parts.json",
+        "table-name": "body_parts"
+    },
+    {
+        "model-name": "UserDisability",
+        "resource-file": "user_disabilities.json",
+        "table-name": "user_disabilities"
+    },
+    {
+        "model-name": "UserChronicDisease",
+        "resource-file": "user_chronic_diseases.json",
+        "table-name": "user_chronic_diseases"
+    },
+    {
+        "model-name": "UserHobby",
+        "resource-file": "user_hobbies.json",
+        "table-name": "user_hobbies"
+    },
+    {
+        "model-name": "ApplicationType",
+        "resource-file": "application_types.json",
+        "table-name": "application_types"
+    },
+    {
+        "model-name": "ApplicationReason",
+        "resource-file": "application_reasons.json",
+        "table-name": "application_reasons"
+    },
+    {
+        "model-name": "Applicant",
+        "resource-file": "applicants.json",
+        "table-name": "applicants"
+    },
+    {
+        "model-name": "EmployeeStatus",
+        "resource-file": "employee_statuses.json",
+        "table-name": "employee_statuses"
+    },
+    {
+        "model-name": "Department",
+        "resource-file": "departments.json",
+        "table-name": "departments"
+    },
+    {
+        "model-name": "Section",
+        "resource-file": "sections.json",
+        "table-name": "sections"
+    },
+    {
+        "model-name": "Employee",
+        "resource-file": "employees.json",
+        "table-name": "employees"
+    },
+    {
+        "model-name": "HeadOfDepartment",
+        "resource-file": "head_of_departments.json",
+        "table-name": "head_of_departments"
+    },
+    {
+        "model-name": "HeadOfSection",
+        "resource-file": "head_of_sections.json",
+        "table-name": "head_of_sections"
+    },
+    {
+        "model-name": "Attendance",
+        "resource-file": "attendances.json",
+        "table-name": "attendances"
+    },
+    {
+        "model-name": "SchoolEvent",
+        "resource-file": "school_events.json",
+        "table-name": "school_events"
+    },
+    {
+        "model-name": "SchoolEventScope",
+        "resource-file": "school_event_scopes.json",
+        "table-name": "school_event_scopes"
+    },
+    {
+        "model-name": "SchoolEventType",
+        "resource-file": "school_event_types.json",
+        "table-name": "school_event_types"
+    },
+    {
+        "model-name": "TransactionCategory",
+        "resource-file": "transaction_categories.json",
+        "table-name": "transaction_categories"
+    },
+    {
+        "model-name": "FinancialTransaction",
+        "resource-file": "financial_transactions.json",
+        "table-name": "financial_transactions"
+    },
+    {
+        "model-name": "PostTransaction",
+        "resource-file": "post_transactions.json",
+        "table-name": "post_transactions"
+    },
+    {
+        "model-name": "AcademicEvaluationType",
+        "resource-file": "academic_evaluation_types.json",
+        "table-name": "academic_evaluation_types"
+    },
+    {
+        "model-name": "TransactionMethod",
+        "resource-file": "transaction_methods.json",
+        "table-name": "transaction_methods"
+    },
+    {
+        "model-name": "Post",
+        "resource-file": "posts.json",
+        "table-name": "posts"
+    },
+    {
+        "model-name": "TacaidsEvent",
+        "resource-file": "tacaids_events.json",
+        "table-name": "tacaids_events"
+    },
+    {
+        "model-name": "Organisation",
+        "resource-file": "organisations.json",
+        "table-name": "organisations"
+    },
+    {
+        "model-name": "MeteogramStation",
+        "resource-file": "meteogram_stations.json",
+        "table-name": "meteogram_stations"
+    },
+    {
+        "model-name": "MeteogramPeriod",
+        "resource-file": "meteogram_periods.json",
+        "table-name": "meteogram_periods"
+    },
+    {
+        "model-name": "MeteogramWeather",
+        "resource-file": "meteogram_weathers.json",
+        "table-name": "meteogram_weathers"
+    },
+    {
+        "model-name": "Severenity",
+        "resource-file": "severenities.json",
+        "table-name": "severenities"
+    },
+    {
+        "model-name": "MeteogramWeatherParameter",
+        "resource-file": "meteogram_weather_parameters.json",
+        "table-name": "meteogram_weather_parameters"
+    },
+    {
+        "model-name": "MeteogramStationObservation",
+        "resource-file": "meteogram_station_observations.json",
+        "table-name": "meteogram_station_observations"
+    },
+    {
+        "model-name": "MeteogramMessageType",
+        "resource-file": "meteogram_message_types.json",
+        "table-name": "meteogram_message_types"
+    },
+    {
+        "model-name": "MeteogramMetar",
+        "resource-file": "meteogram_metars.json",
+        "table-name": "meteogram_metars"
+    },
+    {
+        "model-name": "SaccosMransactionMethod",
+        "resource-file": "saccos_mransaction_methods.json",
+        "table-name": "saccos_mransaction_methods"
+    },
+    {
+        "model-name": "SaccosTransactionMethod",
+        "resource-file": "saccos_transaction_methods.json",
+        "table-name": "saccos_transaction_methods"
+    },
+    {
+        "model-name": "SaccosTransactionReason",
+        "resource-file": "saccos_transaction_reasons.json",
+        "table-name": "saccos_transaction_reasons"
+    },
+    {
+        "model-name": "SaccosTransactionType",
+        "resource-file": "saccos_transaction_types.json",
+        "table-name": "saccos_transaction_types"
+    },
+    {
+        "model-name": "SaccosTransaction",
+        "resource-file": "saccos_transactions.json",
+        "table-name": "saccos_transactions"
+    },
+    {
+        "model-name": "Refund",
+        "resource-file": "refunds.json",
+        "table-name": "refunds"
+    },
+    {
+        "model-name": "Saving",
+        "resource-file": "savings.json",
+        "table-name": "savings"
+    },
+    {
+        "model-name": "Share",
+        "resource-file": "shares.json",
+        "table-name": "shares"
+    },
+    {
+        "model-name": "MonthlyDeduction",
+        "resource-file": "monthly_deductions.json",
+        "table-name": "monthly_deductions"
+    },
+    {
+        "model-name": "Loan",
+        "resource-file": "loans.json",
+        "table-name": "loans"
+    },
+    {
+        "model-name": "LoansDeduction",
+        "resource-file": "loans_deductions.json",
+        "table-name": "loans_deductions"
+    },
+    {
+        "model-name": "SaccosLog",
+        "resource-file": "saccos_logs.json",
+        "table-name": "saccos_logs"
+    },
+    {
+        "model-name": "SaccosExpense",
+        "resource-file": "saccos_expenses.json",
+        "table-name": "saccos_expenses"
+    },
+    {
+        "model-name": "TransportMean",
+        "resource-file": "transport_means.json",
+        "table-name": "transport_means"
+    },
+    {
+        "model-name": "PaymentType",
+        "resource-file": "payment_types.json",
+        "table-name": "payment_types"
+    },
+    {
+        "model-name": "PaymentReason",
+        "resource-file": "payment_reasons.json",
+        "table-name": "payment_reasons"
+    },
+    {
+        "model-name": "PaymentMode",
+        "resource-file": "payment_modes.json",
+        "table-name": "payment_modes"
+    },
+    {
+        "model-name": "OrderType",
+        "resource-file": "order_types.json",
+        "table-name": "order_types"
+    },
+    {
+        "model-name": "InventoryType",
+        "resource-file": "inventory_types.json",
+        "table-name": "inventory_types"
+    },
+    {
+        "model-name": "ItemSubCategory",
+        "resource-file": "item_sub_categories.json",
+        "table-name": "item_sub_categories"
+    },
+    {
+        "model-name": "ItemSecondSubCategory",
+        "resource-file": "item_second_sub_categories.json",
+        "table-name": "item_second_sub_categories"
+    },
+    {
+        "model-name": "ItemThirdSubCategory",
+        "resource-file": "item_third_sub_categories.json",
+        "table-name": "item_third_sub_categories"
+    },
+    {
+        "model-name": "Partner",
+        "resource-file": "partners.json",
+        "table-name": "partners"
+    },
+    {
+        "model-name": "Order",
+        "resource-file": "orders.json",
+        "table-name": "orders"
+    },
+    {
+        "model-name": "Purchase",
+        "resource-file": "purchases.json",
+        "table-name": "purchases"
+    },
+    {
+        "model-name": "Sale",
+        "resource-file": "sales.json",
+        "table-name": "sales"
+    },
+    {
+        "model-name": "ItemPayment",
+        "resource-file": "item_payments.json",
+        "table-name": "item_payments"
+    },
+    {
+        "model-name": "TransactionType",
+        "resource-file": "transaction_types.json",
+        "table-name": "transaction_types"
+    },
+    {
+        "model-name": "Inventory",
+        "resource-file": "inventories.json",
+        "table-name": "inventories"
+    },
+    {
+        "model-name": "Size",
+        "resource-file": "sizes.json",
+        "table-name": "sizes"
+    },
+    {
+        "model-name": "StorageCategory",
+        "resource-file": "storage_categories.json",
+        "table-name": "storage_categories"
+    },
+    {
+        "model-name": "StorageCost",
+        "resource-file": "storage_costs.json",
+        "table-name": "storage_costs"
+    },
+    {
+        "model-name": "StorageKeeper",
+        "resource-file": "storage_keepers.json",
+        "table-name": "storage_keepers"
+    },
+    {
+        "model-name": "StorageLocation",
+        "resource-file": "storage_locations.json",
+        "table-name": "storage_locations"
+    },
+    {
+        "model-name": "RouteType",
+        "resource-file": "route_types.json",
+        "table-name": "route_types"
+    },
+    {
+        "model-name": "Route",
+        "resource-file": "routes.json",
+        "table-name": "routes"
+    },
+    {
+        "model-name": "StorageRoute",
+        "resource-file": "storage_routes.json",
+        "table-name": "storage_routes"
+    },
+    {
+        "model-name": "InventoryStorage",
+        "resource-file": "inventory_storages.json",
+        "table-name": "inventory_storages"
+    },
+    {
+        "model-name": "RouteStation",
+        "resource-file": "route_stations.json",
+        "table-name": "route_stations"
+    },
+    {
+        "model-name": "Receiver",
+        "resource-file": "receivers.json",
+        "table-name": "receivers"
+    },
+    {
+        "model-name": "ItemDelivery",
+        "resource-file": "item_deliveries.json",
+        "table-name": "item_deliveries"
+    },
+    {
+        "model-name": "Storage",
+        "resource-file": "storages.json",
+        "table-name": "storages"
+    },
+    {
+        "model-name": "StorageType",
+        "resource-file": "storage_types.json",
+        "table-name": "storage_types"
+    },
+    {
+        "model-name": "UnitAccountType",
+        "resource-file": "unit_account_types.json",
+        "table-name": "unit_account_types"
+    },
+    {
+        "model-name": "Member",
+        "resource-file": "members.json",
+        "table-name": "members"
+    },
+    {
+        "model-name": "Relationship",
+        "resource-file": "relationships.json",
+        "table-name": "relationships"
+    },
+    {
+        "model-name": "MemberRelative",
+        "resource-file": "member_relatives.json",
+        "table-name": "member_relatives"
+    },
+    {
+        "model-name": "Bank",
+        "resource-file": "banks.json",
+        "table-name": "banks"
+    },
+    {
+        "model-name": "BankAccount",
+        "resource-file": "bank_accounts.json",
+        "table-name": "bank_accounts"
+    },
+    {
+        "model-name": "Contribution",
+        "resource-file": "contributions.json",
+        "table-name": "contributions"
+    },
+    {
+        "model-name": "ItemCategory",
+        "resource-file": "item_categories.json",
+        "table-name": "item_categories"
+    },
+    {
+        "model-name": "Item",
+        "resource-file": "items.json",
+        "table-name": "items"
+    },
+    {
+        "model-name": "Transaction",
+        "resource-file": "transactions.json",
+        "table-name": "transactions"
+    },
+    {
+        "model-name": "ReportGroup",
+        "resource-file": "report_groups.json",
+        "table-name": "report_groups"
+    },
+    {
+        "model-name": "ReportGroupOperation",
+        "resource-file": "report_group_operations.json",
+        "table-name": "report_group_operations"
+    },
+    {
+        "model-name": "ReportGroupSection",
+        "resource-file": "report_group_sections.json",
+        "table-name": "report_group_sections"
+    },
+    {
+        "model-name": "ItemReportGroup",
+        "resource-file": "item_report_groups.json",
+        "table-name": "item_report_groups"
+    },
+    {
+        "model-name": "Subscription",
+        "resource-file": "subscriptions.json",
+        "table-name": "subscriptions"
+    },
+    {
+        "model-name": "Condolence",
+        "resource-file": "condolences.json",
+        "table-name": "condolences"
+    },
+    {
+        "model-name": "PaymentVoucher",
+        "resource-file": "payment_vouchers.json",
+        "table-name": "payment_vouchers"
+    },
+    {
+        "model-name": "Coupon",
+        "resource-file": "coupons.json",
+        "table-name": "coupons"
+    },
+    {
+        "model-name": "DeliveryPoint",
+        "resource-file": "delivery_points.json",
+        "table-name": "delivery_points"
+    },
+    {
+        "model-name": "DeliverySubcriptionCost",
+        "resource-file": "delivery_subcription_costs.json",
+        "table-name": "delivery_subcription_costs"
+    },
+    {
+        "model-name": "DeliverySubcription",
+        "resource-file": "delivery_subcriptions.json",
+        "table-name": "delivery_subcriptions"
+    },
+    {
+        "model-name": "Wallet",
+        "resource-file": "wallets.json",
+        "table-name": "wallets"
+    },
+    {
+        "model-name": "DeliveryPointCost",
+        "resource-file": "delivery_point_costs.json",
+        "table-name": "delivery_point_costs"
+    },
+    {
+        "model-name": "HelpCategory",
+        "resource-file": "help_categories.json",
+        "table-name": "help_categories"
+    },
+    {
+        "model-name": "Help",
+        "resource-file": "helps.json",
+        "table-name": "helps"
+    },
+    {
+        "model-name": "HelpEngagement",
+        "resource-file": "help_engagements.json",
+        "table-name": "help_engagements"
+    },
+    {
+        "model-name": "AnthropogenicInfluenceType",
+        "resource-file": "anthropogenic_influence_types.json",
+        "table-name": "anthropogenic_influence_types"
+    },
+    {
+        "model-name": "EData",
+        "resource-file": "e_datas.json",
+        "table-name": "e_datas"
+    },
+    {
+        "model-name": "NData",
+        "resource-file": "n_datas.json",
+        "table-name": "n_datas"
+    },
+    {
+        "model-name": "WindData",
+        "resource-file": "wind_datas.json",
+        "table-name": "wind_datas"
+    },
+    {
+        "model-name": "Country",
+        "resource-file": "countries.json",
+        "table-name": "countries"
+    },
+    {
+        "model-name": "TimeZone",
+        "resource-file": "time_zones.json",
+        "table-name": "time_zones"
+    },
+    {
+        "model-name": "TimeType",
+        "resource-file": "time_types.json",
+        "table-name": "time_types"
+    },
+    {
+        "model-name": "SystemParameter",
+        "resource-file": "system_parameters.json",
+        "table-name": "system_parameters"
+    },
+    {
+        "model-name": "TimeSchemeType",
+        "resource-file": "time_scheme_types.json",
+        "table-name": "time_scheme_types"
+    },
+    {
+        "model-name": "TimeScheme",
+        "resource-file": "time_schemes.json",
+        "table-name": "time_schemes"
+    },
+    {
+        "model-name": "CalculationScale",
+        "resource-file": "calculation_scales.json",
+        "table-name": "calculation_scales"
+    },
+    {
+        "model-name": "Scale",
+        "resource-file": "scales.json",
+        "table-name": "scales"
+    },
+    {
+        "model-name": "Unit",
+        "resource-file": "units.json",
+        "table-name": "units"
+    },
+    {
+        "model-name": "UniTranslation",
+        "resource-file": "uni_translations.json",
+        "table-name": "uni_translations"
+    },
+    {
+        "model-name": "UnitTranslation",
+        "resource-file": "unit_translations.json",
+        "table-name": "unit_translations"
+    },
+    {
+        "model-name": "Element",
+        "resource-file": "elements.json",
+        "table-name": "elements"
+    },
+    {
+        "model-name": "River",
+        "resource-file": "rivers.json",
+        "table-name": "rivers"
+    },
+    {
+        "model-name": "RiverProfile",
+        "resource-file": "river_profiles.json",
+        "table-name": "river_profiles"
+    },
+    {
+        "model-name": "Basin",
+        "resource-file": "basins.json",
+        "table-name": "basins"
+    },
+    {
+        "model-name": "Region",
+        "resource-file": "regions.json",
+        "table-name": "regions"
+    },
+    {
+        "model-name": "District",
+        "resource-file": "districts.json",
+        "table-name": "districts"
+    },
+    {
+        "model-name": "StationReferencePurpose",
+        "resource-file": "station_reference_purposes.json",
+        "table-name": "station_reference_purposes"
+    },
+    {
+        "model-name": "StationReferenceUse",
+        "resource-file": "station_reference_uses.json",
+        "table-name": "station_reference_uses"
+    },
+    {
+        "model-name": "ReferenceStation",
+        "resource-file": "reference_stations.json",
+        "table-name": "reference_stations"
+    },
+    {
+        "model-name": "StationType",
+        "resource-file": "station_types.json",
+        "table-name": "station_types"
+    },
+    {
+        "model-name": "Station",
+        "resource-file": "stations.json",
+        "table-name": "stations"
+    },
+    {
+        "model-name": "MdataCalculationFunction",
+        "resource-file": "mdata_calculation_functions.json",
+        "table-name": "mdata_calculation_functions"
+    },
+    {
+        "model-name": "TimeDuration",
+        "resource-file": "time_durations.json",
+        "table-name": "time_durations"
+    },
+    {
+        "model-name": "NdataCalculationFunction",
+        "resource-file": "ndata_calculation_functions.json",
+        "table-name": "ndata_calculation_functions"
+    },
+    {
+        "model-name": "Month",
+        "resource-file": "months.json",
+        "table-name": "months"
+    },
+    {
+        "model-name": "ElementSubstitution",
+        "resource-file": "element_substitutions.json",
+        "table-name": "element_substitutions"
+    },
+    {
+        "model-name": "ElementMdataCountFunction",
+        "resource-file": "element_mdata_count_functions.json",
+        "table-name": "element_mdata_count_functions"
+    },
+    {
+        "model-name": "ElementMdataIrregularScheme",
+        "resource-file": "element_mdata_irregular_schemes.json",
+        "table-name": "element_mdata_irregular_schemes"
+    },
+    {
+        "model-name": "ElementMdataRegularScheme",
+        "resource-file": "element_mdata_regular_schemes.json",
+        "table-name": "element_mdata_regular_schemes"
+    },
+    {
+        "model-name": "ElementMdataRegularFunction",
+        "resource-file": "element_mdata_regular_functions.json",
+        "table-name": "element_mdata_regular_functions"
+    },
+    {
+        "model-name": "ElementMdataTarget",
+        "resource-file": "element_mdata_targets.json",
+        "table-name": "element_mdata_targets"
+    },
+    {
+        "model-name": "ElementMdataTargetFunction",
+        "resource-file": "element_mdata_target_functions.json",
+        "table-name": "element_mdata_target_functions"
+    },
+    {
+        "model-name": "ElementEdataIrregularScheme",
+        "resource-file": "element_edata_irregular_schemes.json",
+        "table-name": "element_edata_irregular_schemes"
+    },
+    {
+        "model-name": "ElementEdataRegularScheme",
+        "resource-file": "element_edata_regular_schemes.json",
+        "table-name": "element_edata_regular_schemes"
+    },
+    {
+        "model-name": "ElementEdataRegularFunction",
+        "resource-file": "element_edata_regular_functions.json",
+        "table-name": "element_edata_regular_functions"
+    },
+    {
+        "model-name": "ElementEdataTarget",
+        "resource-file": "element_edata_targets.json",
+        "table-name": "element_edata_targets"
+    },
+    {
+        "model-name": "ElementEdataTargetFunction",
+        "resource-file": "element_edata_target_functions.json",
+        "table-name": "element_edata_target_functions"
+    },
+    {
+        "model-name": "ElementNdataFunction",
+        "resource-file": "element_ndata_functions.json",
+        "table-name": "element_ndata_functions"
+    },
+    {
+        "model-name": "ElementGisIrregularScheme",
+        "resource-file": "element_gis_irregular_schemes.json",
+        "table-name": "element_gis_irregular_schemes"
+    },
+    {
+        "model-name": "ElementGisRegularScheme",
+        "resource-file": "element_gis_regular_schemes.json",
+        "table-name": "element_gis_regular_schemes"
+    },
+    {
+        "model-name": "ElementImportLimit",
+        "resource-file": "element_import_limits.json",
+        "table-name": "element_import_limits"
+    },
+    {
+        "model-name": "StationElement",
+        "resource-file": "station_elements.json",
+        "table-name": "station_elements"
+    },
+    {
+        "model-name": "StationInstrument",
+        "resource-file": "station_instruments.json",
+        "table-name": "station_instruments"
+    },
+    {
+        "model-name": "Instrument",
+        "resource-file": "instruments.json",
+        "table-name": "instruments"
+    },
+    {
+        "model-name": "InstrumentType",
+        "resource-file": "instrument_types.json",
+        "table-name": "instrument_types"
+    },
+    {
+        "model-name": "DataFlagType",
+        "resource-file": "data_flag_types.json",
+        "table-name": "data_flag_types"
+    },
+    {
+        "model-name": "DataFlag",
+        "resource-file": "data_flags.json",
+        "table-name": "data_flags"
+    },
+    {
+        "model-name": "DataFlagStatus",
+        "resource-file": "data_flag_statuses.json",
+        "table-name": "data_flag_statuses"
+    },
+    {
+        "model-name": "DataFlagDefinition",
+        "resource-file": "data_flag_definitions.json",
+        "table-name": "data_flag_definitions"
+    },
+    {
+        "model-name": "TimeSchemeParameter",
+        "resource-file": "time_scheme_parameters.json",
+        "table-name": "time_scheme_parameters"
+    },
+    {
+        "model-name": "StationClimaticData",
+        "resource-file": "station_climatic_datas.json",
+        "table-name": "station_climatic_datas"
+    },
+    {
+        "model-name": "EventCategory",
+        "resource-file": "event_categories.json",
+        "table-name": "event_categories"
+    },
+    {
+        "model-name": "Event",
+        "resource-file": "events.json",
+        "table-name": "events"
+    },
+    {
+        "model-name": "Setting",
+        "resource-file": "settings.json",
+        "table-name": "settings"
+    },
+    {
+        "model-name": "KefForm",
+        "resource-file": "kef_forms.json",
+        "table-name": "kef_forms"
+    },
+    {
+        "model-name": "UserLoginLog",
+        "resource-file": "user_login_logs.json",
+        "table-name": "user_login_logs"
+    },
+    {
+        "model-name": "UserDatabase",
+        "resource-file": "user_databases.json",
+        "table-name": "user_databases"
+    },
+    {
+        "model-name": "SystemSetting",
+        "resource-file": "system_settings.json",
+        "table-name": "system_settings"
+    },
+    {
+        "model-name": "Log",
+        "resource-file": "logs.json",
+        "table-name": "logs"
+    },
+    {
+        "model-name": "Recaptcha",
+        "resource-file": "recaptchas.json",
+        "table-name": "recaptchas"
+    },
+    {
+        "model-name": "MediaCategory",
+        "resource-file": "media_categories.json",
+        "table-name": "media_categories"
+    },
+    {
+        "model-name": "MediaType",
+        "resource-file": "media_types.json",
+        "table-name": "media_types"
+    },
+    {
+        "model-name": "MediaArchive",
+        "resource-file": "media_archives.json",
+        "table-name": "media_archives"
+    },
+    {
+        "model-name": "MediaPermission",
+        "resource-file": "media_permissions.json",
+        "table-name": "media_permissions"
+    },
+    {
+        "model-name": "FileType",
+        "resource-file": "file_types.json",
+        "table-name": "file_types"
+    }
+]

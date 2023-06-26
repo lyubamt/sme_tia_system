@@ -1,0 +1,1417 @@
+{
+    "fields": [
+        {
+            "name": "id",
+            "labels": {
+                "en": "Id",
+                "sw": "Id"
+            },
+            "html-type": "number",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "",
+            "is-on-index": false,
+            "is-on-show": false,
+            "is-on-form": false,
+            "data-type": "int",
+            "data-type-params": [],
+            "data-value": null,
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": true,
+            "comment": null,
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": true,
+            "is-auto-increment": true,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter id here...",
+                "sw": "Enter id here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "id",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The id of the model.",
+                "sw": "The id of the model."
+            }
+        },
+        {
+            "name": "meteogram_message_type_id",
+            "labels": {
+                "en": "Meteogram Message Type",
+                "sw": "Meteogram Message Type"
+            },
+            "html-type": "select",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "required|numeric|min:0|max:4294967295",
+            "is-on-index": true,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "int",
+            "data-type-params": [],
+            "data-value": null,
+            "is-index": true,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": true,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter meteogram message type here...",
+                "sw": "Enter meteogram message type here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": {
+                "name": "meteogramMessageType",
+                "type": "belongsTo",
+                "params": [
+                    "App\\Models\\MeteogramMessageType",
+                    "meteogram_message_type_id"
+                ],
+                "field": "name"
+            },
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "meteogram_message_type_id",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The meteogram message type of the model.",
+                "sw": "The meteogram message type of the model."
+            }
+        },
+        {
+            "name": "meteogram_station_id",
+            "labels": {
+                "en": "Meteogram Station",
+                "sw": "Meteogram Station"
+            },
+            "html-type": "select",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "required",
+            "is-on-index": true,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "int",
+            "data-type-params": [],
+            "data-value": null,
+            "is-index": true,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": true,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Select meteogram station",
+                "sw": "Select meteogram station"
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": {
+                "name": "meteogramStation",
+                "type": "belongsTo",
+                "params": [
+                    "App\\Models\\MeteogramStation",
+                    "meteogram_station_id"
+                ],
+                "field": "name"
+            },
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "meteogram_station_id",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The meteogram station of the model.",
+                "sw": "The meteogram station of the model."
+            }
+        },
+        {
+            "name": "date_time_gmt",
+            "labels": {
+                "en": "Date Time Gmt",
+                "sw": "Date Time Gmt"
+            },
+            "html-type": "text",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "required|string|min:1|max:7",
+            "is-on-index": true,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "string",
+            "data-type-params": [
+                7
+            ],
+            "data-value": null,
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "j/n/Y",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter date time gmt here...",
+                "sw": "Enter date time gmt here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "date_time_gmt",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The date time gmt of the model.",
+                "sw": "The date time gmt of the model."
+            }
+        },
+        {
+            "name": "mean_wind",
+            "labels": {
+                "en": "Mean Wind",
+                "sw": "Mean Wind"
+            },
+            "html-type": "text",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "required|string|min:1|max:10",
+            "is-on-index": true,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "string",
+            "data-type-params": [
+                10
+            ],
+            "data-value": null,
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter mean wind here...",
+                "sw": "Enter mean wind here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "mean_wind",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The mean wind of the model.",
+                "sw": "The mean wind of the model."
+            }
+        },
+        {
+            "name": "directional_wind",
+            "labels": {
+                "en": "Directional Wind",
+                "sw": "Directional Wind"
+            },
+            "html-type": "text",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "nullable|string|min:0|max:10",
+            "is-on-index": true,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "string",
+            "data-type-params": [
+                10
+            ],
+            "data-value": "NULL",
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": true,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter directional wind here...",
+                "sw": "Enter directional wind here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "directional_wind",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The directional wind of the model.",
+                "sw": "The directional wind of the model."
+            }
+        },
+        {
+            "name": "variational_wind",
+            "labels": {
+                "en": "Variational Wind",
+                "sw": "Variational Wind"
+            },
+            "html-type": "text",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "nullable|string|min:0|max:7",
+            "is-on-index": true,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "string",
+            "data-type-params": [
+                7
+            ],
+            "data-value": "NULL",
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": true,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter variational wind here...",
+                "sw": "Enter variational wind here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "variational_wind",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The variational wind of the model.",
+                "sw": "The variational wind of the model."
+            }
+        },
+        {
+            "name": "prevailing_visibility",
+            "labels": {
+                "en": "Prevailing Visibility",
+                "sw": "Prevailing Visibility"
+            },
+            "html-type": "text",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "required|string|min:1|max:4",
+            "is-on-index": true,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "string",
+            "data-type-params": [
+                4
+            ],
+            "data-value": null,
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter prevailing visibility here...",
+                "sw": "Enter prevailing visibility here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "prevailing_visibility",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The prevailing visibility of the model.",
+                "sw": "The prevailing visibility of the model."
+            }
+        },
+        {
+            "name": "directional_visibility",
+            "labels": {
+                "en": "Directional Visibility",
+                "sw": "Directional Visibility"
+            },
+            "html-type": "text",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "nullable|string|min:0|max:5",
+            "is-on-index": true,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "string",
+            "data-type-params": [
+                5
+            ],
+            "data-value": "NULL",
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": true,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter directional visibility here...",
+                "sw": "Enter directional visibility here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "directional_visibility",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The directional visibility of the model.",
+                "sw": "The directional visibility of the model."
+            }
+        },
+        {
+            "name": "present_weather",
+            "labels": {
+                "en": "Present Weather",
+                "sw": "Present Weather"
+            },
+            "html-type": "text",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "nullable|string|min:0|max:12",
+            "is-on-index": true,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "string",
+            "data-type-params": [
+                12
+            ],
+            "data-value": "NULL",
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": true,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter present weather here...",
+                "sw": "Enter present weather here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "present_weather",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The present weather of the model.",
+                "sw": "The present weather of the model."
+            }
+        },
+        {
+            "name": "first_cloud",
+            "labels": {
+                "en": "First Cloud",
+                "sw": "First Cloud"
+            },
+            "html-type": "text",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "required|string|min:1|max:6",
+            "is-on-index": true,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "string",
+            "data-type-params": [
+                6
+            ],
+            "data-value": null,
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter first cloud here...",
+                "sw": "Enter first cloud here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "first_cloud",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The first cloud of the model.",
+                "sw": "The first cloud of the model."
+            }
+        },
+        {
+            "name": "second_cloud",
+            "labels": {
+                "en": "Second Cloud",
+                "sw": "Second Cloud"
+            },
+            "html-type": "text",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "nullable|string|min:0|max:8",
+            "is-on-index": true,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "string",
+            "data-type-params": [
+                8
+            ],
+            "data-value": "NULL",
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": true,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter second cloud here...",
+                "sw": "Enter second cloud here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "second_cloud",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The second cloud of the model.",
+                "sw": "The second cloud of the model."
+            }
+        },
+        {
+            "name": "third_cloud",
+            "labels": {
+                "en": "Third Cloud",
+                "sw": "Third Cloud"
+            },
+            "html-type": "text",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "nullable|string|min:0|max:6",
+            "is-on-index": true,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "string",
+            "data-type-params": [
+                6
+            ],
+            "data-value": "NULL",
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": true,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter third cloud here...",
+                "sw": "Enter third cloud here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "third_cloud",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The third cloud of the model.",
+                "sw": "The third cloud of the model."
+            }
+        },
+        {
+            "name": "fourth_cloud",
+            "labels": {
+                "en": "Fourth Cloud",
+                "sw": "Fourth Cloud"
+            },
+            "html-type": "text",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "nullable|string|min:0|max:6",
+            "is-on-index": true,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "string",
+            "data-type-params": [
+                6
+            ],
+            "data-value": "NULL",
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": true,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter fourth cloud here...",
+                "sw": "Enter fourth cloud here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "fourth_cloud",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The fourth cloud of the model.",
+                "sw": "The fourth cloud of the model."
+            }
+        },
+        {
+            "name": "temperatures",
+            "labels": {
+                "en": "Temperatures",
+                "sw": "Temperatures"
+            },
+            "html-type": "text",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "required|string|min:1|max:5",
+            "is-on-index": true,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "string",
+            "data-type-params": [
+                5
+            ],
+            "data-value": null,
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter temperatures here...",
+                "sw": "Enter temperatures here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "temperatures",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The temperatures of the model.",
+                "sw": "The temperatures of the model."
+            }
+        },
+        {
+            "name": "QNH",
+            "labels": {
+                "en": "Q N H",
+                "sw": "Q N H"
+            },
+            "html-type": "text",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "required|string|min:1|max:5",
+            "is-on-index": true,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "string",
+            "data-type-params": [
+                5
+            ],
+            "data-value": null,
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter q n h here...",
+                "sw": "Enter q n h here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "QNH",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The q n h of the model.",
+                "sw": "The q n h of the model."
+            }
+        },
+        {
+            "name": "recent_weather",
+            "labels": {
+                "en": "Recent Weather",
+                "sw": "Recent Weather"
+            },
+            "html-type": "text",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "nullable|string|min:0|max:4",
+            "is-on-index": true,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "string",
+            "data-type-params": [
+                4
+            ],
+            "data-value": "NULL",
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": true,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter recent weather here...",
+                "sw": "Enter recent weather here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "recent_weather",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The recent weather of the model.",
+                "sw": "The recent weather of the model."
+            }
+        },
+        {
+            "name": "trend_change_group",
+            "labels": {
+                "en": "Trend Change Group",
+                "sw": "Trend Change Group"
+            },
+            "html-type": "text",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "required|string|min:1|max:5",
+            "is-on-index": true,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "string",
+            "data-type-params": [
+                5
+            ],
+            "data-value": null,
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter trend change group here...",
+                "sw": "Enter trend change group here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "trend_change_group",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The trend change group of the model.",
+                "sw": "The trend change group of the model."
+            }
+        },
+        {
+            "name": "trend_time",
+            "labels": {
+                "en": "Trend Time",
+                "sw": "Trend Time"
+            },
+            "html-type": "text",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "nullable|string|min:0|max:5",
+            "is-on-index": true,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "string",
+            "data-type-params": [
+                5
+            ],
+            "data-value": "NULL",
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": true,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter trend time here...",
+                "sw": "Enter trend time here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "trend_time",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The trend time of the model.",
+                "sw": "The trend time of the model."
+            }
+        },
+        {
+            "name": "trend_wind",
+            "labels": {
+                "en": "Trend Wind",
+                "sw": "Trend Wind"
+            },
+            "html-type": "text",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "nullable|string|min:0|max:10",
+            "is-on-index": true,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "string",
+            "data-type-params": [
+                10
+            ],
+            "data-value": "NULL",
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": true,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter trend wind here...",
+                "sw": "Enter trend wind here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "trend_wind",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The trend wind of the model.",
+                "sw": "The trend wind of the model."
+            }
+        },
+        {
+            "name": "trend_visibility",
+            "labels": {
+                "en": "Trend Visibility",
+                "sw": "Trend Visibility"
+            },
+            "html-type": "text",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "nullable|string|min:0|max:4",
+            "is-on-index": true,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "string",
+            "data-type-params": [
+                4
+            ],
+            "data-value": "NULL",
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": true,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter trend visibility here...",
+                "sw": "Enter trend visibility here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "trend_visibility",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The trend visibility of the model.",
+                "sw": "The trend visibility of the model."
+            }
+        },
+        {
+            "name": "trend_weather",
+            "labels": {
+                "en": "Trend Weather",
+                "sw": "Trend Weather"
+            },
+            "html-type": "text",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "nullable|string|min:0|max:8",
+            "is-on-index": true,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "string",
+            "data-type-params": [
+                8
+            ],
+            "data-value": "NULL",
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": true,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter trend weather here...",
+                "sw": "Enter trend weather here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "trend_weather",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The trend weather of the model.",
+                "sw": "The trend weather of the model."
+            }
+        },
+        {
+            "name": "trend_cloud",
+            "labels": {
+                "en": "Trend Cloud",
+                "sw": "Trend Cloud"
+            },
+            "html-type": "text",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "nullable|string|min:0|max:2",
+            "is-on-index": true,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "string",
+            "data-type-params": [
+                2
+            ],
+            "data-value": "NULL",
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": true,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter trend cloud here...",
+                "sw": "Enter trend cloud here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "trend_cloud",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The trend cloud of the model.",
+                "sw": "The trend cloud of the model."
+            }
+        },
+        {
+            "name": "user_id",
+            "labels": {
+                "en": "User",
+                "sw": "User"
+            },
+            "html-type": "select",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "required",
+            "is-on-index": true,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "int",
+            "data-type-params": [],
+            "data-value": null,
+            "is-index": true,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": true,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Select user",
+                "sw": "Select user"
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": {
+                "name": "user",
+                "type": "belongsTo",
+                "params": [
+                    "App\\Models\\User",
+                    "user_id"
+                ],
+                "field": "name"
+            },
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "user_id",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The user of the model.",
+                "sw": "The user of the model."
+            }
+        },
+        {
+            "name": "created_at",
+            "labels": {
+                "en": "Created At",
+                "sw": "Created At"
+            },
+            "html-type": "text",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "",
+            "is-on-index": false,
+            "is-on-show": true,
+            "is-on-form": false,
+            "data-type": "timestamp",
+            "data-type-params": [],
+            "data-value": "NULL",
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": true,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "j/n/Y g:i A",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter created at here...",
+                "sw": "Enter created at here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "created_at",
+            "is-api-visible": false,
+            "api-description": {
+                "en": "The created at of the model.",
+                "sw": "The created at of the model."
+            }
+        },
+        {
+            "name": "updated_at",
+            "labels": {
+                "en": "Updated At",
+                "sw": "Updated At"
+            },
+            "html-type": "text",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "",
+            "is-on-index": false,
+            "is-on-show": true,
+            "is-on-form": false,
+            "data-type": "timestamp",
+            "data-type-params": [],
+            "data-value": "NULL",
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": true,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "j/n/Y g:i A",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter updated at here...",
+                "sw": "Enter updated at here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "updated_at",
+            "is-api-visible": false,
+            "api-description": {
+                "en": "The updated at of the model.",
+                "sw": "The updated at of the model."
+            }
+        }
+    ],
+    "relations": [],
+    "indexes": [],
+    "auto-manage-created-and-updated-at": true,
+    "table-name": "meteogram_metars",
+    "protection": {
+        "is-model-protected": false,
+        "is-controller-protected": false,
+        "is-api-resource-protected": false,
+        "is-api-resource-collection-protected": false,
+        "is-api-documentation-protected": false,
+        "is-api-documentation-controller-protected": false,
+        "is-form-request-protected": false,
+        "is-languages-protected": false,
+        "is-form-view-protected": false,
+        "is-index-view-protected": false,
+        "is-create-view-protected": false,
+        "is-edit-view-protected": false,
+        "is-show-view-protected": false
+    },
+    "api-documentation": {
+        "access_token_with_bearer": {
+            "en": "The access token prefixed with the \"Bearer \" key word.",
+            "sw": "The access token prefixed with the \"Bearer \" key word."
+        },
+        "index_route_description": {
+            "en": "Retrieve existing meteogram metars.",
+            "sw": "Retrieve existing meteogram metars."
+        },
+        "index_route_response_description": {
+            "en": "The API's response will be JSON based data. The JSON object will be structured as follow",
+            "sw": "The API's response will be JSON based data. The JSON object will be structured as follow"
+        },
+        "the_key_is_the_model_property_and_the_value_is_the_model_value": {
+            "en": "The array's key is the meteogram metar property name where the value is the assigned value to the retrieved meteogram metar.",
+            "sw": "The array's key is the meteogram metar property name where the value is the assigned value to the retrieved meteogram metar."
+        },
+        "link_to_retrieve_first_page": {
+            "en": "Link to retrieve first page.",
+            "sw": "Link to retrieve first page."
+        },
+        "link_to_retrieve_last_page": {
+            "en": "Link to retrieve last page.",
+            "sw": "Link to retrieve last page."
+        },
+        "link_to_retrieve_previous_page": {
+            "en": "Link to retrieve previous page.",
+            "sw": "Link to retrieve previous page."
+        },
+        "link_to_retrieve_next_page": {
+            "en": "Link to retrieve next page.",
+            "sw": "Link to retrieve next page."
+        },
+        "the_number_of_current_page": {
+            "en": "The number of current page.",
+            "sw": "The number of current page."
+        },
+        "the_index_of_the_first_retrieved_item": {
+            "en": "The index of first retrieved meteogram metar.",
+            "sw": "The index of first retrieved meteogram metar."
+        },
+        "the_number_of_the_last_page": {
+            "en": "The number of the last page.",
+            "sw": "The number of the last page."
+        },
+        "the_base_link_to_the_resource": {
+            "en": "The base link to the api resource.",
+            "sw": "The base link to the api resource."
+        },
+        "the_number_of_models_per_page": {
+            "en": "The number of meteogram metars per page.",
+            "sw": "The number of meteogram metars per page."
+        },
+        "the_index_of_the_last_retrieved_item": {
+            "en": "The index of last retrieved meteogram metar.",
+            "sw": "The index of last retrieved meteogram metar."
+        },
+        "the_total_of_available_pages": {
+            "en": "The total of the available pages.",
+            "sw": "The total of the available pages."
+        },
+        "store_route_description": {
+            "en": "Create new meteogram metar.",
+            "sw": "Create new meteogram metar."
+        },
+        "store_route_response_description": {
+            "en": "The API's response will be JSON based data. The JSON object will be structured as follow",
+            "sw": "The API's response will be JSON based data. The JSON object will be structured as follow"
+        },
+        "update_route_description": {
+            "en": "Update existsing meteogram metar.",
+            "sw": "Update existsing meteogram metar."
+        },
+        "update_route_response_description": {
+            "en": "The API's response will be JSON based data. The JSON object will be structured as follow",
+            "sw": "The API's response will be JSON based data. The JSON object will be structured as follow"
+        },
+        "show_route_description": {
+            "en": "Retrieve existsing meteogram metar.",
+            "sw": "Retrieve existsing meteogram metar."
+        },
+        "show_route_response_description": {
+            "en": "The API's response will be JSON based data. The JSON object will be structured as follow",
+            "sw": "The API's response will be JSON based data. The JSON object will be structured as follow"
+        },
+        "the_id_of_model_to_retrieve": {
+            "en": "The unique id of the meteogram metar to retrieve",
+            "sw": "The unique id of the meteogram metar to retrieve"
+        },
+        "destroy_route_description": {
+            "en": "Delete existsing meteogram metar.",
+            "sw": "Delete existsing meteogram metar."
+        },
+        "destroy_route_response_description": {
+            "en": "The API's response will be JSON based data. The JSON object will be structured as follow",
+            "sw": "The API's response will be JSON based data. The JSON object will be structured as follow"
+        },
+        "the_id_of_model_to_delete": {
+            "en": "The id of the meteogram metar to delete.",
+            "sw": "The id of the meteogram metar to delete."
+        },
+        "general_description": {
+            "en": "Allows you to list, create, edit, show and delete meteogram metars.",
+            "sw": "Allows you to list, create, edit, show and delete meteogram metars."
+        },
+        "indicate_whether_the_request_was_successful_or_not": {
+            "en": "Indicate whether the request was successful or not.",
+            "sw": "Indicate whether the request was successful or not."
+        },
+        "the_id_of_the_model": {
+            "en": "The id of the meteogram metar.",
+            "sw": "The id of the meteogram metar."
+        },
+        "this_parameter_must_be_present_in_the_request": {
+            "en": "This parameter must be present in the request.",
+            "sw": "This parameter must be present in the request."
+        },
+        "the_request_failed_validation": {
+            "en": "The request failed validation.",
+            "sw": "The request failed validation."
+        },
+        "list_of_the_invalid_errors": {
+            "en": "List of the invalid errors.",
+            "sw": "List of the invalid errors."
+        },
+        "the_requested_model_does_not_exists": {
+            "en": "The requested meteogram metar does not exists.",
+            "sw": "The requested meteogram metar does not exists."
+        },
+        "the_user_does_not_have_permission_to_access_the_requested_resource": {
+            "en": "User does not have permission to access the requested resource.",
+            "sw": "User does not have permission to access the requested resource."
+        }
+    }
+}

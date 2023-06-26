@@ -1,0 +1,1889 @@
+{
+    "fields": [
+        {
+            "name": "id",
+            "labels": {
+                "en": "Id",
+                "sw": "Id"
+            },
+            "html-type": "text",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "",
+            "is-on-index": false,
+            "is-on-show": false,
+            "is-on-form": false,
+            "data-type": "string",
+            "data-type-params": [],
+            "data-value": null,
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": true,
+            "comment": null,
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": true,
+            "is-auto-increment": true,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter id here...",
+                "sw": "Enter id here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "id",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The id of the model.",
+                "sw": "The id of the model."
+            }
+        },
+        {
+            "name": "shop_branch_id",
+            "labels": {
+                "en": "Shop Branch",
+                "sw": "Shop Branch"
+            },
+            "html-type": "select",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "required",
+            "is-on-index": true,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "int",
+            "data-type-params": [],
+            "data-value": "0",
+            "is-index": true,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": "0 => \"Created by Babalao platform\"",
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": true,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Select shop branch",
+                "sw": "Select shop branch"
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": {
+                "name": "shopBranch",
+                "type": "belongsTo",
+                "params": [
+                    "App\\Models\\ShopBranch",
+                    "shop_branch_id"
+                ],
+                "field": "id"
+            },
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "shop_branch_id",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The shop branch of the model.",
+                "sw": "The shop branch of the model."
+            }
+        },
+        {
+            "name": "title",
+            "labels": {
+                "en": "Title",
+                "sw": "Title"
+            },
+            "html-type": "text",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "required|string|min:1|max:191",
+            "is-on-index": true,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "string",
+            "data-type-params": [
+                191
+            ],
+            "data-value": null,
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": false,
+            "is-header": true,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter title here...",
+                "sw": "Enter title here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "title",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The title of the model.",
+                "sw": "The title of the model."
+            }
+        },
+        {
+            "name": "feature_image",
+            "labels": {
+                "en": "Feature Image",
+                "sw": "Feature Image"
+            },
+            "html-type": "text",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "nullable|numeric",
+            "is-on-index": true,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "string",
+            "data-type-params": [
+                191
+            ],
+            "data-value": "NULL",
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": true,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter feature image here...",
+                "sw": "Enter feature image here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "feature_image",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The feature image of the model.",
+                "sw": "The feature image of the model."
+            }
+        },
+        {
+            "name": "prefix",
+            "labels": {
+                "en": "Prefix",
+                "sw": "Prefix"
+            },
+            "html-type": "text",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "required|string|min:1|max:10",
+            "is-on-index": true,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "string",
+            "data-type-params": [
+                10
+            ],
+            "data-value": null,
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter prefix here...",
+                "sw": "Enter prefix here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "prefix",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The prefix of the model.",
+                "sw": "The prefix of the model."
+            }
+        },
+        {
+            "name": "percentage",
+            "labels": {
+                "en": "Percentage",
+                "sw": "Percentage"
+            },
+            "html-type": "text",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "required|numeric",
+            "is-on-index": true,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "string",
+            "data-type-params": [
+                6
+            ],
+            "data-value": null,
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter percentage here...",
+                "sw": "Enter percentage here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "percentage",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The percentage of the model.",
+                "sw": "The percentage of the model."
+            }
+        },
+        {
+            "name": "stores",
+            "labels": {
+                "en": "Stores",
+                "sw": "Stores"
+            },
+            "html-type": "textarea",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "required",
+            "is-on-index": false,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "text",
+            "data-type-params": [],
+            "data-value": "'ALL'",
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter stores here...",
+                "sw": "Enter stores here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "stores",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The stores of the model.",
+                "sw": "The stores of the model."
+            }
+        },
+        {
+            "name": "include_products",
+            "labels": {
+                "en": "Include Products",
+                "sw": "Include Products"
+            },
+            "html-type": "textarea",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "required",
+            "is-on-index": false,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "text",
+            "data-type-params": [],
+            "data-value": "'ALL'",
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter include products here...",
+                "sw": "Enter include products here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "include_products",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The include products of the model.",
+                "sw": "The include products of the model."
+            }
+        },
+        {
+            "name": "include_product_categories",
+            "labels": {
+                "en": "Include Product Categories",
+                "sw": "Include Product Categories"
+            },
+            "html-type": "textarea",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "required",
+            "is-on-index": false,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "text",
+            "data-type-params": [],
+            "data-value": "'ALL'",
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter include product categories here...",
+                "sw": "Enter include product categories here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "include_product_categories",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The include product categories of the model.",
+                "sw": "The include product categories of the model."
+            }
+        },
+        {
+            "name": "exclude_products",
+            "labels": {
+                "en": "Exclude Products",
+                "sw": "Exclude Products"
+            },
+            "html-type": "textarea",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "required",
+            "is-on-index": false,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "text",
+            "data-type-params": [],
+            "data-value": "'NONE'",
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter exclude products here...",
+                "sw": "Enter exclude products here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "exclude_products",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The exclude products of the model.",
+                "sw": "The exclude products of the model."
+            }
+        },
+        {
+            "name": "exclude_product_categories",
+            "labels": {
+                "en": "Exclude Product Categories",
+                "sw": "Exclude Product Categories"
+            },
+            "html-type": "textarea",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "required",
+            "is-on-index": false,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "text",
+            "data-type-params": [],
+            "data-value": "'NONE'",
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter exclude product categories here...",
+                "sw": "Enter exclude product categories here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "exclude_product_categories",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The exclude product categories of the model.",
+                "sw": "The exclude product categories of the model."
+            }
+        },
+        {
+            "name": "start_date_time",
+            "labels": {
+                "en": "Start Date Time",
+                "sw": "Start Date Time"
+            },
+            "html-type": "text",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "required|string|min:1|max:30",
+            "is-on-index": false,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "string",
+            "data-type-params": [
+                30
+            ],
+            "data-value": null,
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter start date time here...",
+                "sw": "Enter start date time here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "start_date_time",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The start date time of the model.",
+                "sw": "The start date time of the model."
+            }
+        },
+        {
+            "name": "expiry_in_days",
+            "labels": {
+                "en": "Expiry In Days",
+                "sw": "Expiry In Days"
+            },
+            "html-type": "number",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "required",
+            "is-on-index": false,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "int",
+            "data-type-params": [],
+            "data-value": null,
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter expiry in days here...",
+                "sw": "Enter expiry in days here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "expiry_in_days",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The expiry in days of the model.",
+                "sw": "The expiry in days of the model."
+            }
+        },
+        {
+            "name": "total_coupons",
+            "labels": {
+                "en": "Total Coupons",
+                "sw": "Total Coupons"
+            },
+            "html-type": "number",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "required|numeric|min:-2147483648|max:2147483647",
+            "is-on-index": false,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "int",
+            "data-type-params": [],
+            "data-value": null,
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter total coupons here...",
+                "sw": "Enter total coupons here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "total_coupons",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The total coupons of the model.",
+                "sw": "The total coupons of the model."
+            }
+        },
+        {
+            "name": "calculation_days",
+            "labels": {
+                "en": "Calculation Days",
+                "sw": "Calculation Days"
+            },
+            "html-type": "number",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "required",
+            "is-on-index": false,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "int",
+            "data-type-params": [],
+            "data-value": null,
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": "Calculation days for the conditions",
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter calculation days here...",
+                "sw": "Enter calculation days here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "calculation_days",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The calculation days of the model.",
+                "sw": "The calculation days of the model."
+            }
+        },
+        {
+            "name": "mini_spending_value",
+            "labels": {
+                "en": "Mini Spending Value",
+                "sw": "Mini Spending Value"
+            },
+            "html-type": "text",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "required|string|min:1|max:30",
+            "is-on-index": false,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "string",
+            "data-type-params": [
+                30
+            ],
+            "data-value": "'0'",
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter mini spending value here...",
+                "sw": "Enter mini spending value here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "mini_spending_value",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The mini spending value of the model.",
+                "sw": "The mini spending value of the model."
+            }
+        },
+        {
+            "name": "max_spending_value",
+            "labels": {
+                "en": "Max Spending Value",
+                "sw": "Max Spending Value"
+            },
+            "html-type": "text",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "nullable|string|min:0|max:30",
+            "is-on-index": false,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "string",
+            "data-type-params": [
+                30
+            ],
+            "data-value": "NULL",
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": true,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter max spending value here...",
+                "sw": "Enter max spending value here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "max_spending_value",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The max spending value of the model.",
+                "sw": "The max spending value of the model."
+            }
+        },
+        {
+            "name": "buy_bundle_reward",
+            "labels": {
+                "en": "Buy Bundle Reward",
+                "sw": "Buy Bundle Reward"
+            },
+            "html-type": "number",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "required",
+            "is-on-index": false,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "int",
+            "data-type-params": [],
+            "data-value": "0",
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": "how many times?",
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter buy bundle reward here...",
+                "sw": "Enter buy bundle reward here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "buy_bundle_reward",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The buy bundle reward of the model.",
+                "sw": "The buy bundle reward of the model."
+            }
+        },
+        {
+            "name": "buy_gift_card_reward",
+            "labels": {
+                "en": "Buy Gift Card Reward",
+                "sw": "Buy Gift Card Reward"
+            },
+            "html-type": "number",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "required",
+            "is-on-index": false,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "int",
+            "data-type-params": [],
+            "data-value": "0",
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": "total",
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter buy gift card reward here...",
+                "sw": "Enter buy gift card reward here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "buy_gift_card_reward",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The buy gift card reward of the model.",
+                "sw": "The buy gift card reward of the model."
+            }
+        },
+        {
+            "name": "add_product_review_reward",
+            "labels": {
+                "en": "Add Product Review Reward",
+                "sw": "Add Product Review Reward"
+            },
+            "html-type": "number",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "required",
+            "is-on-index": false,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "int",
+            "data-type-params": [],
+            "data-value": "0",
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": "total",
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter add product review reward here...",
+                "sw": "Enter add product review reward here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "add_product_review_reward",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The add product review reward of the model.",
+                "sw": "The add product review reward of the model."
+            }
+        },
+        {
+            "name": "cart_abandon_motivation",
+            "labels": {
+                "en": "Cart Abandon Motivation",
+                "sw": "Cart Abandon Motivation"
+            },
+            "html-type": "number",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "required",
+            "is-on-index": false,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "int",
+            "data-type-params": [],
+            "data-value": "0",
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": "In days",
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter cart abandon motivation here...",
+                "sw": "Enter cart abandon motivation here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "cart_abandon_motivation",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The cart abandon motivation of the model.",
+                "sw": "The cart abandon motivation of the model."
+            }
+        },
+        {
+            "name": "incomplete_checkout_motivation",
+            "labels": {
+                "en": "Incomplete Checkout Motivation",
+                "sw": "Incomplete Checkout Motivation"
+            },
+            "html-type": "number",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "required",
+            "is-on-index": false,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "int",
+            "data-type-params": [],
+            "data-value": "0",
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": "In days",
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter incomplete checkout motivation here...",
+                "sw": "Enter incomplete checkout motivation here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "incomplete_checkout_motivation",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The incomplete checkout motivation of the model.",
+                "sw": "The incomplete checkout motivation of the model."
+            }
+        },
+        {
+            "name": "complete_checkout_motivation",
+            "labels": {
+                "en": "Complete Checkout Motivation",
+                "sw": "Complete Checkout Motivation"
+            },
+            "html-type": "number",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "required",
+            "is-on-index": false,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "int",
+            "data-type-params": [],
+            "data-value": "0",
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": "In total number",
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter complete checkout motivation here...",
+                "sw": "Enter complete checkout motivation here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "complete_checkout_motivation",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The complete checkout motivation of the model.",
+                "sw": "The complete checkout motivation of the model."
+            }
+        },
+        {
+            "name": "top_wishlists",
+            "labels": {
+                "en": "Top Wishlists",
+                "sw": "Top Wishlists"
+            },
+            "html-type": "number",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "required",
+            "is-on-index": false,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "int",
+            "data-type-params": [],
+            "data-value": "0",
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter top wishlists here...",
+                "sw": "Enter top wishlists here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "top_wishlists",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The top wishlists of the model.",
+                "sw": "The top wishlists of the model."
+            }
+        },
+        {
+            "name": "top_compares",
+            "labels": {
+                "en": "Top Compares",
+                "sw": "Top Compares"
+            },
+            "html-type": "number",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "required",
+            "is-on-index": false,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "int",
+            "data-type-params": [],
+            "data-value": "0",
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter top compares here...",
+                "sw": "Enter top compares here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "top_compares",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The top compares of the model.",
+                "sw": "The top compares of the model."
+            }
+        },
+        {
+            "name": "top_carts",
+            "labels": {
+                "en": "Top Carts",
+                "sw": "Top Carts"
+            },
+            "html-type": "number",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "required",
+            "is-on-index": false,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "int",
+            "data-type-params": [],
+            "data-value": "0",
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter top carts here...",
+                "sw": "Enter top carts here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "top_carts",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The top carts of the model.",
+                "sw": "The top carts of the model."
+            }
+        },
+        {
+            "name": "top_purchase_amount",
+            "labels": {
+                "en": "Top Purchase Amount",
+                "sw": "Top Purchase Amount"
+            },
+            "html-type": "text",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "required|string|min:1",
+            "is-on-index": false,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "string",
+            "data-type-params": [],
+            "data-value": "0",
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter top purchase amount here...",
+                "sw": "Enter top purchase amount here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "top_purchase_amount",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The top purchase amount of the model.",
+                "sw": "The top purchase amount of the model."
+            }
+        },
+        {
+            "name": "top_purchase_quantity",
+            "labels": {
+                "en": "Top Purchase Quantity",
+                "sw": "Top Purchase Quantity"
+            },
+            "html-type": "text",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "required|string|min:1",
+            "is-on-index": false,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "string",
+            "data-type-params": [],
+            "data-value": "0",
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter top purchase quantity here...",
+                "sw": "Enter top purchase quantity here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "top_purchase_quantity",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The top purchase quantity of the model.",
+                "sw": "The top purchase quantity of the model."
+            }
+        },
+        {
+            "name": "sign_up_motivation",
+            "labels": {
+                "en": "Sign Up Motivation",
+                "sw": "Sign Up Motivation"
+            },
+            "html-type": "checkbox",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "boolean",
+            "is-on-index": false,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "bool",
+            "data-type-params": [],
+            "data-value": "0",
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter sign up motivation here...",
+                "sw": "Enter sign up motivation here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "sign_up_motivation",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The sign up motivation of the model.",
+                "sw": "The sign up motivation of the model."
+            }
+        },
+        {
+            "name": "email_channel",
+            "labels": {
+                "en": "Email Channel",
+                "sw": "Email Channel"
+            },
+            "html-type": "checkbox",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "boolean",
+            "is-on-index": false,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "bool",
+            "data-type-params": [],
+            "data-value": "0",
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter email channel here...",
+                "sw": "Enter email channel here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "email_channel",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The email channel of the model.",
+                "sw": "The email channel of the model."
+            }
+        },
+        {
+            "name": "sms_channel",
+            "labels": {
+                "en": "Sms Channel",
+                "sw": "Sms Channel"
+            },
+            "html-type": "checkbox",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "boolean",
+            "is-on-index": false,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "bool",
+            "data-type-params": [],
+            "data-value": "0",
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter sms channel here...",
+                "sw": "Enter sms channel here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "sms_channel",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The sms channel of the model.",
+                "sw": "The sms channel of the model."
+            }
+        },
+        {
+            "name": "platform_channel",
+            "labels": {
+                "en": "Platform Channel",
+                "sw": "Platform Channel"
+            },
+            "html-type": "checkbox",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "boolean",
+            "is-on-index": false,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "bool",
+            "data-type-params": [],
+            "data-value": "0",
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter platform channel here...",
+                "sw": "Enter platform channel here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "platform_channel",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The platform channel of the model.",
+                "sw": "The platform channel of the model."
+            }
+        },
+        {
+            "name": "disclaimer",
+            "labels": {
+                "en": "Disclaimer",
+                "sw": "Disclaimer"
+            },
+            "html-type": "textarea",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "required",
+            "is-on-index": false,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "text",
+            "data-type-params": [],
+            "data-value": null,
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter disclaimer here...",
+                "sw": "Enter disclaimer here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "disclaimer",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The disclaimer of the model.",
+                "sw": "The disclaimer of the model."
+            }
+        },
+        {
+            "name": "status",
+            "labels": {
+                "en": "Status",
+                "sw": "Status"
+            },
+            "html-type": "checkbox",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "boolean",
+            "is-on-index": false,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "bool",
+            "data-type-params": [],
+            "data-value": "1",
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter status here...",
+                "sw": "Enter status here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "status",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The status of the model.",
+                "sw": "The status of the model."
+            }
+        },
+        {
+            "name": "user_id",
+            "labels": {
+                "en": "User",
+                "sw": "User"
+            },
+            "html-type": "select",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "required",
+            "is-on-index": false,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "int",
+            "data-type-params": [],
+            "data-value": null,
+            "is-index": true,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": true,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Select user",
+                "sw": "Select user"
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": {
+                "name": "user",
+                "type": "belongsTo",
+                "params": [
+                    "App\\Models\\User",
+                    "user_id"
+                ],
+                "field": "name"
+            },
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "user_id",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The user of the model.",
+                "sw": "The user of the model."
+            }
+        },
+        {
+            "name": "created_at",
+            "labels": {
+                "en": "Created At",
+                "sw": "Created At"
+            },
+            "html-type": "text",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "",
+            "is-on-index": false,
+            "is-on-show": true,
+            "is-on-form": false,
+            "data-type": "timestamp",
+            "data-type-params": [],
+            "data-value": "NULL",
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": true,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "j/n/Y g:i A",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter created at here...",
+                "sw": "Enter created at here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "created_at",
+            "is-api-visible": false,
+            "api-description": {
+                "en": "The created at of the model.",
+                "sw": "The created at of the model."
+            }
+        },
+        {
+            "name": "updated_at",
+            "labels": {
+                "en": "Updated At",
+                "sw": "Updated At"
+            },
+            "html-type": "text",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "",
+            "is-on-index": false,
+            "is-on-show": true,
+            "is-on-form": false,
+            "data-type": "timestamp",
+            "data-type-params": [],
+            "data-value": "NULL",
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": true,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "j/n/Y g:i A",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter updated at here...",
+                "sw": "Enter updated at here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "updated_at",
+            "is-api-visible": false,
+            "api-description": {
+                "en": "The updated at of the model.",
+                "sw": "The updated at of the model."
+            }
+        }
+    ],
+    "relations": [],
+    "indexes": [],
+    "auto-manage-created-and-updated-at": true,
+    "table-name": "coupons",
+    "protection": {
+        "is-model-protected": false,
+        "is-controller-protected": false,
+        "is-api-resource-protected": false,
+        "is-api-resource-collection-protected": false,
+        "is-api-documentation-protected": false,
+        "is-api-documentation-controller-protected": false,
+        "is-form-request-protected": false,
+        "is-languages-protected": false,
+        "is-form-view-protected": false,
+        "is-index-view-protected": false,
+        "is-create-view-protected": false,
+        "is-edit-view-protected": false,
+        "is-show-view-protected": false
+    },
+    "api-documentation": {
+        "access_token_with_bearer": {
+            "en": "The access token prefixed with the \"Bearer \" key word.",
+            "sw": "The access token prefixed with the \"Bearer \" key word."
+        },
+        "index_route_description": {
+            "en": "Retrieve existing coupons.",
+            "sw": "Retrieve existing coupons."
+        },
+        "index_route_response_description": {
+            "en": "The API's response will be JSON based data. The JSON object will be structured as follow",
+            "sw": "The API's response will be JSON based data. The JSON object will be structured as follow"
+        },
+        "the_key_is_the_model_property_and_the_value_is_the_model_value": {
+            "en": "The array's key is the coupon property name where the value is the assigned value to the retrieved coupon.",
+            "sw": "The array's key is the coupon property name where the value is the assigned value to the retrieved coupon."
+        },
+        "link_to_retrieve_first_page": {
+            "en": "Link to retrieve first page.",
+            "sw": "Link to retrieve first page."
+        },
+        "link_to_retrieve_last_page": {
+            "en": "Link to retrieve last page.",
+            "sw": "Link to retrieve last page."
+        },
+        "link_to_retrieve_previous_page": {
+            "en": "Link to retrieve previous page.",
+            "sw": "Link to retrieve previous page."
+        },
+        "link_to_retrieve_next_page": {
+            "en": "Link to retrieve next page.",
+            "sw": "Link to retrieve next page."
+        },
+        "the_number_of_current_page": {
+            "en": "The number of current page.",
+            "sw": "The number of current page."
+        },
+        "the_index_of_the_first_retrieved_item": {
+            "en": "The index of first retrieved coupon.",
+            "sw": "The index of first retrieved coupon."
+        },
+        "the_number_of_the_last_page": {
+            "en": "The number of the last page.",
+            "sw": "The number of the last page."
+        },
+        "the_base_link_to_the_resource": {
+            "en": "The base link to the api resource.",
+            "sw": "The base link to the api resource."
+        },
+        "the_number_of_models_per_page": {
+            "en": "The number of coupons per page.",
+            "sw": "The number of coupons per page."
+        },
+        "the_index_of_the_last_retrieved_item": {
+            "en": "The index of last retrieved coupon.",
+            "sw": "The index of last retrieved coupon."
+        },
+        "the_total_of_available_pages": {
+            "en": "The total of the available pages.",
+            "sw": "The total of the available pages."
+        },
+        "store_route_description": {
+            "en": "Create new coupon.",
+            "sw": "Create new coupon."
+        },
+        "store_route_response_description": {
+            "en": "The API's response will be JSON based data. The JSON object will be structured as follow",
+            "sw": "The API's response will be JSON based data. The JSON object will be structured as follow"
+        },
+        "update_route_description": {
+            "en": "Update existsing coupon.",
+            "sw": "Update existsing coupon."
+        },
+        "update_route_response_description": {
+            "en": "The API's response will be JSON based data. The JSON object will be structured as follow",
+            "sw": "The API's response will be JSON based data. The JSON object will be structured as follow"
+        },
+        "show_route_description": {
+            "en": "Retrieve existsing coupon.",
+            "sw": "Retrieve existsing coupon."
+        },
+        "show_route_response_description": {
+            "en": "The API's response will be JSON based data. The JSON object will be structured as follow",
+            "sw": "The API's response will be JSON based data. The JSON object will be structured as follow"
+        },
+        "the_id_of_model_to_retrieve": {
+            "en": "The unique id of the coupon to retrieve",
+            "sw": "The unique id of the coupon to retrieve"
+        },
+        "destroy_route_description": {
+            "en": "Delete existsing coupon.",
+            "sw": "Delete existsing coupon."
+        },
+        "destroy_route_response_description": {
+            "en": "The API's response will be JSON based data. The JSON object will be structured as follow",
+            "sw": "The API's response will be JSON based data. The JSON object will be structured as follow"
+        },
+        "the_id_of_model_to_delete": {
+            "en": "The id of the coupon to delete.",
+            "sw": "The id of the coupon to delete."
+        },
+        "general_description": {
+            "en": "Allows you to list, create, edit, show and delete coupons.",
+            "sw": "Allows you to list, create, edit, show and delete coupons."
+        },
+        "indicate_whether_the_request_was_successful_or_not": {
+            "en": "Indicate whether the request was successful or not.",
+            "sw": "Indicate whether the request was successful or not."
+        },
+        "the_id_of_the_model": {
+            "en": "The id of the coupon.",
+            "sw": "The id of the coupon."
+        },
+        "this_parameter_must_be_present_in_the_request": {
+            "en": "This parameter must be present in the request.",
+            "sw": "This parameter must be present in the request."
+        },
+        "the_request_failed_validation": {
+            "en": "The request failed validation.",
+            "sw": "The request failed validation."
+        },
+        "list_of_the_invalid_errors": {
+            "en": "List of the invalid errors.",
+            "sw": "List of the invalid errors."
+        },
+        "the_requested_model_does_not_exists": {
+            "en": "The requested coupon does not exists.",
+            "sw": "The requested coupon does not exists."
+        },
+        "the_user_does_not_have_permission_to_access_the_requested_resource": {
+            "en": "User does not have permission to access the requested resource.",
+            "sw": "User does not have permission to access the requested resource."
+        }
+    }
+}

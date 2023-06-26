@@ -1,0 +1,1521 @@
+{
+    "fields": [
+        {
+            "name": "id",
+            "labels": {
+                "en": "Id",
+                "sw": "Id"
+            },
+            "html-type": "number",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "",
+            "is-on-index": false,
+            "is-on-show": false,
+            "is-on-form": false,
+            "data-type": "int",
+            "data-type-params": [],
+            "data-value": null,
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": true,
+            "comment": null,
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": true,
+            "is-auto-increment": true,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter id here...",
+                "sw": "Enter id here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "id",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The id of the model.",
+                "sw": "The id of the model."
+            }
+        },
+        {
+            "name": "station_ID",
+            "labels": {
+                "en": "Station",
+                "sw": "Station"
+            },
+            "html-type": "select",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "required",
+            "is-on-index": true,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "string",
+            "data-type-params": [
+                8
+            ],
+            "data-value": null,
+            "is-index": true,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": true,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Select station",
+                "sw": "Select station"
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": {
+                "name": "station",
+                "type": "belongsTo",
+                "params": [
+                    "App\\Models\\Station",
+                    "station_ID"
+                ],
+                "field": "id"
+            },
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "station_ID",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The station of the model.",
+                "sw": "The station of the model."
+            }
+        },
+        {
+            "name": "icao_ID",
+            "labels": {
+                "en": "Icao",
+                "sw": "Icao"
+            },
+            "html-type": "select",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "required",
+            "is-on-index": true,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "string",
+            "data-type-params": [
+                50
+            ],
+            "data-value": null,
+            "is-index": true,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": true,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Select icao",
+                "sw": "Select icao"
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": {
+                "name": "icao",
+                "type": "belongsTo",
+                "params": [
+                    "App\\Models\\Icao",
+                    "icao_ID"
+                ],
+                "field": "id"
+            },
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "icao_ID",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The icao of the model.",
+                "sw": "The icao of the model."
+            }
+        },
+        {
+            "name": "wmo_ID",
+            "labels": {
+                "en": "Wmo",
+                "sw": "Wmo"
+            },
+            "html-type": "select",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "required",
+            "is-on-index": true,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "string",
+            "data-type-params": [
+                50
+            ],
+            "data-value": null,
+            "is-index": true,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": true,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Select wmo",
+                "sw": "Select wmo"
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": {
+                "name": "wmo",
+                "type": "belongsTo",
+                "params": [
+                    "App\\Models\\Wmo",
+                    "wmo_ID"
+                ],
+                "field": "id"
+            },
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "wmo_ID",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The wmo of the model.",
+                "sw": "The wmo of the model."
+            }
+        },
+        {
+            "name": "hydro_ID",
+            "labels": {
+                "en": "Hydro",
+                "sw": "Hydro"
+            },
+            "html-type": "select",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "required",
+            "is-on-index": true,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "string",
+            "data-type-params": [
+                50
+            ],
+            "data-value": null,
+            "is-index": true,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": true,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Select hydro",
+                "sw": "Select hydro"
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": {
+                "name": "hydro",
+                "type": "belongsTo",
+                "params": [
+                    "App\\Models\\Hydro",
+                    "hydro_ID"
+                ],
+                "field": "id"
+            },
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "hydro_ID",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The hydro of the model.",
+                "sw": "The hydro of the model."
+            }
+        },
+        {
+            "name": "clicom_ID",
+            "labels": {
+                "en": "Clicom",
+                "sw": "Clicom"
+            },
+            "html-type": "select",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "required",
+            "is-on-index": true,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "string",
+            "data-type-params": [
+                50
+            ],
+            "data-value": null,
+            "is-index": true,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": true,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Select clicom",
+                "sw": "Select clicom"
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": {
+                "name": "clicom",
+                "type": "belongsTo",
+                "params": [
+                    "App\\Models\\Clicom",
+                    "clicom_ID"
+                ],
+                "field": "id"
+            },
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "clicom_ID",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The clicom of the model.",
+                "sw": "The clicom of the model."
+            }
+        },
+        {
+            "name": "hist_ID",
+            "labels": {
+                "en": "Hist",
+                "sw": "Hist"
+            },
+            "html-type": "select",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "required",
+            "is-on-index": true,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "string",
+            "data-type-params": [
+                50
+            ],
+            "data-value": null,
+            "is-index": true,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": true,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Select hist",
+                "sw": "Select hist"
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": {
+                "name": "hist",
+                "type": "belongsTo",
+                "params": [
+                    "App\\Models\\Hist",
+                    "hist_ID"
+                ],
+                "field": "id"
+            },
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "hist_ID",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The hist of the model.",
+                "sw": "The hist of the model."
+            }
+        },
+        {
+            "name": "begin",
+            "labels": {
+                "en": "Begin",
+                "sw": "Begin"
+            },
+            "html-type": "text",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "required|string|min:1|max:30",
+            "is-on-index": true,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "string",
+            "data-type-params": [
+                30
+            ],
+            "data-value": null,
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter begin here...",
+                "sw": "Enter begin here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "begin",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The begin of the model.",
+                "sw": "The begin of the model."
+            }
+        },
+        {
+            "name": "end",
+            "labels": {
+                "en": "End",
+                "sw": "End"
+            },
+            "html-type": "text",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "required|string|min:1|max:30",
+            "is-on-index": true,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "string",
+            "data-type-params": [
+                30
+            ],
+            "data-value": null,
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter end here...",
+                "sw": "Enter end here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "end",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The end of the model.",
+                "sw": "The end of the model."
+            }
+        },
+        {
+            "name": "name",
+            "labels": {
+                "en": "Name",
+                "sw": "Name"
+            },
+            "html-type": "text",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "required|string|min:1|max:25",
+            "is-on-index": true,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "string",
+            "data-type-params": [
+                25
+            ],
+            "data-value": null,
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": false,
+            "is-header": true,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter name here...",
+                "sw": "Enter name here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "name",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The name of the model.",
+                "sw": "The name of the model."
+            }
+        },
+        {
+            "name": "qual",
+            "labels": {
+                "en": "Qual",
+                "sw": "Qual"
+            },
+            "html-type": "text",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "required|string|min:1|max:25",
+            "is-on-index": true,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "string",
+            "data-type-params": [
+                25
+            ],
+            "data-value": null,
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter qual here...",
+                "sw": "Enter qual here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "qual",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The qual of the model.",
+                "sw": "The qual of the model."
+            }
+        },
+        {
+            "name": "district_id",
+            "labels": {
+                "en": "District",
+                "sw": "District"
+            },
+            "html-type": "select",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "required",
+            "is-on-index": true,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "int",
+            "data-type-params": [],
+            "data-value": null,
+            "is-index": true,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": true,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Select district",
+                "sw": "Select district"
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": {
+                "name": "district",
+                "type": "belongsTo",
+                "params": [
+                    "App\\Models\\District",
+                    "district_id"
+                ],
+                "field": "name"
+            },
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "district_id",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The district of the model.",
+                "sw": "The district of the model."
+            }
+        },
+        {
+            "name": "basin_id",
+            "labels": {
+                "en": "Basin",
+                "sw": "Basin"
+            },
+            "html-type": "select",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "required",
+            "is-on-index": true,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "int",
+            "data-type-params": [],
+            "data-value": null,
+            "is-index": true,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": true,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Select basin",
+                "sw": "Select basin"
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": {
+                "name": "basin",
+                "type": "belongsTo",
+                "params": [
+                    "App\\Models\\Basin",
+                    "basin_id"
+                ],
+                "field": "name"
+            },
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "basin_id",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The basin of the model.",
+                "sw": "The basin of the model."
+            }
+        },
+        {
+            "name": "river_distance",
+            "labels": {
+                "en": "River Distance",
+                "sw": "River Distance"
+            },
+            "html-type": "text",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "required|string|min:1|max:5",
+            "is-on-index": true,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "string",
+            "data-type-params": [
+                5
+            ],
+            "data-value": null,
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter river distance here...",
+                "sw": "Enter river distance here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "river_distance",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The river distance of the model.",
+                "sw": "The river distance of the model."
+            }
+        },
+        {
+            "name": "full_name",
+            "labels": {
+                "en": "Full Name",
+                "sw": "Full Name"
+            },
+            "html-type": "text",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "required|string|min:1|max:50",
+            "is-on-index": true,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "string",
+            "data-type-params": [
+                50
+            ],
+            "data-value": null,
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter full name here...",
+                "sw": "Enter full name here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "full_name",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The full name of the model.",
+                "sw": "The full name of the model."
+            }
+        },
+        {
+            "name": "historic_name",
+            "labels": {
+                "en": "Historic Name",
+                "sw": "Historic Name"
+            },
+            "html-type": "text",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "required|string|min:1|max:70",
+            "is-on-index": true,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "string",
+            "data-type-params": [
+                70
+            ],
+            "data-value": null,
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter historic name here...",
+                "sw": "Enter historic name here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "historic_name",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The historic name of the model.",
+                "sw": "The historic name of the model."
+            }
+        },
+        {
+            "name": "remark",
+            "labels": {
+                "en": "Remark",
+                "sw": "Remark"
+            },
+            "html-type": "text",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "required|string|min:1|max:100",
+            "is-on-index": true,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "string",
+            "data-type-params": [
+                100
+            ],
+            "data-value": null,
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter remark here...",
+                "sw": "Enter remark here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "remark",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The remark of the model.",
+                "sw": "The remark of the model."
+            }
+        },
+        {
+            "name": "longitude",
+            "labels": {
+                "en": "Longitude",
+                "sw": "Longitude"
+            },
+            "html-type": "text",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "required|string|min:1|max:10",
+            "is-on-index": true,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "string",
+            "data-type-params": [
+                10
+            ],
+            "data-value": null,
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter longitude here...",
+                "sw": "Enter longitude here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "longitude",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The longitude of the model.",
+                "sw": "The longitude of the model."
+            }
+        },
+        {
+            "name": "latitude",
+            "labels": {
+                "en": "Latitude",
+                "sw": "Latitude"
+            },
+            "html-type": "text",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "required|string|min:1|max:10",
+            "is-on-index": true,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "string",
+            "data-type-params": [
+                10
+            ],
+            "data-value": null,
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter latitude here...",
+                "sw": "Enter latitude here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "latitude",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The latitude of the model.",
+                "sw": "The latitude of the model."
+            }
+        },
+        {
+            "name": "elevation",
+            "labels": {
+                "en": "Elevation",
+                "sw": "Elevation"
+            },
+            "html-type": "text",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "required|string|min:1|max:5",
+            "is-on-index": true,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "string",
+            "data-type-params": [
+                5
+            ],
+            "data-value": null,
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter elevation here...",
+                "sw": "Enter elevation here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "elevation",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The elevation of the model.",
+                "sw": "The elevation of the model."
+            }
+        },
+        {
+            "name": "time_deviation",
+            "labels": {
+                "en": "Time Deviation",
+                "sw": "Time Deviation"
+            },
+            "html-type": "text",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "required|string|min:1|max:5",
+            "is-on-index": true,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "string",
+            "data-type-params": [
+                5
+            ],
+            "data-value": null,
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter time deviation here...",
+                "sw": "Enter time deviation here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "time_deviation",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The time deviation of the model.",
+                "sw": "The time deviation of the model."
+            }
+        },
+        {
+            "name": "reference_station_id",
+            "labels": {
+                "en": "Reference Station",
+                "sw": "Reference Station"
+            },
+            "html-type": "select",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "required",
+            "is-on-index": true,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "int",
+            "data-type-params": [],
+            "data-value": null,
+            "is-index": true,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": "ID of the station near the current station",
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": true,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Select reference station",
+                "sw": "Select reference station"
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": {
+                "name": "referenceStation",
+                "type": "belongsTo",
+                "params": [
+                    "App\\Models\\ReferenceStation",
+                    "reference_station_id"
+                ],
+                "field": "seq_no"
+            },
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "reference_station_id",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The reference station of the model.",
+                "sw": "The reference station of the model."
+            }
+        },
+        {
+            "name": "station_type_id",
+            "labels": {
+                "en": "Station Type",
+                "sw": "Station Type"
+            },
+            "html-type": "select",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "required",
+            "is-on-index": true,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "int",
+            "data-type-params": [],
+            "data-value": null,
+            "is-index": true,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": true,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Select station type",
+                "sw": "Select station type"
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": {
+                "name": "stationType",
+                "type": "belongsTo",
+                "params": [
+                    "App\\Models\\StationType",
+                    "station_type_id"
+                ],
+                "field": "name"
+            },
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "station_type_id",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The station type of the model.",
+                "sw": "The station type of the model."
+            }
+        },
+        {
+            "name": "status",
+            "labels": {
+                "en": "Status",
+                "sw": "Status"
+            },
+            "html-type": "checkbox",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "boolean",
+            "is-on-index": true,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "bool",
+            "data-type-params": [],
+            "data-value": "1",
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": false,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter status here...",
+                "sw": "Enter status here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "status",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The status of the model.",
+                "sw": "The status of the model."
+            }
+        },
+        {
+            "name": "is_deleted",
+            "labels": {
+                "en": "Is Deleted",
+                "sw": "Is Deleted"
+            },
+            "html-type": "checkbox",
+            "css-class": "",
+            "options": {
+                "en": {
+                    "0": "No",
+                    "1": "Yes"
+                },
+                "sw": {
+                    "0": "No",
+                    "1": "Yes"
+                }
+            },
+            "html-value": null,
+            "validation": "boolean",
+            "is-on-index": true,
+            "is-on-show": true,
+            "is-on-form": true,
+            "data-type": "bool",
+            "data-type-params": [],
+            "data-value": "0",
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": true,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "",
+            "cast-as": "",
+            "placeholder": {},
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "is_deleted",
+            "is-api-visible": true,
+            "api-description": {
+                "en": "The is deleted of the model.",
+                "sw": "The is deleted of the model."
+            }
+        },
+        {
+            "name": "created_at",
+            "labels": {
+                "en": "Created At",
+                "sw": "Created At"
+            },
+            "html-type": "text",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "",
+            "is-on-index": false,
+            "is-on-show": true,
+            "is-on-form": false,
+            "data-type": "timestamp",
+            "data-type-params": [],
+            "data-value": "NULL",
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": true,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "j/n/Y g:i A",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter created at here...",
+                "sw": "Enter created at here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "created_at",
+            "is-api-visible": false,
+            "api-description": {
+                "en": "The created at of the model.",
+                "sw": "The created at of the model."
+            }
+        },
+        {
+            "name": "updated_at",
+            "labels": {
+                "en": "Updated At",
+                "sw": "Updated At"
+            },
+            "html-type": "text",
+            "css-class": "",
+            "options": {},
+            "html-value": null,
+            "validation": "",
+            "is-on-index": false,
+            "is-on-show": true,
+            "is-on-form": false,
+            "data-type": "timestamp",
+            "data-type-params": [],
+            "data-value": "NULL",
+            "is-index": false,
+            "is-unique": false,
+            "is-primary": false,
+            "comment": null,
+            "is-nullable": true,
+            "is-header": false,
+            "is-unsigned": false,
+            "is-auto-increment": false,
+            "is-inline-options": false,
+            "is-date": false,
+            "date-format": "j/n/Y g:i A",
+            "cast-as": "",
+            "placeholder": {
+                "en": "Enter updated at here...",
+                "sw": "Enter updated at here..."
+            },
+            "delimiter": "; ",
+            "range": [],
+            "foreign-relation": null,
+            "foreign-constraint": null,
+            "on-store": null,
+            "on-update": null,
+            "api-key": "updated_at",
+            "is-api-visible": false,
+            "api-description": {
+                "en": "The updated at of the model.",
+                "sw": "The updated at of the model."
+            }
+        }
+    ],
+    "relations": [],
+    "indexes": [],
+    "auto-manage-created-and-updated-at": true,
+    "table-name": "stations",
+    "protection": {
+        "is-model-protected": false,
+        "is-controller-protected": false,
+        "is-api-resource-protected": false,
+        "is-api-resource-collection-protected": false,
+        "is-api-documentation-protected": false,
+        "is-api-documentation-controller-protected": false,
+        "is-form-request-protected": false,
+        "is-languages-protected": false,
+        "is-form-view-protected": false,
+        "is-index-view-protected": false,
+        "is-create-view-protected": false,
+        "is-edit-view-protected": false,
+        "is-show-view-protected": false
+    },
+    "api-documentation": {
+        "access_token_with_bearer": {
+            "en": "The access token prefixed with the \"Bearer \" key word.",
+            "sw": "The access token prefixed with the \"Bearer \" key word."
+        },
+        "index_route_description": {
+            "en": "Retrieve existing stations.",
+            "sw": "Retrieve existing stations."
+        },
+        "index_route_response_description": {
+            "en": "The API's response will be JSON based data. The JSON object will be structured as follow",
+            "sw": "The API's response will be JSON based data. The JSON object will be structured as follow"
+        },
+        "the_key_is_the_model_property_and_the_value_is_the_model_value": {
+            "en": "The array's key is the station property name where the value is the assigned value to the retrieved station.",
+            "sw": "The array's key is the station property name where the value is the assigned value to the retrieved station."
+        },
+        "link_to_retrieve_first_page": {
+            "en": "Link to retrieve first page.",
+            "sw": "Link to retrieve first page."
+        },
+        "link_to_retrieve_last_page": {
+            "en": "Link to retrieve last page.",
+            "sw": "Link to retrieve last page."
+        },
+        "link_to_retrieve_previous_page": {
+            "en": "Link to retrieve previous page.",
+            "sw": "Link to retrieve previous page."
+        },
+        "link_to_retrieve_next_page": {
+            "en": "Link to retrieve next page.",
+            "sw": "Link to retrieve next page."
+        },
+        "the_number_of_current_page": {
+            "en": "The number of current page.",
+            "sw": "The number of current page."
+        },
+        "the_index_of_the_first_retrieved_item": {
+            "en": "The index of first retrieved station.",
+            "sw": "The index of first retrieved station."
+        },
+        "the_number_of_the_last_page": {
+            "en": "The number of the last page.",
+            "sw": "The number of the last page."
+        },
+        "the_base_link_to_the_resource": {
+            "en": "The base link to the api resource.",
+            "sw": "The base link to the api resource."
+        },
+        "the_number_of_models_per_page": {
+            "en": "The number of stations per page.",
+            "sw": "The number of stations per page."
+        },
+        "the_index_of_the_last_retrieved_item": {
+            "en": "The index of last retrieved station.",
+            "sw": "The index of last retrieved station."
+        },
+        "the_total_of_available_pages": {
+            "en": "The total of the available pages.",
+            "sw": "The total of the available pages."
+        },
+        "store_route_description": {
+            "en": "Create new station.",
+            "sw": "Create new station."
+        },
+        "store_route_response_description": {
+            "en": "The API's response will be JSON based data. The JSON object will be structured as follow",
+            "sw": "The API's response will be JSON based data. The JSON object will be structured as follow"
+        },
+        "update_route_description": {
+            "en": "Update existsing station.",
+            "sw": "Update existsing station."
+        },
+        "update_route_response_description": {
+            "en": "The API's response will be JSON based data. The JSON object will be structured as follow",
+            "sw": "The API's response will be JSON based data. The JSON object will be structured as follow"
+        },
+        "show_route_description": {
+            "en": "Retrieve existsing station.",
+            "sw": "Retrieve existsing station."
+        },
+        "show_route_response_description": {
+            "en": "The API's response will be JSON based data. The JSON object will be structured as follow",
+            "sw": "The API's response will be JSON based data. The JSON object will be structured as follow"
+        },
+        "the_id_of_model_to_retrieve": {
+            "en": "The unique id of the station to retrieve",
+            "sw": "The unique id of the station to retrieve"
+        },
+        "destroy_route_description": {
+            "en": "Delete existsing station.",
+            "sw": "Delete existsing station."
+        },
+        "destroy_route_response_description": {
+            "en": "The API's response will be JSON based data. The JSON object will be structured as follow",
+            "sw": "The API's response will be JSON based data. The JSON object will be structured as follow"
+        },
+        "the_id_of_model_to_delete": {
+            "en": "The id of the station to delete.",
+            "sw": "The id of the station to delete."
+        },
+        "general_description": {
+            "en": "Allows you to list, create, edit, show and delete stations.",
+            "sw": "Allows you to list, create, edit, show and delete stations."
+        },
+        "indicate_whether_the_request_was_successful_or_not": {
+            "en": "Indicate whether the request was successful or not.",
+            "sw": "Indicate whether the request was successful or not."
+        },
+        "the_id_of_the_model": {
+            "en": "The id of the station.",
+            "sw": "The id of the station."
+        },
+        "this_parameter_must_be_present_in_the_request": {
+            "en": "This parameter must be present in the request.",
+            "sw": "This parameter must be present in the request."
+        },
+        "the_request_failed_validation": {
+            "en": "The request failed validation.",
+            "sw": "The request failed validation."
+        },
+        "list_of_the_invalid_errors": {
+            "en": "List of the invalid errors.",
+            "sw": "List of the invalid errors."
+        },
+        "the_requested_model_does_not_exists": {
+            "en": "The requested station does not exists.",
+            "sw": "The requested station does not exists."
+        },
+        "the_user_does_not_have_permission_to_access_the_requested_resource": {
+            "en": "User does not have permission to access the requested resource.",
+            "sw": "User does not have permission to access the requested resource."
+        }
+    }
+}
