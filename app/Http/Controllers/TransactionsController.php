@@ -12,6 +12,8 @@ use App\Models\Business;
 use App\Models\Item;
 use App\Models\Unit;
 
+use Auth;
+
 use Exception;
 
 class TransactionsController extends Controller
@@ -33,7 +35,13 @@ class TransactionsController extends Controller
      */
     public function index()
     {
-        $transactions = Transaction::with("transactionType","transactionCategory")->where("status",1)->where("is_deleted",0)->get();
+
+        $transactions = [];
+        if (Auth::user()->hasRole("Admin")) {
+            $transactions = Transaction::with("transactionType","transactionCategory","user")->where("status",1)->where("is_deleted",0)->paginate(25);
+        } else {
+            $transactions = Transaction::with("transactionType","transactionCategory","user")->where("user_id",auth()->user()->id)->where("status",1)->where("is_deleted",0)->paginate(25);
+        }
     
         return view('admin.transactions.transactions.index', compact('transactions'));
     }
@@ -116,6 +124,7 @@ class TransactionsController extends Controller
                 'value' => $request->get("value"),
                 'quantity' => $request->get("quantity"),
                 'date' => $request->get("date"),
+                'user_id' => auth()->user()->id,
                 'description' => $request->get("description")
             ]);
       

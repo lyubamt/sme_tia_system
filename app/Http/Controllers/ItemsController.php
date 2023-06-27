@@ -29,9 +29,9 @@ class ItemsController extends Controller
     {
         $items = [];
         if (Auth::user()->hasRole("Admin")) {
-            $items = Item::where("status",1)->where("is_deleted",0)->paginate(25);
+            $items = Item::with("user")->where("status",1)->where("is_deleted",0)->paginate(25);
         } else {
-            $items = Item::where("user_id",auth()->user()->id)->where("status",1)->where("is_deleted",0)->paginate(25);
+            $items = Item::with("user")->where("user_id",auth()->user()->id)->where("status",1)->where("is_deleted",0)->paginate(25);
         }
         
 

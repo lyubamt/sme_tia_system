@@ -29,9 +29,9 @@ class UnitsController extends Controller
     {
         $units = [];
         if (Auth::user()->hasRole("Admin")) {
-            $units = Unit::where("status",1)->where("is_deleted",0)->paginate(25);
+            $units = Unit::with("user")->where("status",1)->where("is_deleted",0)->paginate(25);
         } else {
-            $units = Unit::where("user_id",auth()->user()->id)->where("status",1)->where("is_deleted",0)->paginate(25);
+            $units = Unit::with("user")->where("user_id",auth()->user()->id)->where("status",1)->where("is_deleted",0)->paginate(25);
         }
 
         return view('admin.units.units.index', compact('units'));

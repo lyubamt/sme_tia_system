@@ -39,7 +39,8 @@ class  Transaction extends Model
         'description',
         'parent_id',
         'status',
-        'is_deleted'
+        'is_deleted',
+        'user_id'
     ];
 
     /**
@@ -82,6 +83,10 @@ class  Transaction extends Model
 
     public function unit(){
         return $this->belongsTo("App\Models\Unit", "unit_id");
+    }
+
+    public function user(){
+        return $this->belongsTo("App\Models\User", "user_id");
     }
 
 
