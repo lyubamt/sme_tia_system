@@ -16,9 +16,9 @@
 </div>
 
 <div class="form-group {{ $errors->has('symbol') ? 'has-error' : '' }}">
-    <label for="symbol" class="col-md-2 control-label">Symbol</label>
+    <label for="symbol" class="col-md-2 control-label">Abbreviation</label>
     <div class="col-md-10">
-        <input class="form-control" name="symbol" type="text" id="symbol" value="{{ old('symbol', optional($unit)->symbol) }}" minlength="1" maxlength="20" required="true" placeholder="Enter symbol here...">
+        <input class="form-control" name="symbol" type="text" id="symbol" value="{{ old('symbol', optional($unit)->symbol) }}" minlength="1" maxlength="20" required="true" placeholder="Enter abbreviation here...">
         {!! $errors->first('symbol', '<p class="help-block">:message</p>') !!}
     </div>
 </div>

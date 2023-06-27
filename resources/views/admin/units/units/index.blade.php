@@ -47,7 +47,7 @@ Units
                             <th>SN</th>
                             <th>{{ trans('units.name') }}</th>
                             <th>Description</th>
-                            <th>Symbol</th>
+                            <th>Abbreviation</th>
                             <th>Business Owner</th>
 
                             <th></th>
