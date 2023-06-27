@@ -9,6 +9,7 @@ use App\Models\TransactionType;
 
 use App\Models\Transaction;
 use App\Models\Business;
+use App\Models\BusinessOwner;
 use App\Models\Item;
 use App\Models\Unit;
 
