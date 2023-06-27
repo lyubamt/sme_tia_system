@@ -315,7 +315,7 @@
 
                         <option value="" style="display: none;" disabled selected>Choose gender</option>
 
-                            @foreach (['MALE' => 'MALE', 'FEMALE' => 'FEMALE'] as $key => $gender)
+                            @foreach (['Male' => 'Male', 'Female' => 'Female'] as $key => $gender)
 
                                 <option value="{{ $key }}">{{ $gender }}</option>
 

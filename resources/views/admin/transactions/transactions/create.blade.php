@@ -95,7 +95,7 @@ Add Transaction
                         }else{
 
 
-                            $("#parent_id").html('<option value="" style="display: none;" disabled selected>Select parent category</option>' + data.categories_options + '<option value="0">NONE</option>');
+                            $("#parent_id").html('<option value="" style="display: none;" disabled selected>Select parent category</option>' + data.categories_options);
 
                             $("#item_id").html('<option value="" style="display: none;" disabled selected>Select entry item</option>' + data.items_options);
 
