@@ -144,6 +144,7 @@
       .page-wrapper{
         padding-top: 30px;
         padding-bottom: 30px;
+        overflow:   auto;
       }
       .header-container{
         margin: 0px 0px 23px 0px;
