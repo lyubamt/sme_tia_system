@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ItemsFormRequest;
 use App\Models\Item;
+use Auth;
 use Exception;
 
 class ItemsController extends Controller
@@ -26,7 +27,13 @@ class ItemsController extends Controller
      */
     public function index()
     {
-        $items = Item::where("status",1)->where("is_deleted",0)->paginate(25);
+        $items = [];
+        if (Auth::user()->hasRole("Admin")) {
+            $items = Item::where("status",1)->where("is_deleted",0)->paginate(25);
+        } else {
+            $items = Item::where("user_id",auth()->user()->id)->where("status",1)->where("is_deleted",0)->paginate(25);
+        }
+        
 
         return view('admin.items.items.index', compact('items'));
     }

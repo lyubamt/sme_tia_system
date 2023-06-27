@@ -131,3 +131,11 @@
         {!! $errors->first('is_deleted', '<p class="help-block">:message</p>') !!}
     </div>
 </div>
+
+<div hidden class="form-group {{ $errors->has('user_id') ? 'has-error' : '' }}">
+    <label for="user_id" class="col-md-2 control-label">User ID</label>
+    <div class="col-md-10">
+        <input class="form-control" name="user_id" type="text" id="user_id" value="{{ (isset(optional($item)->user_id))?optional($item)->user_id:auth()->user()->id }}" minlength="1" maxlength="20" required="true" placeholder="{{ trans('units.user_id__placeholder') }}">
+        {!! $errors->first('user_id', '<p class="help-block">:message</p>') !!}
+    </div>
+</div>

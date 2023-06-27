@@ -29,6 +29,7 @@ class UnitsFormRequest extends FormRequest
             'description' => 'nullable',
             'symbol' => 'required',
             'status' => 'boolean',
+            'user_id' => 'required',
             'is_deleted' => 'boolean|nullable',
         ];
 
@@ -43,7 +44,7 @@ class UnitsFormRequest extends FormRequest
      */
     public function getData()
     {
-        $data = $this->only(['name', 'description', 'symbol', 'status', 'is_deleted']);
+        $data = $this->only(['name', 'description', 'symbol', 'status', 'user_id, 'is_deleted']);
 
         $data['status'] = $this->has('status');
         $data['is_deleted'] = $this->has('is_deleted');

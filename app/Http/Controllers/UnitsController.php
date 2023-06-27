@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\UnitsFormRequest;
 use App\Models\Unit;
+use Auth;
 use Exception;
 
 class UnitsController extends Controller
@@ -26,7 +27,12 @@ class UnitsController extends Controller
      */
     public function index()
     {
-        $units = Unit::where("status",1)->where("is_deleted",0)->paginate(25);
+        $units = [];
+        if (Auth::user()->hasRole("Admin")) {
+            $units = Unit::where("status",1)->where("is_deleted",0)->paginate(25);
+        } else {
+            $units = Unit::where("user_id",auth()->user()->id)->where("status",1)->where("is_deleted",0)->paginate(25);
+        }
 
         return view('admin.units.units.index', compact('units'));
     }
