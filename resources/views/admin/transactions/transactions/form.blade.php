@@ -129,7 +129,7 @@
 
     <div class="form-group col-md-12">
 
-        <input class="form-control" name="date" type="date" id="date" value="{{ old('date', optional($transaction)->date) }}" minlength="1" maxlength="191" required="true">
+        <input class="form-control" name="date" type="date" id="date" value="{{ (isset(optional($transaction)->date))?optional($transaction)->date:date('Y-m-d') }}" minlength="1" maxlength="191" required="true">
 
     </div>
 
