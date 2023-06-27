@@ -252,6 +252,11 @@
 
 				</form>
 
+				<div class="text-center">
+					<h6>Dont have an account?<a href="{{ route('register') }}" class="text-decoration-none">register here</a></h6>
+				
+				</div>
+
 			</div>
 
 		</div>
