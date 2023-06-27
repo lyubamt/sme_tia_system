@@ -32,12 +32,12 @@
 </div>
 
 
-<div class="form-group {{ $errors->has('status') ? 'has-error' : '' }}">
+<div hidden class="form-group {{ $errors->has('status') ? 'has-error' : '' }}">
     <label for="status" class="col-md-2 control-label">Is Active</label>
     <div class="col-md-10">
         <div class="checkbox">
             <label for="status_1">
-            	<input id="status_1" class="" name="status" type="checkbox" value="1" {{ old('status', optional($unit)->status) == '1' ? 'checked' : '' }}>
+            	<input id="status_1" class="" name="status" type="checkbox" value="1" checked>
                 Yes
             </label>
         </div>

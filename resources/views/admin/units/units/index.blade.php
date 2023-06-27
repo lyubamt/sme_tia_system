@@ -48,6 +48,7 @@ Units
                             <th>{{ trans('units.name') }}</th>
                             <th>Description</th>
                             <th>Symbol</th>
+                            <th>Business Owner</th>
 
                             <th></th>
                         </tr>
@@ -64,6 +65,7 @@ Units
                             <td>{{ $unit->name }}</td>
                             <td>{{ $unit->description }}</td>
                             <td>{{ $unit->symbol }}</td>
+                            <td>{{ optional($unit->user)->name }}</td>
 
                             <td>
 

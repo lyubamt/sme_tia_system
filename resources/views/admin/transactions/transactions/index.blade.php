@@ -102,6 +102,7 @@ Transactions
                     <th class="mid-sized-column">Description</th>
                     <th>Type</th>
                     <th>Category</th>
+                    <th>Business Owner</th>
 
                     <th></th>
                 </tr>
@@ -124,6 +125,7 @@ Transactions
                     <td>{{ $transaction->description }}</td>
                     <td>{{ optional($transaction->transactionType)->name }}</td>
                     <td>{{ optional($transaction->transactionCategory)->name }}</td>
+                    <td>{{ optional($transaction->user)->name }}</td>
 
                     <td>
 

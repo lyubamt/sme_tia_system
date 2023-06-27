@@ -62,6 +62,7 @@ Items
                         <th>Is Purchase</th>
                         <th>Is Sale</th>
                         <th>Is Expense</th>
+                        <th>Business Owner</th>
 
                         <th></th>
                     </tr>
@@ -83,6 +84,7 @@ Items
                         <td>{{ ($item->is_purchase == 1)?'Yes':'No' }}</td>
                         <td>{{ ($item->is_sale == 1)?'Yes':'No' }}</td>
                         <td>{{ ($item->is_expense == 1)?'Yes':'No' }}</td>
+                        <td>{{ optional($item->user)->name }}</td>
 
                         <td>
 
