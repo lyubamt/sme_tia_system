@@ -106,8 +106,8 @@ class TransactionsController extends Controller
 
         }
 
-        $items = Item::where('user_id',auth()->user()->id)->get();
-        $units = Unit::where('user_id',auth()->user()->id)->get();
+        $items = Item::where('user_id',auth()->user()->id)->where("status",1)->where("is_deleted",0)->get();
+        $units = Unit::where('user_id',auth()->user()->id)->where("status",1)->where("is_deleted",0)->get();
 
         return view('admin.transactions.transactions.create',compact("transaction_types","businesses","items","units"));
     }
