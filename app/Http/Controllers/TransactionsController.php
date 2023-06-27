@@ -91,9 +91,22 @@ class TransactionsController extends Controller
     {
 
         $transaction_types = TransactionType::all();
-        $businesses = Business::all();
-        $items = Item::all();
-        $units = Unit::all();
+
+        $owns = BusinessOwner::where("user_id",auth()->user()->id)->where("is_deleted",0)->where("status",1)->get();
+        $businesses = [];
+        if (count($owns) > 0) {
+
+          foreach ($owns as $own) {
+            $business = Business::with("businessOwners","currency","businessCategory")->where("status",1)->where("is_deleted",0)->find($own->business_id);
+            if ($business) {
+              array_push($businesses,$business);
+            }
+          }
+
+        }
+
+        $items = Item::where('user_id',auth()->user()->id)->get();
+        $units = Unit::where('user_id',auth()->user()->id)->get();
 
         return view('admin.transactions.transactions.create',compact("transaction_types","businesses","items","units"));
     }
