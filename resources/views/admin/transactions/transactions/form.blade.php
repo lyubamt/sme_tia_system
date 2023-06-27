@@ -84,7 +84,7 @@
 
     <div class="form-group col-md-6 text-left">
 
-        <h5>Choose unit</h5>
+        <h5>Choose unit of measurement</h5>
 
         <select class="form-control" name="unit_id" id="unit_id" required="true" >
 
@@ -110,25 +110,29 @@
 
     <div class="form-group col-md-6">
 
-        <input class="form-control" name="value" type="text" id="value" value="{{ old('value', optional($transaction)->value) }}" minlength="1" maxlength="191" required="true" placeholder="value">
+        <h5>Cost per item</h5>
+        <input class="form-control" name="value" type="text" id="value" value="{{ old('value', optional($transaction)->value) }}" minlength="1" maxlength="191" required="true" placeholder="Cost per item">
 
     </div>
 
     <div class="form-group col-md-6">
 
-        <input class="form-control" name="quantity" type="text" id="quantity" value="{{ old('quantity', optional($transaction)->quantity) }}" minlength="1" maxlength="191" required="true" placeholder="Quantity">
+        <h5>Total items</h5>
+        <input class="form-control" name="quantity" type="text" id="quantity" value="{{ old('quantity', optional($transaction)->quantity) }}" minlength="1" maxlength="191" required="true" placeholder="Total items">
 
     </div>
     
 
     <div class="form-group col-md-12">
 
+        <h5>Description</h5>
         <textarea class="form-control" name="description" id="description" cols="30" rows="10" placeholder="Description">{{ old('name', optional($transaction)->description) }}</textarea>
 
     </div>
 
     <div class="form-group col-md-12">
 
+        <h5>Date</h5>
         <input class="form-control" name="date" type="date" id="date" value="{{ (isset(optional($transaction)->date))?optional($transaction)->date:date('Y-m-d') }}" minlength="1" maxlength="191" required="true">
 
     </div>
