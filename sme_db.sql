@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 26, 2023 at 09:17 AM
+-- Generation Time: Jun 27, 2023 at 07:35 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -50,9 +50,8 @@ CREATE TABLE `businesses` (
 --
 
 INSERT INTO `businesses` (`id`, `business_category_id`, `business_type`, `name`, `physical_address`, `email`, `phone`, `website`, `currency_id`, `certificate`, `geo_tag`, `status`, `is_deleted`, `created_at`, `updated_at`) VALUES
-(1, 1, 1, 'Agro Business', 'Box 2576', 'agro@gmail.com', '12334567', NULL, 1, NULL, NULL, 1, 1, '2023-06-23 08:04:50', '2023-06-25 09:12:05'),
-(2, 1, 1, 'Agro Business', 'Box 2576', 'agro@gmail.com', '12334567', NULL, 1, NULL, NULL, 1, 0, '2023-06-23 08:54:37', '2023-06-23 08:54:37'),
-(3, 2, 2, 'Kukus TZ', 'Box 2576', 'kukus@gmail.com', '07666777888', 'kukus@gmail.com', 1, '1687630632-SME SRS_2023_06_16.docx', 'Kuku TZ', 1, 0, '2023-06-24 15:17:12', '2023-06-24 15:23:10');
+(1, 1, 1, 'Eat with Isaac', 'Box 2576', 'eatwithisac@gmail.com', '07666777888', NULL, 1, '1687853141-application.png', NULL, 1, 0, '2023-06-27 05:05:41', '2023-06-27 05:05:41'),
+(2, 1, 1, 'Agro Business', 'Box 2576', 'agro@gmail.com', '12334567', NULL, 1, '1687883455-coa.png', NULL, 1, 0, '2023-06-27 13:30:55', '2023-06-27 13:30:55');
 
 -- --------------------------------------------------------
 
@@ -101,9 +100,8 @@ CREATE TABLE `business_owners` (
 --
 
 INSERT INTO `business_owners` (`id`, `business_id`, `user_id`, `status`, `is_deleted`, `created_at`, `updated_at`) VALUES
-(1, 1, 25, 1, 0, '2023-06-23 08:04:50', '2023-06-23 08:04:50'),
-(2, 2, 26, 1, 0, '2023-06-23 08:54:37', '2023-06-23 08:54:37'),
-(3, 3, 5, 1, 0, '2023-06-24 15:17:12', '2023-06-24 15:17:12');
+(1, 1, 26, 1, 0, '2023-06-27 05:05:41', '2023-06-27 05:05:41'),
+(2, 2, 30, 1, 0, '2023-06-27 13:30:55', '2023-06-27 13:30:55');
 
 -- --------------------------------------------------------
 
@@ -633,7 +631,27 @@ INSERT INTO `logs` (`id`, `description`, `user_id`, `created_at`, `updated_at`) 
 (437, 'User Francis  Mashala has logged out', 18, '2023-06-23 06:40:45', '2023-06-23 06:40:45'),
 (438, 'User Francis M Mashala has logged out', 24, '2023-06-23 08:02:37', '2023-06-23 08:02:37'),
 (439, 'User Francis M Mashala has logged out', 25, '2023-06-23 08:36:36', '2023-06-23 08:36:36'),
-(440, 'User Isaac C Mwita has logged out', 26, '2023-06-23 08:57:50', '2023-06-23 08:57:50');
+(440, 'User Isaac C Mwita has logged out', 26, '2023-06-23 08:57:50', '2023-06-23 08:57:50'),
+(441, 'User Minga Edward has logged out', 5, '2023-06-26 05:34:37', '2023-06-26 05:34:37'),
+(442, 'New user with email \'irene@gmail.com\' has been created', 5, '2023-06-26 05:51:03', '2023-06-26 05:51:03'),
+(443, 'User \'irenes@gmail.com\' has been deleted successfully', 5, '2023-06-26 05:59:01', '2023-06-26 05:59:01'),
+(444, 'User Minga Edward has logged out', 5, '2023-06-26 06:13:47', '2023-06-26 06:13:47'),
+(445, 'User Imani M Matonya has logged out', 29, '2023-06-26 07:19:16', '2023-06-26 07:19:16'),
+(446, 'User Minga Edward has logged out', 5, '2023-06-26 08:37:58', '2023-06-26 08:37:58'),
+(447, 'User Minga Edward has logged out', 5, '2023-06-26 08:38:19', '2023-06-26 08:38:19'),
+(448, 'User Isaac C Mwita has logged out', 26, '2023-06-26 09:31:13', '2023-06-26 09:31:13'),
+(449, 'User Minga Edward has logged out', 5, '2023-06-26 09:32:31', '2023-06-26 09:32:31'),
+(450, 'User Isaac C Mwita has logged out', 26, '2023-06-26 09:39:46', '2023-06-26 09:39:46'),
+(451, 'User Minga Edward has logged out', 5, '2023-06-26 10:01:31', '2023-06-26 10:01:31'),
+(452, 'User Isaac C Mwita has logged out', 26, '2023-06-26 10:28:47', '2023-06-26 10:28:47'),
+(453, 'User Isaac C Mwita has logged out', 26, '2023-06-27 08:17:08', '2023-06-27 08:17:08'),
+(454, 'User Isaac C Mwita has logged out', 26, '2023-06-27 08:36:25', '2023-06-27 08:36:25'),
+(455, 'User Minga Edward has logged out', 5, '2023-06-27 08:36:41', '2023-06-27 08:36:41'),
+(456, 'User Isaac C Mwita has logged out', 26, '2023-06-27 13:01:45', '2023-06-27 13:01:45'),
+(457, 'User Isaac C Mwita has logged out', 26, '2023-06-27 13:12:34', '2023-06-27 13:12:34'),
+(458, 'User Isaac C Mwita has logged out', 26, '2023-06-27 13:25:17', '2023-06-27 13:25:17'),
+(459, 'User Francis M Mashala has logged out', 30, '2023-06-27 13:31:46', '2023-06-27 13:31:46'),
+(460, 'User Isaac C Mwita has logged out', 26, '2023-06-27 14:02:58', '2023-06-27 14:02:58');
 
 -- --------------------------------------------------------
 
@@ -669,6 +687,7 @@ INSERT INTO `model_has_roles` (`role_id`, `model_type`, `model_id`) VALUES
 (19, 'App\\Models\\User', 13),
 (19, 'App\\Models\\User', 20),
 (19, 'App\\Models\\User', 25),
+(19, 'App\\Models\\User', 27),
 (20, 'App\\Models\\User', 21),
 (21, 'App\\Models\\User', 12),
 (21, 'App\\Models\\User', 21);
@@ -1351,14 +1370,6 @@ CREATE TABLE `transactions` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `transactions`
---
-
-INSERT INTO `transactions` (`id`, `business_id`, `transaction_type_id`, `transaction_category_id`, `item_id`, `unit_id`, `value`, `quantity`, `description`, `parent_id`, `date`, `status`, `is_deleted`, `created_at`, `updated_at`) VALUES
-(1, 1, 1, 0, 1, 1, '15000', '2', NULL, NULL, '2023-06-25', 1, 0, '2023-06-25 11:13:22', '2023-06-25 11:22:06'),
-(2, 3, 1, 3, 2, 2, '5000', '3', NULL, NULL, '2023-06-20', 1, 0, '2023-06-25 12:56:16', '2023-06-25 12:56:16');
-
 -- --------------------------------------------------------
 
 --
@@ -1382,9 +1393,37 @@ CREATE TABLE `transaction_categories` (
 --
 
 INSERT INTO `transaction_categories` (`id`, `transaction_type_id`, `name`, `description`, `parent_id`, `status`, `is_deleted`, `created_at`, `updated_at`) VALUES
-(1, 1, 'Fixed', NULL, 0, 1, 0, '2023-06-25 06:53:16', '2023-06-25 09:15:56'),
-(2, 1, 'Current', NULL, 0, 1, 0, '2023-06-25 06:53:59', '2023-06-25 06:53:59'),
-(3, 1, 'Existing', NULL, 1, 1, 0, '2023-06-25 06:54:31', '2023-06-25 06:54:31');
+(1, 1, 'Fixed Assets', NULL, 0, 1, 0, '2023-06-26 07:24:31', '2023-06-26 07:24:31'),
+(2, 1, 'New Fixed Asset', NULL, 1, 1, 0, '2023-06-26 07:25:12', '2023-06-26 07:25:12'),
+(3, 1, 'Cash/Bank', NULL, 2, 1, 0, '2023-06-26 07:26:29', '2023-06-26 07:26:29'),
+(4, 1, 'Credit', NULL, 2, 1, 0, '2023-06-26 07:27:32', '2023-06-26 07:27:32'),
+(5, 1, 'Current Asset', NULL, 0, 1, 0, '2023-06-26 07:28:41', '2023-06-26 07:28:41'),
+(6, 1, 'Stock', NULL, 5, 1, 0, '2023-06-26 07:29:22', '2023-06-26 07:29:22'),
+(7, 2, 'Non Current Liability', NULL, 0, 1, 0, '2023-06-26 07:30:12', '2023-06-26 07:30:12'),
+(8, 2, 'Long Term Loans', NULL, 7, 1, 0, '2023-06-26 07:30:48', '2023-06-26 07:30:48'),
+(9, 2, 'Current Liability', NULL, 0, 1, 0, '2023-06-26 07:31:26', '2023-06-26 07:31:26'),
+(10, 2, 'Bank Overdraft', NULL, 9, 1, 0, '2023-06-26 07:58:07', '2023-06-26 07:58:07'),
+(11, 3, 'Equity', NULL, 0, 1, 0, '2023-06-26 07:58:44', '2023-06-26 07:58:44'),
+(12, 3, 'Cash', NULL, 11, 1, 0, '2023-06-26 07:59:01', '2023-06-26 07:59:01'),
+(13, 3, 'Bank', NULL, 11, 1, 0, '2023-06-26 08:00:48', '2023-06-26 08:00:48'),
+(14, 3, 'Debt/Financing', NULL, 0, 1, 0, '2023-06-26 08:01:31', '2023-06-26 08:01:31'),
+(15, 3, 'Cash', NULL, 14, 1, 0, '2023-06-26 08:02:01', '2023-06-26 08:02:01'),
+(16, 3, 'Bank', NULL, 14, 1, 0, '2023-06-26 08:02:27', '2023-06-26 08:02:27'),
+(17, 3, 'Grant', NULL, 0, 1, 0, '2023-06-26 08:03:28', '2023-06-26 08:03:28'),
+(18, 3, 'Bank', NULL, 17, 1, 0, '2023-06-26 08:03:57', '2023-06-26 08:03:57'),
+(19, 3, 'Cash', NULL, 17, 1, 0, '2023-06-26 08:04:24', '2023-06-26 08:04:24'),
+(20, 4, 'Goods', NULL, 0, 1, 0, '2023-06-26 08:05:00', '2023-06-26 08:05:00'),
+(21, 4, 'Service', NULL, 0, 1, 0, '2023-06-26 08:05:45', '2023-06-26 08:05:45'),
+(22, 4, 'Cash', NULL, 20, 1, 0, '2023-06-26 08:06:53', '2023-06-26 08:06:53'),
+(23, 4, 'Credit', NULL, 20, 1, 0, '2023-06-26 08:07:26', '2023-06-26 08:07:26'),
+(24, 4, 'Cash', NULL, 21, 1, 0, '2023-06-26 08:07:52', '2023-06-26 08:07:52'),
+(25, 4, 'Credit', NULL, 21, 1, 0, '2023-06-26 08:08:16', '2023-06-26 08:08:16'),
+(26, 5, 'Goods', NULL, 0, 1, 0, '2023-06-26 08:08:46', '2023-06-26 08:08:46'),
+(27, 5, 'Service', NULL, 0, 1, 0, '2023-06-26 08:09:04', '2023-06-26 08:09:04'),
+(28, 5, 'Cash', NULL, 26, 1, 0, '2023-06-26 08:09:28', '2023-06-26 08:09:28'),
+(29, 5, 'Credit', NULL, 26, 1, 0, '2023-06-26 08:10:16', '2023-06-26 08:10:16'),
+(30, 5, 'Cash', NULL, 27, 1, 0, '2023-06-26 08:10:42', '2023-06-26 08:10:42'),
+(31, 5, 'Credit', NULL, 27, 1, 0, '2023-06-26 08:11:18', '2023-06-26 08:11:18');
 
 -- --------------------------------------------------------
 
@@ -1394,7 +1433,7 @@ INSERT INTO `transaction_categories` (`id`, `transaction_type_id`, `name`, `desc
 
 CREATE TABLE `transaction_items` (
   `id` int(2) NOT NULL,
-  `name` varchar(20) NOT NULL,
+  `name` varchar(20) DEFAULT NULL,
   `description` text DEFAULT NULL,
   `is_asset` tinyint(1) NOT NULL DEFAULT 0,
   `is_liability` tinyint(1) NOT NULL DEFAULT 0,
@@ -1404,17 +1443,10 @@ CREATE TABLE `transaction_items` (
   `is_expense` tinyint(1) NOT NULL DEFAULT 0,
   `status` tinyint(1) NOT NULL DEFAULT 1,
   `is_deleted` tinyint(1) NOT NULL DEFAULT 0,
+  `user_id` int(10) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `transaction_items`
---
-
-INSERT INTO `transaction_items` (`id`, `name`, `description`, `is_asset`, `is_liability`, `is_capital`, `is_purchase`, `is_sale`, `is_expense`, `status`, `is_deleted`, `created_at`, `updated_at`) VALUES
-(1, 'Azam Cola', 'Azam Cola', 1, 0, 1, 1, 1, 0, 1, 0, '2023-06-25 10:33:31', '2023-06-25 10:33:31'),
-(2, 'Mo Energy', 'Mo Energy', 1, 0, 1, 1, 1, 1, 1, 0, '2023-06-25 10:34:59', '2023-06-26 03:58:07');
 
 -- --------------------------------------------------------
 
@@ -1477,7 +1509,7 @@ INSERT INTO `units` (`id`, `name`, `description`, `symbol`, `status`, `is_delete
 
 CREATE TABLE `users` (
   `id` int(10) UNSIGNED NOT NULL,
-  `name` varchar(191) NOT NULL,
+  `name` varchar(191) DEFAULT NULL,
   `first_name` varchar(191) NOT NULL,
   `middle_name` varchar(191) DEFAULT NULL,
   `last_name` varchar(191) NOT NULL,
@@ -1504,11 +1536,15 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `first_name`, `middle_name`, `last_name`, `gender`, `email`, `email_verified_at`, `password`, `remember_token`, `mobile_phone`, `last_login_time`, `is_logged_in`, `last_active_time`, `last_session_id`, `is_first_time_login`, `last_password_update`, `status`, `is_deleted`, `created_at`, `updated_at`) VALUES
-(5, 'Minga Edward', 'Minga', NULL, 'Edward', 'MALE', 'admin@sme', NULL, '$2y$10$JEawqkLG2BWfPm/QI7seK.kB4skeOgfG1g..E36pgVGPSk.Oc65nO', NULL, '+255789846587', '2023-06-26 06:45:57', 1, '2023-06-26 06:45:57', NULL, 1, NULL, 1, 0, '2021-11-20 18:25:56', '2023-06-26 03:45:57'),
+(5, 'Minga Edward', 'Minga', NULL, 'Edward', 'MALE', 'admin@sme', NULL, '$2y$10$JEawqkLG2BWfPm/QI7seK.kB4skeOgfG1g..E36pgVGPSk.Oc65nO', NULL, '+255789846587', '2023-06-27 11:36:35', 0, '2023-06-27 11:36:35', NULL, 1, NULL, 1, 0, '2021-11-20 18:25:56', '2023-06-27 08:36:41'),
 (12, 'Neema Edward', 'Neema', NULL, 'Edward', 'FEMALE', 'neema@gmail.com', NULL, '$2y$10$XKzmrFxRBp/MpBjTh4PsLuViSBvdPS/tfmQu1UhbazOPEgZ4C2qF6', NULL, '0657112259', '2023-02-01 02:13:36', 0, NULL, NULL, 1, NULL, 0, 0, '2023-01-31 19:33:25', '2023-01-31 23:15:52'),
 (13, 'Dr Jafary S. Chobo', 'Dr. Jafary', 'S', 'Chobo', 'MALE', 'chobo@gmail.com', NULL, '$2y$10$YdQaMlrgDnOLdJHkO.lJNOr9ImxlmmAxvRnNitwlg922zTEmgovG6', NULL, '0674353645', '2023-02-01 01:22:46', 0, NULL, NULL, 1, NULL, 1, 0, '2023-01-31 21:46:19', '2023-01-31 22:32:38'),
 (25, 'Francis M Mashala', 'Francis', 'M', 'Mashala', 'MALE', 'francis.mashala@gmail.com', NULL, '$2y$10$cHnxpIdzd2xmazsXl34H4ulM/l4beJQyiCmgzqh.VkZ8HNX6GcjJC', NULL, '07666777888', NULL, 0, NULL, NULL, 1, NULL, 1, 0, '2023-06-23 08:03:35', '2023-06-23 08:03:35'),
-(26, 'Isaac C Mwita', 'Isaac', 'C', 'Mwita', 'MALE', 'isaac@gmail.com', NULL, '$2y$10$FQCc/ozz3MlSrGx5duqFjORC5SRVv/zCBvHhH2ffEImHbi7WA08wa', NULL, '0762396299', NULL, 0, NULL, NULL, 1, NULL, 1, 0, '2023-06-23 08:52:44', '2023-06-23 08:52:44');
+(26, 'Isaac C Mwita', 'Isaac', 'C', 'Mwita', 'MALE', 'isaac@gmail.com', NULL, '$2y$10$QuTwTZnQvL27Mt4U4XPGTeitDzKeZx0EE08vFx4zTuVkUDtnXHVwy', NULL, '0762396299', '2023-06-27 16:59:50', 0, '2023-06-27 16:59:50', NULL, 1, NULL, 1, 0, '2023-06-23 08:52:44', '2023-06-27 14:02:58'),
+(27, 'Irene C Edward', 'Irene', 'C', 'Edward', 'FEMALE', 'irene@gmail.com', NULL, '$2y$10$njcQmXXyjpQ1NJ5R3qQuZeeaz8F23.AlnV3IpPdk.qkRp9rgVpeZC', NULL, '0657112258', NULL, 0, NULL, NULL, 1, NULL, 1, 0, '2023-06-26 05:51:03', '2023-06-26 05:51:03'),
+(28, 'Irene C Edward', 'Irene', 'C', 'Edward', 'FEMALE', 'irenes@gmail.com', NULL, '$2y$10$rp/qqSw4Bj2pHG7K0DoUUeSxgRhOTbXcD/FxuK/Etv09UIhdkWD/y', NULL, '0657112259', NULL, 0, NULL, NULL, 1, NULL, 0, 1, '2023-06-26 05:58:14', '2023-06-26 05:59:01'),
+(29, 'Imani M Matonya', 'Imani', 'M', 'Matonya', 'MALE', 'matonya@sme', NULL, '$2y$10$5EW73Tom9z3soRC4mnTrjOHfN4D8QNk7h0xK9y9OJoyVCnL9Pf0me', NULL, '0766677766', NULL, 0, NULL, NULL, 1, NULL, 1, 0, '2023-06-26 06:17:55', '2023-06-26 06:17:55'),
+(30, 'Francis M Mashala', 'Francis', 'M', 'Mashala', 'MALE', 'f@sme', NULL, '$2y$10$evPGtCsFkiiSGuv2CaDm/OI3sZWRnfL93rB5H3rIDjnZdrqRzGzUO', NULL, '07666777888', NULL, 0, NULL, NULL, 1, NULL, 1, 0, '2023-06-27 13:30:17', '2023-06-27 13:30:17');
 
 -- --------------------------------------------------------
 
@@ -1626,7 +1662,42 @@ INSERT INTO `user_login_logs` (`id`, `email`, `http_client_ip`, `http_x_forwarde
 (28, 'admin@sme', 'NONE', 'NONE', '::1', 'localhost', 1, 'Already Logged In Account', 0, '2023-06-25 03:40:16', '2023-06-25 03:40:16'),
 (29, 'admin@sme', 'NONE', 'NONE', '::1', 'localhost', 1, 'Logged in successfully', 1, '2023-06-25 03:40:16', '2023-06-25 03:40:16'),
 (30, 'admin@sme', 'NONE', 'NONE', '::1', 'localhost', 1, 'Already Logged In Account', 0, '2023-06-26 03:45:57', '2023-06-26 03:45:57'),
-(31, 'admin@sme', 'NONE', 'NONE', '::1', 'localhost', 1, 'Logged in successfully', 1, '2023-06-26 03:45:57', '2023-06-26 03:45:57');
+(31, 'admin@sme', 'NONE', 'NONE', '::1', 'localhost', 1, 'Logged in successfully', 1, '2023-06-26 03:45:57', '2023-06-26 03:45:57'),
+(32, 'admin@sme', 'NONE', 'NONE', '::1', 'localhost', 0, 'Logged out successfully', 1, '2023-06-26 05:34:36', '2023-06-26 05:34:36'),
+(33, 'admin@sme', 'NONE', 'NONE', '::1', 'localhost', 1, 'Logged in successfully', 1, '2023-06-26 05:41:30', '2023-06-26 05:41:30'),
+(34, 'admin@sme', 'NONE', 'NONE', '::1', 'localhost', 0, 'Logged out successfully', 1, '2023-06-26 06:13:47', '2023-06-26 06:13:47'),
+(35, 'matonya@sme', 'NONE', 'NONE', '::1', 'localhost', 0, 'Logged out successfully', 1, '2023-06-26 07:19:16', '2023-06-26 07:19:16'),
+(36, 'admin@sme', 'NONE', 'NONE', '::1', 'localhost', 1, 'Logged in successfully', 1, '2023-06-26 07:21:09', '2023-06-26 07:21:09'),
+(37, 'admin@sme', 'NONE', 'NONE', '::1', 'localhost', 0, 'Logged out successfully', 1, '2023-06-26 08:37:58', '2023-06-26 08:37:58'),
+(38, 'admin@sme', 'NONE', 'NONE', '::1', 'localhost', 1, 'Logged in successfully', 1, '2023-06-26 08:38:13', '2023-06-26 08:38:13'),
+(39, 'admin@sme', 'NONE', 'NONE', '::1', 'localhost', 0, 'Logged out successfully', 1, '2023-06-26 08:38:19', '2023-06-26 08:38:19'),
+(40, 'isaac@gmail.com', 'NONE', 'NONE', '::1', 'localhost', 1, 'Logged in successfully', 1, '2023-06-26 08:38:31', '2023-06-26 08:38:31'),
+(41, 'isaac@gmail.com', 'NONE', 'NONE', '::1', 'localhost', 0, 'Logged out successfully', 1, '2023-06-26 09:31:13', '2023-06-26 09:31:13'),
+(42, 'admin@sme', 'NONE', 'NONE', '::1', 'localhost', 1, 'Logged in successfully', 1, '2023-06-26 09:31:22', '2023-06-26 09:31:22'),
+(43, 'admin@sme', 'NONE', 'NONE', '::1', 'localhost', 0, 'Logged out successfully', 1, '2023-06-26 09:32:31', '2023-06-26 09:32:31'),
+(44, 'isaac@gmail.com', 'NONE', 'NONE', '::1', 'localhost', 1, 'Logged in successfully', 1, '2023-06-26 09:32:44', '2023-06-26 09:32:44'),
+(45, 'isaac@gmail.com', 'NONE', 'NONE', '::1', 'localhost', 0, 'Logged out successfully', 1, '2023-06-26 09:39:46', '2023-06-26 09:39:46'),
+(46, 'admin@sme', 'NONE', 'NONE', '::1', 'localhost', 1, 'Logged in successfully', 1, '2023-06-26 09:54:11', '2023-06-26 09:54:11'),
+(47, 'admin@sme', 'NONE', 'NONE', '::1', 'localhost', 0, 'Logged out successfully', 1, '2023-06-26 10:01:31', '2023-06-26 10:01:31'),
+(48, 'isaac@gmail.com', 'NONE', 'NONE', '::1', 'localhost', 1, 'Logged in successfully', 1, '2023-06-26 10:01:41', '2023-06-26 10:01:41'),
+(49, 'isaac@gmail.com', 'NONE', 'NONE', '::1', 'localhost', 0, 'Logged out successfully', 1, '2023-06-26 10:28:47', '2023-06-26 10:28:47'),
+(50, 'isaac@gmail.com', 'NONE', 'NONE', '::1', 'localhost', 1, 'Logged in successfully', 1, '2023-06-27 07:50:38', '2023-06-27 07:50:38'),
+(51, 'isaac@gmail.com', 'NONE', 'NONE', '::1', 'localhost', 0, 'Logged out successfully', 1, '2023-06-27 08:17:08', '2023-06-27 08:17:08'),
+(52, 'isaac@gmail.com', 'NONE', 'NONE', '::1', 'localhost', 1, 'Logged in successfully', 1, '2023-06-27 08:17:29', '2023-06-27 08:17:29'),
+(53, 'isaac@gmail.com', 'NONE', 'NONE', '::1', 'localhost', 0, 'Logged out successfully', 1, '2023-06-27 08:36:25', '2023-06-27 08:36:25'),
+(54, 'admin@sme', 'NONE', 'NONE', '::1', 'localhost', 1, 'Logged in successfully', 1, '2023-06-27 08:36:35', '2023-06-27 08:36:35'),
+(55, 'admin@sme', 'NONE', 'NONE', '::1', 'localhost', 0, 'Logged out successfully', 1, '2023-06-27 08:36:41', '2023-06-27 08:36:41'),
+(56, 'isaac@gmail.com', 'NONE', 'NONE', '::1', 'localhost', 1, 'Logged in successfully', 1, '2023-06-27 08:36:53', '2023-06-27 08:36:53'),
+(57, 'isaac@gmail.com', 'NONE', 'NONE', '::1', 'localhost', 1, 'Already Logged In Account', 0, '2023-06-27 10:43:35', '2023-06-27 10:43:35'),
+(58, 'isaac@gmail.com', 'NONE', 'NONE', '::1', 'localhost', 1, 'Logged in successfully', 1, '2023-06-27 10:43:35', '2023-06-27 10:43:35'),
+(59, 'isaac@gmail.com', 'NONE', 'NONE', '::1', 'localhost', 0, 'Logged out successfully', 1, '2023-06-27 13:01:45', '2023-06-27 13:01:45'),
+(60, 'isaac@gmail.com', 'NONE', 'NONE', '::1', 'localhost', 1, 'Logged in successfully', 1, '2023-06-27 13:07:32', '2023-06-27 13:07:32'),
+(61, 'isaac@gmail.com', 'NONE', 'NONE', '::1', 'localhost', 0, 'Logged out successfully', 1, '2023-06-27 13:12:34', '2023-06-27 13:12:34'),
+(62, 'isaac@gmail.com', 'NONE', 'NONE', '::1', 'localhost', 1, 'Logged in successfully', 1, '2023-06-27 13:13:19', '2023-06-27 13:13:19'),
+(63, 'isaac@gmail.com', 'NONE', 'NONE', '::1', 'localhost', 0, 'Logged out successfully', 1, '2023-06-27 13:25:17', '2023-06-27 13:25:17'),
+(64, 'f@sme', 'NONE', 'NONE', '::1', 'localhost', 0, 'Logged out successfully', 1, '2023-06-27 13:31:46', '2023-06-27 13:31:46'),
+(65, 'isaac@gmail.com', 'NONE', 'NONE', '::1', 'localhost', 1, 'Logged in successfully', 1, '2023-06-27 13:59:50', '2023-06-27 13:59:50'),
+(66, 'isaac@gmail.com', 'NONE', 'NONE', '::1', 'localhost', 0, 'Logged out successfully', 1, '2023-06-27 14:02:58', '2023-06-27 14:02:58');
 
 --
 -- Indexes for dumped tables
@@ -1790,7 +1861,7 @@ ALTER TABLE `user_login_logs`
 -- AUTO_INCREMENT for table `businesses`
 --
 ALTER TABLE `businesses`
-  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `business_categories`
@@ -1802,7 +1873,7 @@ ALTER TABLE `business_categories`
 -- AUTO_INCREMENT for table `business_owners`
 --
 ALTER TABLE `business_owners`
-  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `countries`
@@ -1826,7 +1897,7 @@ ALTER TABLE `districts`
 -- AUTO_INCREMENT for table `logs`
 --
 ALTER TABLE `logs`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=441;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=461;
 
 --
 -- AUTO_INCREMENT for table `regions`
@@ -1844,19 +1915,19 @@ ALTER TABLE `system_settings`
 -- AUTO_INCREMENT for table `transactions`
 --
 ALTER TABLE `transactions`
-  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `transaction_categories`
 --
 ALTER TABLE `transaction_categories`
-  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `transaction_items`
 --
 ALTER TABLE `transaction_items`
-  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `transaction_types`
@@ -1874,7 +1945,7 @@ ALTER TABLE `units`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `user_activity_logs`
@@ -1898,7 +1969,7 @@ ALTER TABLE `user_lock_logs`
 -- AUTO_INCREMENT for table `user_login_logs`
 --
 ALTER TABLE `user_login_logs`
-  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
