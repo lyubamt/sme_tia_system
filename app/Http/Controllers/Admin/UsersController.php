@@ -148,7 +148,9 @@ class UsersController extends Controller
       try {
 
         $this->validate($request, [
-            'name' => 'required|min:2',
+            'first_name' => 'required|min:2',
+            'middle_name' => 'required|min:1',
+            'last_name' => 'required|min:2',
             'gender' => 'required|min:4',
             'email' => 'required|email|unique:users',
             'mobile_phone' => 'required|min:1',
@@ -166,22 +168,23 @@ class UsersController extends Controller
 
         $added_user = User::where('email',$email)->first();
         $added_user->update([
+          'name'=> $request->get("first_name") ." ".$request->get("middle_name"). " ".$request->get("last_name"),
           'password'=> $root_password
         ]);
 
-        if (count($db_connections) > 0) {
+        // if (count($db_connections) > 0) {
 
-          foreach ($db_connections as $db_connection) {
+        //   foreach ($db_connections as $db_connection) {
 
-            UserDatabase::create([
-              'user_id' => $added_user->id,
-              'email' => $email,
-              'name' => $db_connection,
-            ]);
+        //     UserDatabase::create([
+        //       'user_id' => $added_user->id,
+        //       'email' => $email,
+        //       'name' => $db_connection,
+        //     ]);
 
-          }
+        //   }
 
-        }
+        // }
 
         if ($user) {
 
@@ -234,8 +237,9 @@ class UsersController extends Controller
      *
      * @return Illuminate\View\View
      */
-    public function edit($user)
+    public function edit($id)
     {
+      $user = User::find($id);
         if ($user->is_deleted == 1) {
           return back()
                   ->withErrors(['unexpected_error' => "Sorry, You can not edit information of a deleted user"]);
@@ -253,8 +257,10 @@ class UsersController extends Controller
     * This function is used to edit user roles
     */
 
-    public function edit_role($user)
+    public function edit_role($id)
     {
+
+      $user = User::find($id);
 
       if ($user->is_deleted == 1) {
         return back()
@@ -284,9 +290,11 @@ class UsersController extends Controller
      *
      * @return Illuminate\Http\RedirectResponse | Illuminate\Routing\Redirector
      */
-    public function update($user, Request $request)
+    public function update($id, Request $request)
     {
         try {
+
+          $user = User::find($id);
 
             if ($user->is_deleted == 1) {
               return back()
@@ -294,7 +302,9 @@ class UsersController extends Controller
             }
 
             $this->validate($request, [
-                'name' => 'required|min:2',
+                'first_name' => 'required|min:2',
+                'middle_name' => 'required|min:1',
+                'last_name' => 'required|min:2',
                 'gender' => 'required|min:4',
                 'email' => 'required|email|unique:users,email,' . $user->id,
                 'mobile_phone' => 'required|min:1',
@@ -305,36 +315,39 @@ class UsersController extends Controller
             $email = $request->get("email");
             $db_connections = $request->input('db_connections');
             $user->update([
-              "name"=>$request->get("name"),
+              "name"=>$request->get("first_name") ." ".$request->get("middle_name"). " ".$request->get("last_name"),
+              "first_name"=>$request->get("first_name"),
+              "middle_name"=>$request->get("middle_name"),
+              "last_name"=>$request->get("last_name"),
               "gender"=>$request->get("gender"),
               "email"=>$request->get("email"),
               "mobile_phone"=>$request->get("mobile_phone"),
             ]);
 
-            $previous_assigned_dbs = UserDatabase::where("email",$email)->get();
-            if (count($previous_assigned_dbs) > 0) {
+            // $previous_assigned_dbs = UserDatabase::where("email",$email)->get();
+            // if (count($previous_assigned_dbs) > 0) {
 
-              foreach ($previous_assigned_dbs as $previous_assigned_db) {
+            //   foreach ($previous_assigned_dbs as $previous_assigned_db) {
 
-                $previous_assigned_db->delete();
+            //     $previous_assigned_db->delete();
 
-              }
+            //   }
 
-            }
+            // }
 
-            if (count($db_connections) > 0) {
+            // if (count($db_connections) > 0) {
 
-              foreach ($db_connections as $db_connection) {
+            //   foreach ($db_connections as $db_connection) {
 
-                UserDatabase::create([
-                  'user_id' => $user->id,
-                  'email' => $email,
-                  'name' => $db_connection,
-                ]);
+            //     UserDatabase::create([
+            //       'user_id' => $user->id,
+            //       'email' => $email,
+            //       'name' => $db_connection,
+            //     ]);
 
-              }
+            //   }
 
-            }
+            // }
 
             // LOG
             Authorize::logGeneral("User with email '" . $email . "' has been updated successfully",auth()->user()->id);
@@ -359,9 +372,10 @@ class UsersController extends Controller
      *
      * @return Illuminate\Http\RedirectResponse | Illuminate\Routing\Redirector
      */
-    public function update_role($user, Request $request)
+    public function update_role($id, Request $request)
     {
 
+      $user = User::find($id);
         if ($user->is_deleted == 1) {
           return back()
                   ->withErrors(['unexpected_error' => "Sorry, You can not update role(s) of a deleted user"]);
@@ -408,9 +422,11 @@ class UsersController extends Controller
      *
      * @return Illuminate\Http\RedirectResponse | Illuminate\Routing\Redirector
      */
-    public function destroy($user)
+    public function destroy($id)
     {
         try {
+
+          $user = User::find($id);
             if ( Auth::user()->id == $user->id ) {
 
                 // LOG
@@ -449,9 +465,11 @@ class UsersController extends Controller
         }
     }
 
-    public function recover($user)
+    public function recover($id)
     {
         try {
+
+          $user = User::find($id);
             if ( Auth::user()->id == $user->id) {
 
                 // LOG
@@ -488,9 +506,11 @@ class UsersController extends Controller
         }
     }
 
-    public function lock($user)
+    public function lock($id)
     {
         try {
+
+          $user = User::find($id);
             if ( Auth::user()->id == $user->id) {
 
                 // LOG
@@ -526,9 +546,11 @@ class UsersController extends Controller
         }
     }
 
-    public function unlock($user)
+    public function unlock($id)
     {
         try {
+
+          $user = User::find($id);
             if ( Auth::user()->id == $user->id) {
 
                 // LOG
@@ -564,9 +586,11 @@ class UsersController extends Controller
         }
     }
 
-    public function log_out($user)
+    public function log_out($id)
     {
         try {
+
+          $user = User::find($id);
             if ( Auth::user()->id == $user->id) {
 
                 // LOG
@@ -605,8 +629,10 @@ class UsersController extends Controller
     /**
      * Function for syncing the permissions
      */
-    private function syncPermissions(Request $request, $user)
+    private function syncPermissions(Request $request, $id)
     {
+
+      $user = User::find($id);
         // Get the submitted roles
         $roles = $request->get('roles', []);
         $permissions = $request->get('permissions', []);

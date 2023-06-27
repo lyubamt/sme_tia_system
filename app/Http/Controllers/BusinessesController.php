@@ -10,6 +10,8 @@ use App\Models\BusinessCategory;
 use App\Models\Currency;
 use App\Models\BusinessOwner;
 
+use Auth;
+
 use Exception;
 
 class BusinessesController extends Controller
@@ -31,9 +33,18 @@ class BusinessesController extends Controller
      */
     public function index()
     {
-        $businesses = Business::with("businessOwners","currency","businessCategory")->where("status",1)->where("is_deleted",0)->get();
+        if (auth()->user()->hasRole("Admin")) {
 
-        return view('admin.businesses.businesses.index', compact('businesses'));
+            $businesses = Business::with("businessOwners","currency","businessCategory")->where("status",1)->where("is_deleted",0)->get();
+
+            return view('admin.businesses.businesses.index', compact('businesses'));
+
+        } else {
+            
+            return "Sorry, you do not have permission!";
+
+        }
+    
     }
 
     /**
@@ -44,10 +55,7 @@ class BusinessesController extends Controller
     public function create()
     {
 
-        $business_categories = BusinessCategory::all();
-        $currencies = Currency::all();
-
-        return view('admin.businesses.businesses.create',compact("business_categories","currencies"));
+        return back();
     }
 
     /**
@@ -100,8 +108,9 @@ class BusinessesController extends Controller
             ]);
       
 
-            return redirect()->route('admin.businesses.business.index')
+            return back()
                 ->with('success_message', 'Business has been added successfully');
+
         } catch (Exception $exception) {
 
             return back()->withInput()
@@ -118,6 +127,7 @@ class BusinessesController extends Controller
      */
     public function show($id)
     {
+        return back();
         $business = Business::where("status",1)->where("is_deleted",0)->findOrFail($id);
 
         return view('admin.businesses.businesses.show', compact('business'));
@@ -132,6 +142,7 @@ class BusinessesController extends Controller
      */
     public function edit($id)
     {
+        return back();
         $business = Business::where("status",1)->where("is_deleted",0)->findOrFail($id);
         $business_categories = BusinessCategory::all();
         $currencies = Currency::all();
@@ -165,7 +176,7 @@ class BusinessesController extends Controller
                 'geo_tag' => $request->get("geo_tag")
             ]);
 
-            return redirect()->route('admin.businesses.business.index')
+            return back()
                 ->with('success_message', 'Business has been updated successfully');
         } catch (Exception $exception) {
 

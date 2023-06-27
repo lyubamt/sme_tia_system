@@ -254,7 +254,58 @@ class WebsiteController extends Controller
     }
 
     public function landing(){
-      dd("landing");
+
+      return redirect()->route('login');
+
+    }
+
+    public function choose_business(){
+
+      if (Auth::user()) {
+
+        $owns = BusinessOwner::where("user_id",auth()->user()->id)->where("is_deleted",0)->where("status",1)->get();
+        $businesses = [];
+        if (count($owns) > 0) {
+
+          foreach ($owns as $own) {
+            $business = Business::with("businessOwners","currency","businessCategory")->where("status",1)->where("is_deleted",0)->find($own->business_id);
+            if ($business) {
+              array_push($businesses,$business);
+            }
+          }
+
+        }
+
+        $business_categories = BusinessCategory::all();
+        $currencies = Currency::all();
+
+        return view("admin.landing",compact("businesses","business_categories","currencies"));
+
+      } else {
+
+        return redirect()->route('login');
+
+      }
+      
+
+    }
+
+    public function select_business($businessName,$businessId){
+
+      if (Auth::user()) {
+
+        Session::put('businessName',$businessName);
+        Session::put('businessId',$businessId);
+
+        return redirect()->route('dashboard');
+
+      } else {
+
+        return redirect()->route('login');
+
+      }
+      
+
     }
 
     public function register(){
@@ -409,6 +460,26 @@ class WebsiteController extends Controller
 
       try {
 
+        $certificate = NULL;
+        if($request->hasFile('certificate')) {
+            $file = $request->file('certificate');
+            $certificate = time(). '-' .$file->getClientOriginalName();
+            $certificateArray = explode(".",$certificate);
+
+            if (($certificateArray[count($certificateArray) - 1] == "png") || ($certificateArray[count($certificateArray) - 1] == "jpg") | ($certificateArray[count($certificateArray) - 1] == "jpeg") || ($certificateArray[count($certificateArray) - 1] == "pdf") || ($certificateArray[count($certificateArray) - 1] == "docx")) {
+
+                $destinationPath = 'storage/business/certificates';
+                $file->move($destinationPath,$certificate);
+
+            } else {
+
+                return back()->withInput()
+                    ->withErrors(['unexpected_error' => 'Unsupported file format!']);
+
+            }
+        
+        }
+
         $businessId = Business::create([
           'business_category_id' => $request->get("business_category"),
           'business_type' => $request->get("business_type"),
@@ -418,7 +489,7 @@ class WebsiteController extends Controller
           'phone' => $request->get("b_phone"),
           'website' => $request->get("website"),
           'currency_id' => $request->get("currency"),
-          'certificate' => $request->get("certificate"),
+          'certificate' => $certificate,
           'geo_tag' => $request->get("geo_tag")
         ])->id;
 
@@ -428,13 +499,13 @@ class WebsiteController extends Controller
         ]);
 
 
-        return redirect()->route('dashboard')
+        return redirect()->route('choose_business')
               ->with('success_message','Welcome ' . auth()->user()->name . ', your business registration is complete');
 
 
       } catch (\Exception $e) {
 
-        return redirect()->route('dashboard')
+        return redirect()->route('choose_business')
           ->withErrors(['unexpected_error' => 'Failed to register your business, please try again from the side menu on the left']);
 
       }

@@ -126,6 +126,176 @@ Dashboard
 
   </div>
 
+  <div class="col-md-4">
+      <!-- <a href="#" class="dashboard-column-link"> -->
+          <div class="dashboard-card">
+
+              <div class="row">
+
+                  <div class="col-md-4">
+
+                      <span class="fas fa-boxes fa-3x"></span>
+
+                      <div class="text-center dashboard-card-total-container">
+                        <h4 class="dashboard-card-total-number">0</h4>
+                      </div>
+
+                  </div>
+
+                  <div class="col-md-8 text-left">
+
+                      <h5 class="dashboard-card-title">ASSETS</h5>
+                      <p class="dashboard-card-subtitle">
+                      <b class="dashboard-card-sub-total-number">0</b> Non Current<br>
+                      <b class="dashboard-card-sub-total-number">0</b> Current<br>
+
+                  </div>
+
+              </div>
+              <!--/.dashboard-card-row-->
+
+          </div>
+          <!--/.dashboard-card-->
+      <!-- </a> -->
+
+  </div>
+
+  <div class="col-md-4">
+      <!-- <a href="#" class="dashboard-column-link"> -->
+          <div class="dashboard-card">
+
+              <div class="row">
+
+                  <div class="col-md-4">
+
+                      <span class="fas fa-boxes fa-3x"></span>
+
+                      <div class="text-center dashboard-card-total-container">
+                        <h4 class="dashboard-card-total-number">0</h4>
+                      </div>
+
+                  </div>
+
+                  <div class="col-md-8 text-left">
+
+                      <h5 class="dashboard-card-title">LIABILITIES</h5>
+                      <p class="dashboard-card-subtitle">
+                      <b class="dashboard-card-sub-total-number">0</b> Non Current<br>
+                      <b class="dashboard-card-sub-total-number">0</b> Current<br>
+
+                  </div>
+
+              </div>
+              <!--/.dashboard-card-row-->
+
+          </div>
+          <!--/.dashboard-card-->
+      <!-- </a> -->
+
+  </div>
+
+  <div class="col-md-4">
+      <!-- <a href="#" class="dashboard-column-link"> -->
+          <div class="dashboard-card">
+
+              <div class="row">
+
+                  <div class="col-md-4">
+
+                      <span class="far fa-building fa-3x"></span>
+
+                      <div class="text-center dashboard-card-total-container">
+                        <h4 class="dashboard-card-total-number">0</h4>
+                      </div>
+
+                  </div>
+
+                  <div class="col-md-8 text-left">
+
+                      <h5 class="dashboard-card-title">CAPITAL</h5>
+                      <p class="dashboard-card-subtitle">
+                      <b class="dashboard-card-sub-total-number">0</b> Equity<br>
+                      <b class="dashboard-card-sub-total-number">0</b> Retained Earnings<br>
+
+                  </div>
+
+              </div>
+              <!--/.dashboard-card-row-->
+
+          </div>
+          <!--/.dashboard-card-->
+      <!-- </a> -->
+
+  </div>
+
+  <div class="col-md-4">
+      <!-- <a href="#" class="dashboard-column-link"> -->
+        <div class="dashboard-card">
+
+            <div class="row">
+
+                <div class="col-md-4">
+
+                    <span class="fas fa-money-check-alt fa-3x"></span>
+
+                    <div class="text-center dashboard-card-total-container">
+                      <h4 class="dashboard-card-total-number">0</h4>
+                    </div>
+
+                </div>
+
+                <div class="col-md-8 text-left">
+
+                    <h5 class="dashboard-card-title">SALES</h5>
+                    <p class="dashboard-card-subtitle">
+                    <b class="dashboard-card-sub-total-number">0</b> COGS<br>
+                    <b class="dashboard-card-sub-total-number">0</b> Purchases<br>
+
+                </div>
+
+            </div>
+            <!--/.dashboard-card-row-->
+
+        </div>
+        <!--/.dashboard-card-->
+    <!-- </a> -->
+
+  </div>
+
+  <div class="col-md-4">
+      <!-- <a href="#" class="dashboard-column-link"> -->
+        <div class="dashboard-card">
+
+            <div class="row">
+
+                <div class="col-md-4">
+
+                    <span class="fas fa-clipboard-list fa-3x"></span>
+
+                    <div class="text-center dashboard-card-total-container">
+                      <h4 class="dashboard-card-total-number">0</h4>
+                    </div>
+
+                </div>
+
+                <div class="col-md-8 text-left">
+
+                    <h5 class="dashboard-card-title">EXPENSES</h5>
+                    <p class="dashboard-card-subtitle">
+                    <b class="dashboard-card-sub-total-number">0</b> Expense 1<br>
+                    <b class="dashboard-card-sub-total-number">0</b> Expense 2<br>
+
+                </div>
+
+            </div>
+            <!--/.dashboard-card-row-->
+
+        </div>
+        <!--/.dashboard-card-->
+    <!-- </a> -->
+
+  </div>
+
 </div>
 <!-- /.row -->
 

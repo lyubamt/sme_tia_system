@@ -80,7 +80,7 @@
 
 @endphp
 
-<h4 class="site-name"><b>SME</b></h4>
+<!-- <h4 class="site-name"><b>SME-Business System</b></h4> -->
 
 <!-- navigation-wrapper-large -->
 <div class="side-navigation-large">
@@ -93,6 +93,8 @@
         Dashboard
       </a>
     </li>
+
+    @hasanyrole("Admin")
 
     <li class="side-navigation-item">
       <a class="side-navigation-item-link collapse-btn" href="#" data-toggle="collapse" data-target="#administration-sub-menu" >
@@ -152,6 +154,15 @@
       </a>
     </li>
 
+    <li class="side-navigation-item {{ $active_transaction_categories }}">
+      <a class="side-navigation-item-link" href="{{ route('admin.transaction_categories.transaction_category.index') }}">
+        <i class="fas fa-circle-notch"></i>
+        Categories
+      </a>
+    </li>
+
+    @endhasanyrole
+
     <li class="side-navigation-item {{ $active_items }}">
       <a class="side-navigation-item-link" href="{{ route('admin.items.item.index') }}">
         <i class="fas fa-circle-notch"></i>
@@ -163,13 +174,6 @@
       <a class="side-navigation-item-link" href="{{ route('admin.units.unit.index') }}">
         <i class="fas fa-circle-notch"></i>
         Units
-      </a>
-    </li>
-
-    <li class="side-navigation-item {{ $active_transaction_categories }}">
-      <a class="side-navigation-item-link" href="{{ route('admin.transaction_categories.transaction_category.index') }}">
-        <i class="fas fa-circle-notch"></i>
-        Categories
       </a>
     </li>
 
@@ -196,13 +200,15 @@
         <li class="side-navigation-item {{ $active_profit_and_loss }}">
           <a class="side-navigation-item-link" href="{{ route('admin.reports.report.profit_and_loss') }}">
             <i class="fas fa-circle-notch"></i>
-            Reports
+            Profit & Loss
           </a>
         </li>
 
       </ul>
 
     </li>
+
+    @hasanyrole("Admin")
 
     <li class="side-navigation-item">
       <a class="side-navigation-item-link collapse-btn" href="#" data-toggle="collapse" data-target="#location-sub-menu" >
@@ -234,6 +240,8 @@
       </ul>
 
     </li>
+
+    @endhasanyrole
 
   </ul>
 

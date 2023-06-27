@@ -37,7 +37,8 @@ class Item extends Model
                   'is_sale',
                   'is_expense',
                   'status',
-                  'is_deleted'
+                  'is_deleted',
+                  'user_id'
               ];
 
     /**

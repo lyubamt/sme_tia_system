@@ -19,6 +19,8 @@ Route::post('/change_password', '\App\Http\Controllers\Admin\UsersController@cha
              ->name('admin.user.change_password');
 
 Route::get('/','\App\Http\Controllers\WebsiteController@landing')->name('landing');
+Route::get('/choose_business','\App\Http\Controllers\WebsiteController@choose_business')->name('choose_business');
+Route::get('/select_business/{businessName}/{businessId}','\App\Http\Controllers\WebsiteController@select_business')->name('select_business');
 Route::get('/register','\App\Http\Controllers\WebsiteController@register')->name('register');
 Route::post('/register_external_user','\App\Http\Controllers\WebsiteController@register_external_user')->name('register_external_user');
 
@@ -362,16 +364,22 @@ Route::group([
  ], function () {
      Route::get('/', 'App\Http\Controllers\TransactionsController@index')
           ->name('admin.transactions.transaction.index');
+
      Route::get('/create','App\Http\Controllers\TransactionsController@create')
           ->name('admin.transactions.transaction.create');
+
      Route::get('/show/{transaction}','App\Http\Controllers\TransactionsController@show')
           ->name('admin.transactions.transaction.show')->where('id', '[0-9]+');
+
      Route::get('/{transaction}/edit','App\Http\Controllers\TransactionsController@edit')
           ->name('admin.transactions.transaction.edit')->where('id', '[0-9]+');
+
      Route::post('/', 'App\Http\Controllers\TransactionsController@store')
           ->name('admin.transactions.transaction.store');
+
      Route::put('transaction/{transaction}', 'App\Http\Controllers\TransactionsController@update')
           ->name('admin.transactions.transaction.update')->where('id', '[0-9]+');
+
      Route::delete('/transaction/{transaction}','App\Http\Controllers\TransactionsController@destroy')
           ->name('admin.transactions.transaction.destroy')->where('id', '[0-9]+');
 

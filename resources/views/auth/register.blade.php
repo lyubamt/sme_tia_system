@@ -1,4 +1,4 @@
-@extends('layouts.master_landing')
+@extends('layouts.master_register')
 
 @section("css")
 
@@ -18,6 +18,7 @@
         padding: 60px 80px 50px 80px;
         border: 1px solid #d5e0d5;
         border-radius: 25px;
+        background: #fff;
     }
 
     @media screen and (max-width: 992px) {

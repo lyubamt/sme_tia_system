@@ -34,6 +34,7 @@ class ItemsFormRequest extends FormRequest
             'is_sale' => 'boolean|nullable',
             'is_expense' => 'boolean|nullable',
             'status' => 'boolean',
+            'user_id' => 'required',
             'is_deleted' => 'boolean|nullable',
         ];
 
@@ -48,7 +49,7 @@ class ItemsFormRequest extends FormRequest
      */
     public function getData()
     {
-        $data = $this->only(['name', 'description', 'is_asset', 'is_liability', 'is_capital', 'is_purchase', 'is_sale', 'is_expense', 'status', 'is_deleted']);
+        $data = $this->only(['name', 'description', 'is_asset', 'is_liability', 'is_capital', 'is_purchase', 'is_sale', 'is_expense', 'status', 'user_id', 'is_deleted']);
 
         $data['is_asset'] = $this->has('is_asset');
         $data['is_liability'] = $this->has('is_liability');

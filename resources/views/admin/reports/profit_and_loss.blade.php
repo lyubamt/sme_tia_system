@@ -62,7 +62,7 @@ Profit & Loss
                 </td>
                 <td></td>
                 <td>
-                  <h5>XX</h5>
+                  <h5>1,230</h5>
                 </td>
               </tr>
 
@@ -72,7 +72,7 @@ Profit & Loss
                 </td>
                 <td></td>
                 <td>
-                  <h5>XX</h5>
+                  <h5>1,230</h5>
                 </td>
               </tr>
 
@@ -80,7 +80,7 @@ Profit & Loss
                 <td>
                   <h5 class="inner-item">Opening Stock</h5>
                 </td>
-                <td>XX</td>
+                <td><h5>1,230</h5></td>
                 <td>
                   <h5></h5>
                 </td>
@@ -88,9 +88,9 @@ Profit & Loss
 
               <tr>
                 <td>
-                  <h5 class="inner-item">Opening Stock</h5>
+                  <h5 class="inner-item">Purchases</h5>
                 </td>
-                <td>XX</td>
+                <td><h5>1,230</h5></td>
                 <td>
                   <h5></h5>
                 </td>
@@ -98,11 +98,269 @@ Profit & Loss
 
               <tr>
                 <td>
-                  <h5 class="inner-item">Opening Stock</h5>
+                  <h5 class="inner-item">Closing Stock</h5>
                 </td>
-                <td>(XX)</td>
+                <td>(1,230)</td>
                 <td>
                   <h5></h5>
+                </td>
+              </tr>
+
+              <tr>
+                <td colspan="3">&nbsp;</td>
+              </tr>
+
+            </table>
+            <br>
+            <table class="text-left" width="100%" border="0">
+
+              <tr>
+                <td>
+                  <h5>Gross Profit</h5>
+                </td>
+                <td></td>
+                <td>
+                  <h5>1,230</h5>
+                </td>
+              </tr>
+
+            </table>
+            <br>
+            <table class="text-left" width="100%" border="0">
+
+              <tr>
+                <td>
+                  <h5>Expenses</h5>
+                </td>
+                <td></td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>
+                  <h5 class="inner-item">Expense 1</h5>
+                </td>
+                <td><h5>1,230</h5></td>
+                <td>
+                  <h5></h5>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <h5 class="inner-item">Expense 2</h5>
+                </td>
+                <td><h5>1,230</h5></td>
+                <td>
+                  <h5></h5>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <h5 class="inner-item">Expense 3</h5>
+                </td>
+                <td><h5>(1,230)</h5></td>
+                <td>
+                  <h5></h5>
+                </td>
+              </tr>
+
+              <tr>
+                <td></td>
+                <td></td>
+                <td>
+                  <h5>(1,230)</h5>
+                </td>
+              </tr>
+
+              <tr>
+                <td><h5>Net Profit</h5></td>
+                <td></td>
+                <td>
+                  <h5>1,230</h5>
+                </td>
+              </tr>
+
+              <tr>
+                <td><h5>ASSETS</h5></td>
+                <td></td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td><h5>Non-Current Asset</h5></td>
+                <td></td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>
+                  <h5 class="inner-item">Property Plant and Equipment (PPE)</h5>
+                </td>
+                <td><h5>1,230</h5></td>
+                <td>
+                  <h5></h5>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <h5 class="inner-item">Machinery</h5>
+                </td>
+                <td><h5>1,230</h5></td>
+                <td>
+                  <h5></h5>
+                </td>
+              </tr>
+
+              <tr>
+                <td><h5>Current Asset</h5></td>
+                <td></td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>
+                  <h5 class="inner-item">Inventory</h5>
+                </td>
+                <td><h5>1,230</h5></td>
+                <td>
+                  <h5></h5>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <h5 class="inner-item">Account Receivables</h5>
+                </td>
+                <td><h5>1,230</h5></td>
+                <td>
+                  <h5></h5>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <h5 class="inner-item">Cash</h5>
+                </td>
+                <td><h5>1,230</h5></td>
+                <td>
+                  <h5></h5>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <h5 class="inner-item">Bank</h5>
+                </td>
+                <td><h5>1,230</h5></td>
+                <td>
+                  <h5></h5>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <h5>Total Asset</h5>
+                </td>
+                <td><h5>1,230</h5></td>
+                <td>
+                  <h5></h5>
+                </td>
+              </tr>
+
+              <tr>
+                <td><h5>LIABILITIES</h5></td>
+                <td></td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td><h5>Current Liabilities</h5></td>
+                <td></td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>
+                  <h5 class="inner-item">Account Payable (Creditors)</h5>
+                </td>
+                <td><h5>1,230</h5></td>
+                <td>
+                  <h5></h5>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <h5 class="inner-item">Bank Overdraft</h5>
+                </td>
+                <td><h5>1,230</h5></td>
+                <td>
+                  <h5></h5>
+                </td>
+              </tr>
+
+              <tr>
+                <td><h5>Non-Current Liabilities</h5></td>
+                <td></td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>
+                  <h5 class="inner-item">Long term loan</h5>
+                </td>
+                <td><h5>1,230</h5></td>
+                <td>
+                  <h5>1,230</h5>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <h5>Total Liability</h5>
+                </td>
+                <td></td>
+                <td>
+                  <h5>1,230</h5>
+                </td>
+              </tr>
+
+              <tr>
+                <td><h5>CAPITAL</h5></td>
+                <td></td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td>
+                  <h5 class="inner-item">Equity</h5>
+                </td>
+                <td><h5>1,230</h5></td>
+                <td>
+                  <h5></h5>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <h5 class="inner-item">Retained Earnings</h5>
+                </td>
+                <td><h5>1,230</h5></td>
+                <td>
+                  <h5>1,230</h5>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <h5>Total Equity and Retained Earnings</h5>
+                </td>
+                <td></td>
+                <td>
+                  <h5>1,230</h5>
                 </td>
               </tr>
 

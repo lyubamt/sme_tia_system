@@ -4,20 +4,22 @@
 
 @endphp
 <div class="row header-row">
-    <div class="col-md-5">
+
+    <div class="col-6">
 
         <h4 class="welcome-word">Welcome back, <b>{{ ucwords(strtolower(auth()->user()->name)) }}</b></h4>
 
     </div>
 
-    <div class="col-md-7 text-right">
+    <div class="col-6 text-right" style="padding: 0px;">
 
         <!-- <h4 class="welcome-word display-inline header-time" id="header-time">TIME:&nbsp;{{ date("d.m.Y H:s") }}</h4> -->
 
-        <a href="{{route('logout')}}">
+        <a href="{{route('logout')}}" class="logout-link">
             <i class="fas fa-sign-out-alt fa-2x" title="Sign Out"></i>
         </a>
-        &nbsp;
+    
+        @include("includes.sidebar-small")
 
         <div class="dropdown header-menu-dropdown">
             <i class="fas fa-ellipsis-v fa-2x" title="Menu" data-toggle="dropdown"></i>

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\TransactionCategory;
 use App\Models\TransactionType;
+use App\Models\Item;
 
 use App\Models\Currency;
 
@@ -238,6 +239,17 @@ class TransactionCategoriesController extends Controller
                 }
 
             }
+
+            // if ($transaction_type_id == 1) {
+
+            //     $items = Item::where("status",1)->where("is_asset",1)->where("is_deleted",0)->paginate(25);
+
+            // } else {
+
+            //     $items = Item::where("status",1)->where("is_liability",1)->where("is_deleted",0)->paginate(25);
+
+            // }
+            
 
             return response()->json([
                 'success' => 1,

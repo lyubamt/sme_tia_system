@@ -1,8 +1,24 @@
 <div class="form-group {{ $errors->has('name') ? 'has-error' : '' }}">
-    <label for="name" class="col-md-2 control-label">{{ trans('users.name') }}</label>
+    <label for="name" class="col-md-2 control-label">First Name</label>
     <div class="col-md-10">
-        <input class="form-control" name="name" type="text" id="name" value="{{ old('name', optional($user)->name) }}" minlength="1" maxlength="255" required="true" placeholder="{{ trans('users.name__placeholder') }}">
-        {!! $errors->first('name', '<p class="help-block">:message</p>') !!}
+        <input class="form-control" name="first_name" type="text" id="first_name" value="{{ old('first_name', optional($user)->first_name) }}" minlength="1" maxlength="255" required="true" placeholder="First Name">
+        {!! $errors->first('first_name', '<p class="help-block">:message</p>') !!}
+    </div>
+</div>
+
+<div class="form-group {{ $errors->has('name') ? 'has-error' : '' }}">
+    <label for="name" class="col-md-2 control-label">Middle Name</label>
+    <div class="col-md-10">
+        <input class="form-control" name="middle_name" type="text" id="middle_name" value="{{ old('middle_name', optional($user)->middle_name) }}" minlength="1" maxlength="255" required="true" placeholder="Middle Name">
+        {!! $errors->first('middle_name', '<p class="help-block">:message</p>') !!}
+    </div>
+</div>
+
+<div class="form-group {{ $errors->has('name') ? 'has-error' : '' }}">
+    <label for="name" class="col-md-2 control-label">Last Name</label>
+    <div class="col-md-10">
+        <input class="form-control" name="last_name" type="text" id="last_name" value="{{ old('last_name', optional($user)->last_name) }}" minlength="1" maxlength="255" required="true" placeholder="Last Name">
+        {!! $errors->first('last_name', '<p class="help-block">:message</p>') !!}
     </div>
 </div>
 
@@ -45,7 +61,7 @@
 </div>
 
 
-<div class="form-group">
+<div hidden class="form-group">
   <label for="label" class="col-md-2 control-label">Database(s)</label>
   <div class="col-md-12">
 
@@ -62,7 +78,7 @@
     @if (count($db_connections)>0)
       @foreach($db_connections as $db_connection)
 
-        <input {{ (count(array_keys(array_combine(array_keys($databases), array_column($databases, 'name')),$db_connection)) > 0)? 'checked': ''}} name="db_connections[]" type="checkbox" value="{{ $db_connection }}">
+        <input {{ (count(array_keys(array_combine(array_keys($databases), array_column($databases, 'name')),$db_connection)) > 0)? 'checked': ''}} name="db_connections[]" type="checkbox" value="{{ $db_connection }}" checked>
         <label for="{{ $db_connection }}">{{ ucwords(strtolower(str_replace("_"," ",$db_connection))) }}</label><br>
 
       @endforeach

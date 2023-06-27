@@ -4,6 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="The SME Business Management System">
+    <meta name="X-UA-Compatible" content="ie=edge">
+    <meta name="Content-Language" content="en-us">
+    <meta name="keywords" content="TIA, Business, SME, Management System, Business System">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     @php
@@ -12,7 +16,7 @@
 
     @endphp
 
-    <title>SME | @yield("title")</title>
+    <title>SME-Business System | @yield("title")</title>
 
     <link rel="stylesheet" href="{{asset($app_url.'/css/app.css')}}">
     <link rel="stylesheet" href="{{asset($app_url.'/css/header.css')}}">
@@ -53,19 +57,35 @@
       }
 
       .container-fluid{
-        padding: 20px;
+        padding: 0px 20px;
         background: #F8FAFB;
         height: 100vh;
         position:fixed;
+      }
+      @media screen and (max-width: 657px){
+        .container-fluid{
+            height: 100%;
+            position:relative;
+            overflow-y: scroll;
+        }
       }
       .side-bar-container{
           height: 100vh;
           overflow-y: auto;
           padding-bottom: 10px;
       }
+      @media screen and (max-width: 657px){
+        .side-bar-container{
+          display: none;
+        }
+      }
       .content-container{
           height: 100vh;
-          overflow-y: auto;
+      }
+      @media screen and (max-width: 657px){
+        .content-container{
+            height: 100%;
+        }
       }
       .site-name{
         font-family: "Lucida Console", "Courier New", monospace;
@@ -78,6 +98,11 @@
       .side-navigation-large{
         margin-top: 45px;
         overflow-y: auto;
+      }
+      @media screen and (max-width: 657px){
+        .side-navigation-large{
+          display: none;
+        }
       }
       .side-navigation-list{
         list-style-type: none;
@@ -136,6 +161,9 @@
         font-family: Arial, Helvetica, sans-serif;
       }
       .page-content-card > h4 {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      h1,h2,h3,h4,h5,h6,p,label{
         font-family: Arial, Helvetica, sans-serif;
       }
       footer{
@@ -246,6 +274,38 @@
         color: grey;
         font-family: Arial, Helvetica, sans-serif;
       }
+      .banner-section{
+        padding: 10px 10px 10px 10px;
+      }
+      .site-title{
+        font-size: 25px;
+        font-weight: 700;
+        color: #01579b;
+        text-shadow: 0px 2px 2px rgba(255, 255, 255, 0.4);
+      }
+      @media screen and (max-width: 657px){
+        .site-title{
+          font-size: 16px;
+          font-weight: 700;
+          color: #01579b;
+          text-shadow: 0px 2px 2px rgba(255, 255, 255, 0.4);
+        }
+      }
+      .side-navigation-small{
+        display: none;
+      }
+      @media screen and (max-width: 657px){
+        .side-navigation-small{
+          display: block;
+        }
+        .logout-link{
+          display: none;
+        }
+        .header-menu-dropdown{
+          display: none;
+        }
+      }
+
     </style>
 
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
@@ -257,7 +317,7 @@
     @yield("css")
 
   </head>
-  <body>
+  <body id="site_translate">
 
     @php
 
@@ -265,8 +325,6 @@
         $ip = (isset($_SERVER['REMOTE_ADDR']))?$_SERVER['REMOTE_ADDR']:"NONE"
 
     @endphp
-
-    <!-- https://www.upwork.com/nx/signup/?dest=home -->
 
     <!--change-password-modal-->
     <div class="modal" id="change-password-modal">
@@ -316,7 +374,34 @@
 
     <div class="container-fluid" id="app">
 
-      <div class="row">
+      <div class="row" style="margin: 0px;padding: 0px;">
+
+        <div class="col-md-12" style="margin: 0px 0px 30px 0px;padding: 0px;background:url( {{ url('/img/tz_flag.jpg') }} );background-size: cover;background-repeat: no-repeat;">
+
+          <div class="row banner-section">
+
+            <div class="col-3">
+
+              <img src="{{ url('img/em.png') }}" style="width: 61px;height: 61px;">
+
+            </div>
+
+            <div class="col-6 text-center">
+
+                <h5 class="site-title">Tanzania Institute of Accountancy (TIA)</h5>
+                <h4 class="site-title">SME Business Management System</h4>
+
+            </div>
+
+            <div class="col-3 text-right">
+
+              <img src="{{ url('img/new_tia.png')}}" alt="TIA LOGO" style="width: 100px;height: 61px;">
+
+            </div>
+
+          </div>
+
+        </div>
 
         <div class="col-md-2 side-bar-container">
 
@@ -358,6 +443,16 @@
 
     <!-- jQuery -->
     <script src="{{asset($app_url.'/js/app.js')}}"></script>
+    
+    <script src="{{asset($app_url.'/js/app.js')}}"></script>
+    <script>
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en'},'site_translate')
+      }
+    </script>
+
+    <script type="text/javascript" src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
     
     <script src="https://code.highcharts.com/5.0.14/highcharts.src.js"></script>
     <script src="https://code.highcharts.com/5.0.14/modules/exporting.js"></script>

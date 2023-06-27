@@ -120,8 +120,16 @@ class LoginController extends Controller
               'last_active_time' => date("Y-m-d H:i:s"),
               'last_session_id' => $session_id
             ]);
-  
-            return redirect()->intended('dashboard');
+
+            if (Auth::user()->hasRole('Admin')) {
+
+              return redirect()->intended('dashboard');
+
+            } else {
+
+              return redirect()->intended('choose_business');
+
+            }
   
           }else{
   
