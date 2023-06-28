@@ -61,6 +61,7 @@
         /* background-color: #F8FAFB; */
         height: 100vh;
         position:fixed;
+        overflow: auto;
       }
       .site-name{
         font-family: "Lucida Console", "Courier New", monospace;
@@ -339,7 +340,7 @@
               <!-- header-wrapper -->
               <div class="header-wrapper">
 
-                  @include("includes.header")
+                  @include("includes.header_external")
 
               </div>
               <!-- /.header-wrapper -->
@@ -372,15 +373,15 @@
     <script src="{{asset($app_url.'/js/app.js')}}"></script>
 
     <script src="{{asset($app_url.'/js/app.js')}}"></script>
-    <!--
     <script>
-      function googleTranslateElementInit() {
-        new google.translate.TranslateElement({pageLanguage: 'en'},'site_translate')
-      }
-    </script>
 
-    <script type="text/javascript" src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-    -->
+        // var url = "{{ route('change_lang') }}";
+        // $(document).on("change",".changeLang", function(){
+        //   window.location.href = url + "?lang="+ $(this).val();
+        // });
+
+    </script>
+    
     <script src="https://code.highcharts.com/5.0.14/highcharts.src.js"></script>
     <script src="https://code.highcharts.com/5.0.14/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/5.0.14/modules/offline-exporting.js"></script>

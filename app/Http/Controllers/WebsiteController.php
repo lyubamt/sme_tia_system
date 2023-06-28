@@ -23,6 +23,7 @@ use PDF;
 use Hash;
 use Exception;
 use Auth;
+use App;
 
 use App\Helpers\Authorize;
 use App\Helpers\AuthenticateTokenActivationKey;
@@ -34,6 +35,23 @@ class WebsiteController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function terms_and_conditions(){
+      return view('auth.terms_and_conditions');
+    }
+
+    public function license(){
+      return view('auth.license');
+    }
+
+    public function change_lang(Request $request){
+
+      App::setLocale($request->lang);
+      session()->put('locale', $request->lang);
+
+      return redirect()->back();
+
+    }
 
     public function get_current_date()
     {
@@ -290,9 +308,12 @@ class WebsiteController extends Controller
 
     }
 
-    public function select_business($businessName,$businessId){
+    public function select_business(Request $request){
 
       if (Auth::user()) {
+
+        $businessName = $request->get("businessName");
+        $businessId = $request->get("businessId");
 
         Session::put('businessName',$businessName);
         Session::put('businessId',$businessId);

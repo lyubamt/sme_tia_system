@@ -244,32 +244,32 @@ class TransactionCategoriesController extends Controller
             if ($transaction_type_id == 1) {
                 // ASSET
 
-                $items = Item::where("is_asset",1)->where("status",1)->where("is_asset",1)->where("is_deleted",0)->paginate(25);
+                $items = Item::where("is_asset",1)->where('user_id',auth()->user()->id)->where("status",1)->where("is_asset",1)->where("is_deleted",0)->paginate(25);
 
             } else if ($transaction_type_id == 2) {
                 // LIABILITY
 
-                $items = Item::where("is_liability",1)->where("status",1)->where("is_liability",1)->where("is_deleted",0)->paginate(25);
+                $items = Item::where("is_liability",1)->where('user_id',auth()->user()->id)->where("status",1)->where("is_liability",1)->where("is_deleted",0)->paginate(25);
 
             } else if ($transaction_type_id == 3) {
                 // CAPITAL
 
-                $items = Item::where("is_capital",1)->where("status",1)->where("is_liability",1)->where("is_deleted",0)->paginate(25);
+                $items = Item::where("is_capital",1)->where('user_id',auth()->user()->id)->where("status",1)->where("is_liability",1)->where("is_deleted",0)->paginate(25);
 
             } else if ($transaction_type_id == 4) {
                 // PURCHASE
 
-                $items = Item::where("is_purchase",1)->where("status",1)->where("is_liability",1)->where("is_deleted",0)->paginate(25);
+                $items = Item::where("is_purchase",1)->where('user_id',auth()->user()->id)->where("status",1)->where("is_liability",1)->where("is_deleted",0)->paginate(25);
 
             } else if ($transaction_type_id == 5) {
                 // SALE
 
-                $items = Item::where("is_sale",1)->where("status",1)->where("is_liability",1)->where("is_deleted",0)->paginate(25);
+                $items = Item::where("is_sale",1)->where('user_id',auth()->user()->id)->where("status",1)->where("is_liability",1)->where("is_deleted",0)->paginate(25);
 
             } else if ($transaction_type_id == 6) {
                 // EXPENSE
 
-                $items = Item::where("is_expense",1)->where("status",1)->where("is_liability",1)->where("is_deleted",0)->paginate(25);
+                $items = Item::where("is_expense",1)->where('user_id',auth()->user()->id)->where("status",1)->where("is_liability",1)->where("is_deleted",0)->paginate(25);
 
             }
 

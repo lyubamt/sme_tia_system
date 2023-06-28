@@ -1,4 +1,4 @@
-@extends('layouts.master_clidata')
+@extends('layouts.master_dashboard)
 
 @section('title')
 Dashboard

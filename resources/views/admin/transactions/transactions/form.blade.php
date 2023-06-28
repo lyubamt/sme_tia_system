@@ -2,29 +2,11 @@
 
     @if (!$transaction)
 
-    <div class="form-group col-md-6 text-left">
+    <div hidden class="form-group col-md-4 text-left">
 
         <h5>Choose business</h5>
 
-        <select class="form-control" name="business_id" id="business_id" required="true" >
-
-            <option value="" style="display: none;" {{ old('business_id', optional($transaction)->business_id ?: '') == '' ? 'selected' : '' }} disabled selected>Select business</option>
-
-            @if (count($businesses) > 0)
-
-                @foreach ($businesses as $business)
-
-                    <option value="{{ $business->id }}" {{ (old('business_id', optional($transaction)->business_id) == $business->id)?'selected':'' }}>
-                        
-                        {{ $business->name }}
-
-                    </option>
-
-                @endforeach
-
-            @endif
-
-        </select>
+        <input type="text" class="form-control" name="business_id" id="business_id" required="true" value="{{ (Session::has('businessId'))?session('businessId'):'' }}">
 
     </div>
 

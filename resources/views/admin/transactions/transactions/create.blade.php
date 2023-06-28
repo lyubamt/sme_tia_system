@@ -90,7 +90,7 @@ Add Transaction
                         let data = response.data;
                         if (data.categories_options == "") {
 
-                            $("#parent_id").html('<option value="0">NONE</option>');
+                            $("#parent_id").html('<option value="0">None</option>');
 
                         }else{
 
@@ -103,7 +103,7 @@ Add Transaction
                         
                     } else {
 
-                        $("#parent_id").html('<option value="0">NONE</option>');
+                        $("#parent_id").html('<option value="0">None</option>');
                         
                     }
                    

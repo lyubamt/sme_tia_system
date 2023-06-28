@@ -29,14 +29,26 @@
 
         @endhasanyrole
 
-        <li class="nav-item active">
+        <li class="nav-item">
             <a class="nav-link" href="{{ route('admin.items.item.index') }}">Items</a>
         </li>
 
-        <li class="nav-item active">
+        <li class="nav-item">
             <a class="nav-link" href="{{ route('admin.units.unit.index') }}">Units</a>
         </li>
-        <li class="nav-item active">
+        <li class="nav-item">
+            <a class="nav-link" href="{{ route('admin.capitals.capital.index') }}">Capital</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="{{ route('admin.purchases.purchase.index') }}">Purchases</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="{{ route('admin.sales.sale.index') }}">Sales</a>
+        </li>
+
+        <li class="nav-item">
             <a class="nav-link" href="{{ route('admin.transactions.transaction.index') }}">Transactions</a>
         </li>
 

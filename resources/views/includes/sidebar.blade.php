@@ -18,7 +18,12 @@
   $active_businesses = "";
   $active_items = "";
   $active_transaction_categories = "";
+
+  $active_capitals = "";
+  $active_purchases = "";
+  $active_sales = "";
   $active_transactions = "";
+
   $active_units = "";
 
   $active_profit_and_loss = "";
@@ -77,13 +82,31 @@
     $show_report_sub_menu = "show";
   }
 
+  if (strpos($ref,"purchases") !== false){
+    $active_purchases = "active";
+  }
+
+  if (strpos($ref,"sales") !== false){
+    $active_sales = "active";
+  }
+
+  if (strpos($ref,"capitals") !== false){
+    $active_capitals = "active";
+  }
+
 
 @endphp
 
-<!-- <h4 class="site-name"><b>SME-Business System</b></h4> -->
-
 <!-- navigation-wrapper-large -->
 <div class="side-navigation-large">
+
+  <h3 class="site-name">
+
+    @if (Session::has("businessName"))
+      <b>{{ session("businessName") }}</b>
+    @endif
+
+  </h3>
 
   <ul class="side-navigation-list">
 
@@ -177,9 +200,30 @@
       </a>
     </li>
 
+    <li class="side-navigation-item {{ $active_capitals }}">
+      <a class="side-navigation-item-link" href="{{ route('admin.capitals.capital.index') }}">
+        <i class="fas fa-circle-notch"></i>
+        Capital
+      </a>
+    </li>
+
+    <li class="side-navigation-item {{ $active_purchases }}">
+      <a class="side-navigation-item-link" href="{{ route('admin.purchases.purchase.index') }}">
+        <i class="fas fa-shopping-bag"></i>
+        Purchases
+      </a>
+    </li>
+
+    <li class="side-navigation-item {{ $active_sales }}">
+      <a class="side-navigation-item-link" href="{{ route('admin.sales.sale.index') }}">
+        <i class="fas fa-receipt"></i>
+        Sales
+      </a>
+    </li>
+
     <li class="side-navigation-item {{ $active_transactions }}">
       <a class="side-navigation-item-link" href="{{ route('admin.transactions.transaction.index') }}">
-        <i class="fas fa-receipt"></i>
+        <i class="fas fa-exchange-alt"></i>
         Transactions
       </a>
     </li>
@@ -187,7 +231,7 @@
     <li class="side-navigation-item">
       <a class="side-navigation-item-link collapse-btn" href="#" data-toggle="collapse" data-target="#report-sub-menu" >
         <i class="far fa-chart-bar"></i>
-        Analysis & Reports
+        Analysis & Report
 
         @if ($show_report_sub_menu == "show")
             <i class="fas fa-angle-down"></i>

@@ -77,7 +77,7 @@ Items
                     <tr>
                         <td>{{ ++$index }}</td>
                         <td>{{ $item->name }}</td>
-                        <td>{{ $item->description }}</td>
+                        <td>{{ ($item->description)?$item->description:'NONE' }}</td>
                         <td>{{ ($item->is_asset == 1)?'Yes':'No' }}</td>
                         <td>{{ ($item->is_liability == 1)?'Yes':'No' }}</td>
                         <td>{{ ($item->is_capital == 1)?'Yes':'No' }}</td>

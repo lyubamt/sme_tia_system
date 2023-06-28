@@ -114,7 +114,7 @@
 		padding: 10px;
 	}
 	.form-container-column{
-		padding: 9% 3% 0px 3%;
+		padding: 3% 3% 0px 3%;
 	}
 	.login-card{
 		border-radius: 30px;
@@ -177,6 +177,14 @@
 @endphp
 
 <div class="row">
+
+	<div class="col-md-12" style="padding: 10px;">
+		<select class="form-select changeLang form-control float-right" style="width: 100px;">
+			<option value="en" {{ session()->get('locale') == 'en' ? 'selected' : '' }}>English</option>
+			<option value="sw" {{ session()->get('locale') == 'sw' ? 'selected' : '' }}>Swahili</option>
+			<option value="fr" {{ session()->get('locale') == 'fr' ? 'selected' : '' }}>France</option>
+		</select>
+	</div>
 
 <div class="col-md-2"></div>
 
@@ -253,6 +261,7 @@
 				</form>
 
 				<div class="text-center">
+
 					<h6>Dont have an account?<a href="{{ route('register') }}" class="text-decoration-none">register here</a></h6>
 				
 				</div>
@@ -290,6 +299,12 @@
 				$(this).attr("class",toggler_class);
 
 			});
+
+			// var url = "{{ route('change_lang') }}";
+			// $(document).on("change",".changeLang", function(){
+			// 	window.location.href = url + "?lang="+ $(this).val();
+			// });
+
 		});
 	</script>
 

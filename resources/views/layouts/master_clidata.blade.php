@@ -18,8 +18,8 @@
 
     <title>SME-Business System | @yield("title")</title>
 
+
     <link rel="stylesheet" href="{{asset($app_url.'/css/app.css')}}">
-    <link rel="stylesheet" href="{{asset($app_url.'/css/header.css')}}">
 
     <link rel="stylesheet" href="{{ asset($app_url.'/map/style.css') }}">
 
@@ -89,7 +89,9 @@
         }
       }
       .site-name{
-        font-family: "Lucida Console", "Courier New", monospace;
+        /* font-family: "Lucida Console", "Courier New", monospace; */
+        font-family: Arial, Helvetica, sans-serif;
+        color: #01579b;
       }
       .header-system-applications-icon{
         width: 30px;
@@ -97,7 +99,7 @@
         margin: 0px 0px 13px 0px;
       }
       .side-navigation-large{
-        margin-top: 45px;
+        margin-top: 95px;
         overflow-y: auto;
       }
       @media screen and (max-width: 657px){
@@ -113,12 +115,12 @@
         padding: 7px 3px 7px 13px;
       }
       .side-navigation-item.active{
-        background: black;
+        background: #01579b;
         border-radius: 9px;
       }
       .side-navigation-item.active>a{
-        color: #C8FF25;
-        background: black;
+        color: #fff;
+        background: #01579b;
       }
       .side-navigation-item-link{
         text-decoration: none;
@@ -164,8 +166,37 @@
       .page-content-card > h4 {
         font-family: Arial, Helvetica, sans-serif;
       }
-      h1,h2,h3,h4,h5,h6,p,label{
+      h1,h2,h3,h4,h5,h6,p,label,a,div{
         font-family: Arial, Helvetica, sans-serif;
+      }
+      .sell-buy-drop-down{
+        z-index: 638364849393938393;
+      }
+      .sell-buy-button{
+        font-size: 18px;
+        min-width: 170px;
+        background-color: #fff;
+        color: #01579b;
+        border: 1px solid #01579b;
+        border-radius: 8px;
+      }
+      .sell-buy-button:hover{
+        background-color: #01579b;
+        color: #fff;
+        border: 1px solid #01579b;
+      }
+      .sell-buy-icon{
+        color: #01579b;
+      }
+      .sell-buy-button:hover > .sell-buy-icon{
+        color: #fff;
+      }
+      .sell-buy-text{
+        color: #01579b;
+        font-weight: 300;
+      }
+      .sell-buy-button:hover > .sell-buy-text{
+        color: #fff;
       }
       footer{
         margin: 0px;
@@ -315,8 +346,6 @@
     <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.ckeditor.com/ckeditor5/37.1.0/classic/ckeditor.js"></script>
 
-    @yield("css")
-
   </head>
   <body id="site_translate">
 
@@ -444,8 +473,7 @@
 
     <!-- jQuery -->
     <script src="{{asset($app_url.'/js/app.js')}}"></script>
-    
-    <script src="{{asset($app_url.'/js/app.js')}}"></script>
+
     <!--
     <script>
       function googleTranslateElementInit() {

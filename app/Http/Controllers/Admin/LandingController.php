@@ -74,7 +74,7 @@ class LandingController extends Controller
 
         $opening_stock = 1000;
 
-        return view('admin.landing_application',compact('app','total_sales'));
+        return view('admin.landing_application_temp',compact('app','total_sales'));
 
     }
 

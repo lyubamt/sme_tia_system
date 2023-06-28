@@ -18,9 +18,12 @@ Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Route::post('/change_password', '\App\Http\Controllers\Admin\UsersController@change_password')
              ->name('admin.user.change_password');
 
+Route::get('/change_lang', '\App\Http\Controllers\WebsiteController@change_lang')
+     ->name('change_lang');
+
 Route::get('/','\App\Http\Controllers\WebsiteController@landing')->name('landing');
 Route::get('/choose_business','\App\Http\Controllers\WebsiteController@choose_business')->name('choose_business');
-Route::get('/select_business/{businessName}/{businessId}','\App\Http\Controllers\WebsiteController@select_business')->name('select_business');
+Route::post('/select_business','\App\Http\Controllers\WebsiteController@select_business')->name('select_business');
 Route::get('/register','\App\Http\Controllers\WebsiteController@register')->name('register');
 Route::post('/register_external_user','\App\Http\Controllers\WebsiteController@register_external_user')->name('register_external_user');
 
@@ -391,5 +394,48 @@ Route::group([
 
      Route::get('/profit_and_loss', 'App\Http\Controllers\ReportsController@profit_and_loss')
           ->name('admin.reports.report.profit_and_loss');
+
+ });
+
+ Route::group([
+     'prefix' => 'admin/sales',
+ ], function () {
+     Route::get('/', 'App\Http\Controllers\TransactionsController@index_sale')
+          ->name('admin.sales.sale.index');
+
+     Route::get('/add-new-sale/{itemId}','App\Http\Controllers\TransactionsController@create_sale')
+          ->name('admin.sales.sale.create');
+
+     Route::get('/{transaction}/edit-sale/{itemId}','App\Http\Controllers\TransactionsController@edit_sale')
+          ->name('admin.sales.sale.edit')->where('id', '[0-9]+');
+
+ });
+
+  Route::group([
+     'prefix' => 'admin/purchases',
+ ], function () {
+     Route::get('/', 'App\Http\Controllers\TransactionsController@index_purchase')
+          ->name('admin.purchases.purchase.index');
+
+     Route::get('/add-new-purchase/{itemId}','App\Http\Controllers\TransactionsController@create_purchase')
+          ->name('admin.purchases.purchase.create');
+
+     Route::get('/{transaction}/edit-purchase/{itemId}','App\Http\Controllers\TransactionsController@edit_purchase')
+          ->name('admin.purchases.purchase.edit')->where('id', '[0-9]+');
+
+ });
+
+
+ Route::group([
+     'prefix' => 'admin/capitals',
+ ], function () {
+     Route::get('/', 'App\Http\Controllers\TransactionsController@index_capital')
+          ->name('admin.capitals.capital.index');
+
+     Route::get('/add-new-capital','App\Http\Controllers\TransactionsController@create_capital')
+          ->name('admin.capitals.capital.create');
+
+     Route::get('/{transaction}/edit-capital/{itemId}','App\Http\Controllers\TransactionsController@edit_capital')
+          ->name('admin.capitals.capital.edit')->where('id', '[0-9]+');
 
  });

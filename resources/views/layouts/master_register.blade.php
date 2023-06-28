@@ -158,15 +158,14 @@
 
 	<script src="{{asset('js/app.js')}}"></script>
     <script src="{{asset($app_url.'/js/app.js')}}"></script>
-    <!--
     <script>
-      function googleTranslateElementInit() {
-        new google.translate.TranslateElement({pageLanguage: 'en'},'site_translate')
-      }
-    </script>
 
-    <script type="text/javascript" src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-   -->
+        var url = "{{ route('change_lang') }}";
+        $(document).on("change",".changeLang", function(){
+          window.location.href = url + "?lang="+ $(this).val();
+        });
+
+    </script>
     @yield('js')
 
 </body>

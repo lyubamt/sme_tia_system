@@ -39,48 +39,51 @@ class TransactionsController extends Controller
 
         $transactions = [];
         if (Auth::user()->hasRole("Admin")) {
-            $transactions = Transaction::with("transactionType","transactionCategory","user")->where("status",1)->where("is_deleted",0)->paginate(25);
+            $transactions = Transaction::with("transactionType","transactionCategory","user")->where("transaction_type_id","!=",5)->where("transaction_type_id","!=",3)->where("transaction_type_id","!=",4)->where("status",1)->where("is_deleted",0)->paginate(25);
         } else {
-            $transactions = Transaction::with("transactionType","transactionCategory","user")->where("user_id",auth()->user()->id)->where("status",1)->where("is_deleted",0)->paginate(25);
+            $transactions = Transaction::with("transactionType","transactionCategory","user")->where("transaction_type_id","!=",5)->where("transaction_type_id","!=",3)->where("transaction_type_id","!=",4)->where("business_id",session("businessId"))->where("user_id",auth()->user()->id)->where("status",1)->where("is_deleted",0)->paginate(25);
         }
     
         return view('admin.transactions.transactions.index', compact('transactions'));
     }
 
-    public function getSubCategories($transaction_category_id){
+    public function index_sale()
+    {
 
-        $transactions = Transaction::where("parent_id",$transaction_category_id)->where("status",1)->where("is_deleted",0)->get();
-
-        return $transactions;
-
+        $transactions = [];
+        if (Auth::user()->hasRole("Admin")) {
+            $transactions = Transaction::with("transactionType","transactionCategory","user")->where("transaction_type_id",5)->where("status",1)->where("is_deleted",0)->paginate(25);
+        } else {
+            $transactions = Transaction::with("transactionType","transactionCategory","user")->where("transaction_type_id",5)->where("business_id",session("businessId"))->where("user_id",auth()->user()->id)->where("status",1)->where("is_deleted",0)->paginate(25);
+        }
+    
+        return view('admin.transactions.transactions.index_sale', compact('transactions'));
     }
 
-    public function getTreeView($transactions){
+    public function index_purchase()
+    {
 
-        $treeView = '';
-        foreach ($transactions as $subCategory) {
-
-            $childSubCategories = $this->getSubCategories($subCategory->id);
-            if (count($childSubCategories) > 0) {
-
-                $treeView .= '<li><span class="caret">' .$subCategory->name. '</span>';
-
-                $treeView .= '<ul class="nested">';
-                $treeView .= $this->getTreeView($childSubCategories);
-                $treeView .= '</ul>';
-                $treeView .= '</li>';
-
-
-            }else{
-
-                $treeView .= '<li>' .$subCategory->name. '&nbsp;&nbsp;<form method="POST" action="'. route('admin.transactions.transaction.destroy', $subCategory->id) .'" accept-charset="UTF-8" class="form-inline" style="display: inline;"><input name="_method" value="DELETE" type="hidden">' . csrf_field() .'<div class="btn-group-xs" style="display: inline;"><button type="submit" class="btn btn-warning" title="Delete category" onclick="return confirm(&quot;Do you want to delete this category?&quot;)"><span class="fas fa-times" aria-hidden="true"></span></button></div></form></li>';
-
-            }
-
+        $transactions = [];
+        if (Auth::user()->hasRole("Admin")) {
+            $transactions = Transaction::with("transactionType","transactionCategory","user")->where("transaction_type_id",4)->where("status",1)->where("is_deleted",0)->paginate(25);
+        } else {
+            $transactions = Transaction::with("transactionType","transactionCategory","user")->where("transaction_type_id",4)->where("business_id",session("businessId"))->where("user_id",auth()->user()->id)->where("status",1)->where("is_deleted",0)->paginate(25);
         }
+    
+        return view('admin.transactions.transactions.index_purchase', compact('transactions'));
+    }
 
-        return $treeView;
+    public function index_capital()
+    {
 
+        $transactions = [];
+        if (Auth::user()->hasRole("Admin")) {
+            $transactions = Transaction::with("transactionType","transactionCategory","user")->where("transaction_type_id",3)->where("status",1)->where("is_deleted",0)->paginate(25);
+        } else {
+            $transactions = Transaction::with("transactionType","transactionCategory","user")->where("transaction_type_id",3)->where("business_id",session("businessId"))->where("user_id",auth()->user()->id)->where("status",1)->where("is_deleted",0)->paginate(25);
+        }
+    
+        return view('admin.transactions.transactions.index_capital', compact('transactions'));
     }
 
     /**
@@ -91,7 +94,7 @@ class TransactionsController extends Controller
     public function create()
     {
 
-        $transaction_types = TransactionType::all();
+        $transaction_types = TransactionType::where("id","!=",4)->where("id","!=",3)->where("id","!=",5)->get();
 
         $owns = BusinessOwner::where("user_id",auth()->user()->id)->where("is_deleted",0)->where("status",1)->get();
         $businesses = [];
@@ -106,10 +109,44 @@ class TransactionsController extends Controller
 
         }
 
-        $items = Item::where('user_id',auth()->user()->id)->where("status",1)->where("is_deleted",0)->get();
+        $items = [];
         $units = Unit::where('user_id',auth()->user()->id)->where("status",1)->where("is_deleted",0)->get();
 
         return view('admin.transactions.transactions.create',compact("transaction_types","businesses","items","units"));
+    }
+
+    public function create_sale($itemId)
+    {
+
+        $transactionAction = "Add New Sale";
+        $transactionTypeid = 5;
+        $units = Unit::where('user_id',auth()->user()->id)->where("status",1)->where("is_deleted",0)->get();
+        $transaction_categories = TransactionCategory::where("transaction_type_id",5)->where("parent_id",0)->where("status",1)->where("is_deleted",0)->get();
+
+        return view('admin.transactions.transactions.create_simple',compact("transactionAction", "units", "transaction_categories", "transactionTypeid","itemId"));
+    }
+
+    public function create_purchase($itemId)
+    {
+
+        $transactionAction = "Add New Purchase";
+        $transactionTypeid = 4;
+        $units = Unit::where('user_id',auth()->user()->id)->where("status",1)->where("is_deleted",0)->get();
+        $transaction_categories = TransactionCategory::where("transaction_type_id",4)->where("parent_id",0)->where("status",1)->where("is_deleted",0)->get();
+
+        return view('admin.transactions.transactions.create_simple',compact("transactionAction", "units", "transaction_categories", "transactionTypeid","itemId"));
+    }
+
+    public function create_capital()
+    {
+
+        $transactionAction = "Add Capital";
+        $transactionTypeid = 3;
+        $items = Item::where('user_id',auth()->user()->id)->where("status",1)->where("is_deleted",0)->get();
+        $units = Unit::where('user_id',auth()->user()->id)->where("status",1)->where("is_deleted",0)->get();
+        $transaction_categories = TransactionCategory::where("transaction_type_id",3)->where("parent_id",0)->where("status",1)->where("is_deleted",0)->get();
+
+        return view('admin.transactions.transactions.create_capital',compact("transactionAction", "units", "transaction_categories", "transactionTypeid","items"));
     }
 
     /**
@@ -141,10 +178,29 @@ class TransactionsController extends Controller
                 'user_id' => auth()->user()->id,
                 'description' => $request->get("description")
             ]);
-      
 
-            return redirect()->route('admin.transactions.transaction.index')
+            if ($request->get("transaction_type_id") == 4) {
+
+                return redirect()->route('admin.purchases.purchase.index')
+                ->with('success_message', 'Purchase has been added successfully');
+
+            } elseif ($request->get("transaction_type_id") == 5) {
+
+                return redirect()->route('admin.sales.sale.index')
+                ->with('success_message', 'Sale has been added successfully');
+
+            } elseif ($request->get("transaction_type_id") == 3) {
+
+                return redirect()->route('admin.capitals.capital.index')
+                ->with('success_message', 'Capital has been added successfully');
+
+            } else {
+
+                return redirect()->route('admin.transactions.transaction.index')
                 ->with('success_message', 'Transaction has been added successfully');
+
+            }
+            
         } catch (Exception $exception) {
 
             return back()->withInput()
@@ -182,8 +238,30 @@ class TransactionsController extends Controller
                 'value' => $request->get("value"),
                 'description' => $request->get("description")
             ]);
-            return redirect()->route('admin.transactions.transaction.index')
+
+            if ($transaction->transaction_type_id == 4) {
+
+                return redirect()->route('admin.purchases.purchase.index')
+                ->with('success_message', 'Purchase has been updated successfully');
+
+            } elseif ($transaction->transaction_type_id == 5) {
+
+                return redirect()->route('admin.sales.sale.index')
+                ->with('success_message', 'Sale has been updated successfully');
+
+            } elseif ($transaction->transaction_type_id == 3) {
+
+                return redirect()->route('admin.capitals.capital.index')
+                ->with('success_message', 'Capital has been updated successfully');
+
+            } else {
+
+                return redirect()->route('admin.transactions.transaction.index')
                 ->with('success_message', 'Transaction has been updated successfully');
+
+            }
+            
+
         } catch (Exception $exception) {
 
             return back()->withInput()
@@ -206,8 +284,28 @@ class TransactionsController extends Controller
                 'is_deleted' => 1
             ]);
 
-            return redirect()->route('admin.transactions.transaction.index')
+            if ($transaction->transaction_type_id == 4) {
+
+                return redirect()->route('admin.purchases.purchase.index')
+                ->with('success_message', 'Purchase has been deleted successfully');
+
+            } elseif ($transaction->transaction_type_id == 5) {
+
+                return redirect()->route('admin.sales.sale.index')
+                ->with('success_message', 'Sale has been deleted successfully');
+
+            } elseif ($transaction->transaction_type_id == 3) {
+
+                return redirect()->route('admin.capitals.capital.index')
+                ->with('success_message', 'Capital has been deleted successfully');
+
+            } else {
+
+                return redirect()->route('admin.transactions.transaction.index')
                 ->with('success_message', 'Transaction has been deleted successfully');
+
+            }
+
         } catch (Exception $exception) {
 
             return back()->withInput()

@@ -134,14 +134,19 @@ Transactions
                         {{ csrf_field() }}
 
                             <div class="btn-group btn-group-xs float-right" role="group">
-                        
-                                <a href="{{ route('admin.transactions.transaction.edit', $transaction->id ) }}" class="btn btn-primary" title="Edit transaction">
-                                    <span class="fas fa-pencil-alt" aria-hidden="true"></span>
-                                </a>
 
-                                <button type="submit" class="btn btn-danger" title="Delete transactions.transaction" onclick="return confirm(&quot;Do you want to delete this transaction?&quot;)">
-                                    <span class="fas fa-trash" aria-hidden="true"></span>
-                                </button>
+                                @if ($transaction->transaction_type_id != 4 && $transaction->transaction_type_id != 5)
+                        
+                                  <a href="{{ route('admin.transactions.transaction.edit', $transaction->id ) }}" class="btn btn-primary" title="Edit transaction">
+                                      <span class="fas fa-pencil-alt" aria-hidden="true"></span>
+                                  </a>
+
+                                  <button type="submit" class="btn btn-danger" title="Delete transactions.transaction" onclick="return confirm(&quot;Do you want to delete this transaction?&quot;)">
+                                      <span class="fas fa-trash" aria-hidden="true"></span>
+                                  </button>
+
+                                @endif
+
                             </div>
 
                         </form>
