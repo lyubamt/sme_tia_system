@@ -71,9 +71,8 @@
         }
       }
       .side-bar-container{
-          position: relative;
           height: 100vh;
-          overflow-y: auto;
+          overflow: auto;
           padding: 0px 0px 10px 0px;
           margin: 0px;
       }
@@ -460,9 +459,13 @@
 
         </div>
 
-        <div class="col-md-2 container side-bar-container">
+        <div class="col-md-2 side-bar-container">
+
+          <div class="page-wrapper">
 
           @include("includes.sidebar")
+
+          </div>
 
         </div>
 
