@@ -112,6 +112,7 @@
         }
       }
       .side-navigation-list{
+        overflow-y: auto;
         list-style-type: none;
       }
       .side-navigation-item{
