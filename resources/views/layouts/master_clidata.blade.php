@@ -72,7 +72,7 @@
       }
       .side-bar-container{
           height: 100vh;
-          padding: 0px 0px 50px 0px;
+          padding: 0px 0px 100px 0px;
           overflow: auto;
           margin: 0px;
       }
