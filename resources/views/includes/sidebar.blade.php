@@ -102,7 +102,7 @@
 
   <ul class="side-navigation-list">
 
-    <li class="side-navigation-item {{ $active_dashboard }}">
+    <li>
       <h3 class="site-name">
 
         @if (Session::has("businessName"))
