@@ -359,7 +359,7 @@
 
                         <br><br>
                         <label class="checkbox-inline">
-                            <h6><input type="checkbox" class="medium-size-radio-btn" value="">&nbsp;&nbsp;Yes, I understand and agree to the Terms of Service , including the User Agreement and Privacy Policy.</h6>
+                            <h6><input type="checkbox" class="medium-size-radio-btn agree-terms" value="">&nbsp;&nbsp;Yes, I understand and agree to the <a href="{{ route('terms_and_conditions') }}">Terms of Service</a></h6>
                         </label>
 
                     </div>
@@ -369,7 +369,7 @@
 
                 <div class="multi-step-form-options-card-create-account-button-holder">
 
-                    <button type="submit" type="submit"  class="multi-step-form-options-card-create-account-button" id="create-user-account-button">Create my account</button>
+                    <button type="submit" type="submit"  class="multi-step-form-options-card-create-account-button" id="create-user-account-button" style="display: none;">Create my account</button>
                     
                 </div>
 
@@ -670,6 +670,16 @@
 
             $(".step-1").css("display","none");
             $(".step-2").css("display","block");
+            
+        });
+
+        $(document).on('click',".agree-terms", function () {
+
+            if ($(this).is(':checked')){
+                $("#create-user-account-button").css("display","block");
+            }else{
+                $("#create-user-account-button").css("display","none");
+            }
             
         });
 
