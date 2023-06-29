@@ -460,7 +460,7 @@
 
         </div>
 
-        <div class="col-md-2 side-bar-container">
+        <div class="col-md-2 container side-bar-container">
 
           @include("includes.sidebar")
 
