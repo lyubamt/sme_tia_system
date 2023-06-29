@@ -57,7 +57,8 @@
       }
 
       .container-fluid{
-        padding: 0px 20px;
+        margin: 0px;
+        padding: 0px 0px;
         background: #F8FAFB;
         height: 100vh;
         position:fixed;
@@ -100,6 +101,8 @@
         margin: 0px 0px 13px 0px;
       }
       .side-navigation-large{
+        margin: 0px;
+        padding: 0px;
         margin-top: 95px;
         overflow-y: auto;
       }
@@ -113,7 +116,7 @@
       }
       .side-navigation-item{
         font-family: Arial, Helvetica, sans-serif;
-        padding: 7px 3px 7px 13px;
+        padding: 7px 3px 7px 5px;
       }
       .side-navigation-item.active{
         background: #01579b;
@@ -135,6 +138,11 @@
       .header-row{
         padding: 0px 15px 0px 15px;
       }
+      @media screen and (max-width: 657px){
+        .header-row{
+          padding: 0px 5px 0px 5px;
+        }
+      }
       .header-menu-dropdown{
         display: inline;
       }
@@ -146,8 +154,7 @@
         font-family: Arial, Helvetica, sans-serif;
       }
       .page-wrapper{
-        padding-top: 30px;
-        padding-bottom: 30px;
+        padding-top: 30px 0px 30px 0px;
       }
       .header-container{
         margin: 0px 0px 23px 0px;
@@ -184,7 +191,7 @@
       @media screen and (max-width: 657px){
         .sell-buy-button{
           font-size: 18px;
-          min-width: 90px;
+          min-width: 120px;
         }
       }
       .sell-buy-button:hover{
@@ -342,6 +349,16 @@
         }
         .header-menu-dropdown{
           display: none;
+        }
+      }
+      .tia-logo{
+        width: 100px;
+        height: 61px;
+      }
+      @media screen and (max-width: 657px){
+        .tia-logo{
+          width: 80px;
+          height: 49px;
         }
       }
 
