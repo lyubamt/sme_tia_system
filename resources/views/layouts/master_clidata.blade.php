@@ -71,7 +71,7 @@
         }
       }
       .side-bar-container{
-          position: fixed;
+          position: absolute;
           height: 100vh;
           overflow-y: auto;
           padding: 0px 0px 10px 0px;
