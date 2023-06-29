@@ -100,6 +100,8 @@
         margin: 0px 0px 13px 0px;
       }
       .side-navigation-large{
+        margin: 0px;
+        padding: 0px;
         margin-top: 95px;
         overflow-y: auto;
       }
