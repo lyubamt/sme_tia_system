@@ -74,7 +74,7 @@ Expense
             <h4 class="my-1 float-left">Expense</h4>
 
             <div class="btn-group btn-group-sm float-right" role="group">
-                <a href="{{ route('admin.Expenses.Expense.create') }}" class="btn btn-success" title="Add Expense">
+                <a href="{{ route('admin.expenses.expense.create') }}" class="btn btn-success" title="Add Expense">
                     <span class="fas fa-plus" aria-hidden="true"></span>
                 </a>
             </div>
