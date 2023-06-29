@@ -153,8 +153,7 @@
         font-family: Arial, Helvetica, sans-serif;
       }
       .page-wrapper{
-        padding-top: 30px;
-        padding-bottom: 30px;
+        padding-top: 30px 0px 30px 0px;
       }
       .header-container{
         margin: 0px 0px 23px 0px;
