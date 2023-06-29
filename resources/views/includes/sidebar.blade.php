@@ -107,7 +107,7 @@
 
   <ul class="side-navigation-list">
 
-    <li>
+    <!-- <li>
       <h3 class="site-name">
 
         @if (Session::has("businessName"))
@@ -115,7 +115,7 @@
         @endif
 
       </h3>
-    </li>
+    </li> -->
 
     <li class="side-navigation-item {{ $active_dashboard }}">
       <a class="side-navigation-item-link" href="{{ route('dashboard') }}">
