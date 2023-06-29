@@ -56,7 +56,8 @@
       }
 
       .container-fluid{
-        padding: 0px 5px;
+        margin: 0px;
+        padding: 0px 0px;
         background: #F8FAFB;
         height: 100vh;
         position:fixed;
