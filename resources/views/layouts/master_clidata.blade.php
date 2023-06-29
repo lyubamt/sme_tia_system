@@ -361,7 +361,7 @@
           height: 49px;
         }
       }
-      .card-header{
+      .card{
         margin-top: 20px;
       }
 
