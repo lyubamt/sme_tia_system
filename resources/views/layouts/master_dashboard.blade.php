@@ -115,7 +115,7 @@
       }
       .side-navigation-item{
         font-family: Arial, Helvetica, sans-serif;
-        padding: 7px 3px 7px 13px;
+        padding: 7px 3px 7px 5px;
       }
       .side-navigation-item.active{
         background: #01579b;
