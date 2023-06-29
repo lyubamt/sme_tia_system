@@ -359,7 +359,7 @@
 
                         <br><br>
                         <label class="checkbox-inline">
-                            <h6><input type="checkbox" class="medium-size-radio-btn agree-terms" value="">&nbsp;&nbsp;Yes, I understand and agree to the <a href="{{ route('terms_and_conditions') }}">Terms of Service</a></h6>
+                            <h6><input type="checkbox" class="medium-size-radio-btn agree-terms" value="">&nbsp;&nbsp;Yes, I understand and agree to the <a target="_blank" href="{{ route('terms_and_conditions') }}">Terms of Service</a></h6>
                         </label>
 
                     </div>
