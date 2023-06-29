@@ -213,10 +213,11 @@ Dashboard
               </div><!-- card -->
 
             </div><!-- col -->
+            </div><!-- col -->
             <div class="col-lg-8 mg-t-20 mg-lg-t-0">
               <div class="card card-dashboard-four">
                 <div class="card-header">
-                  <h6 class="card-title">Sessions by Channel</h6>
+                  <h6 class="card-title">Expenses by Item</h6>
                 </div><!-- card-header -->
                 <div class="card-body row">
                   <div class="col-md-6 d-flex align-items-center">
@@ -225,7 +226,7 @@ Dashboard
                   <div class="col-md-6 col-lg-5 mg-lg-l-auto mg-t-20 mg-md-t-0">
                     <div class="az-traffic-detail-item">
                       <div>
-                        <span>Organic Search</span>
+                        <span>Salaries</span>
                         <span>1,320 <span>(25%)</span></span>
                       </div>
                       <div class="progress">
@@ -234,7 +235,7 @@ Dashboard
                     </div>
                     <div class="az-traffic-detail-item">
                       <div>
-                        <span>Email</span>
+                        <span>Transport</span>
                         <span>987 <span>(20%)</span></span>
                       </div>
                       <div class="progress">
@@ -243,7 +244,7 @@ Dashboard
                     </div>
                     <div class="az-traffic-detail-item">
                       <div>
-                        <span>Referral</span>
+                        <span>Allowance</span>
                         <span>2,010 <span>(30%)</span></span>
                       </div>
                       <div class="progress">
@@ -252,7 +253,7 @@ Dashboard
                     </div>
                     <div class="az-traffic-detail-item">
                       <div>
-                        <span>Social</span>
+                        <span>Transaction Fees</span>
                         <span>654 <span>(15%)</span></span>
                       </div>
                       <div class="progress">
