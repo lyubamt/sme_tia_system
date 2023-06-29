@@ -72,8 +72,7 @@
       }
       .side-bar-container{
           height: 100vh;
-          overflow: auto;
-          padding: 0px 0px 10px 0px;
+          padding: 0px 0px 30px 0px;
           margin: 0px;
       }
       @media screen and (max-width: 657px){
