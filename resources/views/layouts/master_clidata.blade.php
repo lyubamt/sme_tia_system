@@ -72,7 +72,7 @@
       }
       .side-bar-container{
           height: 100vh;
-          padding: 0px 0px 30px 0px;
+          padding: 0px 0px 50px 0px;
           overflow: auto;
           margin: 0px;
       }
@@ -104,7 +104,7 @@
         margin: 0px;
         padding: 0px;
         margin-top: 5px;
-        overflow: scroll;
+        overflow: auto;
       }
       @media screen and (max-width: 657px){
         .side-navigation-large{
