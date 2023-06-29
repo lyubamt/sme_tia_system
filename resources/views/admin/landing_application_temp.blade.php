@@ -152,70 +152,8 @@ Dashboard
           </div><!-- row -->
 
           <div class="row row-sm mg-b-20">
-            <div class="col-lg-4">
-              <div class="card card-dashboard-pageviews">
-                <div class="card-header">
-                  <h6 class="card-title">Page Views by Page Title</h6>
-                  <p class="card-text">This report is based on 100% of sessions.</p>
-                </div><!-- card-header -->
-                <div class="card-body">
-                  <div class="az-list-item">
-                    <div>
-                      <h6>Admin Home</h6>
-                      <span>/demo/admin/index.html</span>
-                    </div>
-                    <div>
-                      <h6 class="tx-primary">7,755</h6>
-                      <span>31.74% (-100.00%)</span>
-                    </div>
-                  </div><!-- list-group-item -->
-                  <div class="az-list-item">
-                    <div>
-                      <h6>Form Elements</h6>
-                      <span>/demo/admin/forms.html</span>
-                    </div>
-                    <div>
-                      <h6 class="tx-primary">5,215</h6>
-                      <span>28.53% (-100.00%)</span>
-                    </div>
-                  </div><!-- list-group-item -->
-                  <div class="az-list-item">
-                    <div>
-                      <h6>Utilities</h6>
-                      <span>/demo/admin/util.html</span>
-                    </div>
-                    <div>
-                      <h6 class="tx-primary">4,848</h6>
-                      <span>25.35% (-100.00%)</span>
-                    </div>
-                  </div><!-- list-group-item -->
-                  <div class="az-list-item">
-                    <div>
-                      <h6>Form Validation</h6>
-                      <span>/demo/admin/validation.html</span>
-                    </div>
-                    <div>
-                      <h6 class="tx-primary">3,275</h6>
-                      <span>23.17% (-100.00%)</span>
-                    </div>
-                  </div><!-- list-group-item -->
-                  <div class="az-list-item">
-                    <div>
-                      <h6>Modals</h6>
-                      <span>/demo/admin/modals.html</span>
-                    </div>
-                    <div>
-                      <h6 class="tx-primary">3,003</h6>
-                      <span>22.21% (-100.00%)</span>
-                    </div>
-                  </div><!-- list-group-item -->
-                </div><!-- card-body -->
-              </div><!-- card -->
-
-            </div><!-- col -->
-
             
-            <div class="col-lg-8 mg-t-20 mg-lg-t-0">
+            <div class="col-lg-12 mg-t-20 mg-lg-t-0">
               <div class="card card-dashboard-four">
                 <div class="card-header">
                   <h6 class="card-title">Expenses by Item</h6>
