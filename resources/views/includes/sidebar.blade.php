@@ -22,6 +22,7 @@
   $active_capitals = "";
   $active_purchases = "";
   $active_sales = "";
+  $active_expenses = "";
   $active_transactions = "";
 
   $active_units = "";
@@ -92,6 +93,10 @@
 
   if (strpos($ref,"capitals") !== false){
     $active_capitals = "active";
+  }
+
+  if (strpos($ref,"expenses") !== false){
+    $active_expenses = "active";
   }
 
 
@@ -220,6 +225,13 @@
       <a class="side-navigation-item-link" href="{{ route('admin.sales.sale.index') }}">
         <i class="fas fa-receipt"></i>
         Sales
+      </a>
+    </li>
+
+    <li class="side-navigation-item {{ $active_expenses }}">
+      <a class="side-navigation-item-link" href="{{ route('admin.expenses.expense.index') }}">
+        <i class="far fa-comment-alt-dollar"></i>
+        Expenses
       </a>
     </li>
 

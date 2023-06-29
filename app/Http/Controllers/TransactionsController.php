@@ -39,9 +39,9 @@ class TransactionsController extends Controller
 
         $transactions = [];
         if (Auth::user()->hasRole("Admin")) {
-            $transactions = Transaction::with("transactionType","transactionCategory","user")->where("transaction_type_id","!=",5)->where("transaction_type_id","!=",3)->where("transaction_type_id","!=",4)->where("status",1)->where("is_deleted",0)->paginate(25);
+            $transactions = Transaction::with("transactionType","transactionCategory","user")->where("transaction_type_id","!=",5)->where("transaction_type_id","!=",3)->where("transaction_type_id","!=",6)->where("transaction_type_id","!=",4)->where("status",1)->where("is_deleted",0)->paginate(25);
         } else {
-            $transactions = Transaction::with("transactionType","transactionCategory","user")->where("transaction_type_id","!=",5)->where("transaction_type_id","!=",3)->where("transaction_type_id","!=",4)->where("business_id",session("businessId"))->where("user_id",auth()->user()->id)->where("status",1)->where("is_deleted",0)->paginate(25);
+            $transactions = Transaction::with("transactionType","transactionCategory","user")->where("transaction_type_id","!=",5)->where("transaction_type_id","!=",3)->where("transaction_type_id","!=",6)->where("transaction_type_id","!=",4)->where("business_id",session("businessId"))->where("user_id",auth()->user()->id)->where("status",1)->where("is_deleted",0)->paginate(25);
         }
     
         return view('admin.transactions.transactions.index', compact('transactions'));
@@ -86,6 +86,19 @@ class TransactionsController extends Controller
         return view('admin.transactions.transactions.index_capital', compact('transactions'));
     }
 
+    public function index_expense()
+    {
+
+        $transactions = [];
+        if (Auth::user()->hasRole("Admin")) {
+            $transactions = Transaction::with("transactionType","transactionCategory","user")->where("transaction_type_id",6)->where("status",1)->where("is_deleted",0)->paginate(25);
+        } else {
+            $transactions = Transaction::with("transactionType","transactionCategory","user")->where("transaction_type_id",6)->where("business_id",session("businessId"))->where("user_id",auth()->user()->id)->where("status",1)->where("is_deleted",0)->paginate(25);
+        }
+    
+        return view('admin.transactions.transactions.index_expense', compact('transactions'));
+    }
+
     /**
      * Show the form for creating a new transaction_category.
      *
@@ -94,7 +107,7 @@ class TransactionsController extends Controller
     public function create()
     {
 
-        $transaction_types = TransactionType::where("id","!=",4)->where("id","!=",3)->where("id","!=",5)->get();
+        $transaction_types = TransactionType::where("id","!=",4)->where("id","!=",3)->where("id","!=",5)->where("id","!=",6)->get();
 
         $owns = BusinessOwner::where("user_id",auth()->user()->id)->where("is_deleted",0)->where("status",1)->get();
         $businesses = [];
@@ -149,6 +162,18 @@ class TransactionsController extends Controller
         return view('admin.transactions.transactions.create_capital',compact("transactionAction", "units", "transaction_categories", "transactionTypeid","items"));
     }
 
+    public function create_expense()
+    {
+
+        $transactionAction = "Add Expense";
+        $transactionTypeid = 6;
+        $items = Item::where('user_id',auth()->user()->id)->where("status",1)->where("is_deleted",0)->get();
+        $units = Unit::where('user_id',auth()->user()->id)->where("status",1)->where("is_deleted",0)->get();
+        $transaction_categories = TransactionCategory::where("transaction_type_id",6)->where("parent_id",0)->where("status",1)->where("is_deleted",0)->get();
+
+        return view('admin.transactions.transactions.create_expense',compact("transactionAction", "units", "transaction_categories", "transactionTypeid","items"));
+    }
+
     /**
      * Store a new transaction_category in the storage.
      *
@@ -193,6 +218,11 @@ class TransactionsController extends Controller
 
                 return redirect()->route('admin.capitals.capital.index')
                 ->with('success_message', 'Capital has been added successfully');
+
+            } elseif ($request->get("transaction_type_id") == 6) {
+
+                return redirect()->route('admin.expenses.expense.index')
+                ->with('success_message', 'Expense has been added successfully');
 
             } else {
 
@@ -254,6 +284,11 @@ class TransactionsController extends Controller
                 return redirect()->route('admin.capitals.capital.index')
                 ->with('success_message', 'Capital has been updated successfully');
 
+            } elseif ($transaction->transaction_type_id == 6) {
+
+                return redirect()->route('admin.expenses.expense.index')
+                ->with('success_message', 'Expense has been updated successfully');
+
             } else {
 
                 return redirect()->route('admin.transactions.transaction.index')
@@ -298,6 +333,11 @@ class TransactionsController extends Controller
 
                 return redirect()->route('admin.capitals.capital.index')
                 ->with('success_message', 'Capital has been deleted successfully');
+
+            } elseif ($transaction->transaction_type_id == 6) {
+
+                return redirect()->route('admin.expenses.expense.index')
+                ->with('success_message', 'Expense has been deleted successfully');
 
             } else {
 

@@ -439,3 +439,17 @@ Route::group([
           ->name('admin.capitals.capital.edit')->where('id', '[0-9]+');
 
  });
+
+  Route::group([
+     'prefix' => 'admin/expenses',
+ ], function () {
+     Route::get('/', 'App\Http\Controllers\TransactionsController@index_expense')
+          ->name('admin.expenses.expense.index');
+
+     Route::get('/add-new-expense','App\Http\Controllers\TransactionsController@create_expense')
+          ->name('admin.expenses.expense.create');
+
+     Route::get('/{transaction}/edit-expense/{itemId}','App\Http\Controllers\TransactionsController@edit_expense')
+          ->name('admin.expenses.expense.edit')->where('id', '[0-9]+');
+
+ });

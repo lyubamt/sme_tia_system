@@ -30,7 +30,7 @@
             <h4 class="my-1 float-left">{{ $transactionAction }}</h4>
 
             <div class="btn-group btn-group-sm float-right" role="group">
-                <a href="{{ route('admin.capitals.capital.index') }}" class="btn btn-primary" title="Show all capitals">
+                <a href="{{ route('admin.expenses.expense.index') }}" class="btn btn-primary" title="Show all expenses">
                     <span class="fas fa-th-list" aria-hidden="true"></span>
                 </a>
             </div>
