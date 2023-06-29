@@ -213,7 +213,6 @@ Dashboard
             </div><!-- col -->
           </div><!-- row -->
 
-          </div><!-- row -->
         </div><!-- az-content-body -->
       </div>
     </div><!-- az-content -->
