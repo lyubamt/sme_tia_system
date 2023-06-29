@@ -119,46 +119,48 @@ Add Transaction
 
             let __this = $(this);
 
-            $.ajax({
-                'url':'{{ route("admin.transaction_categories.transaction_category.get_transaction_categories_from_category") }}',
-                'method':'POST',
-                'data':{
-                    _token:$('meta[name="csrf-token"]').attr('content'),
-                    'transaction_category_id':__this.val()
-                },
-                success:function (response) {
+            if (__this.val() > 0) {
+                $.ajax({
+                    'url':'{{ route("admin.transaction_categories.transaction_category.get_transaction_categories_from_category") }}',
+                    'method':'POST',
+                    'data':{
+                        _token:$('meta[name="csrf-token"]').attr('content'),
+                        'transaction_category_id':__this.val()
+                    },
+                    success:function (response) {
 
-                    if (response.success == 1) {
+                        if (response.success == 1) {
 
-                        let data = response.data;
-                        if (data.categories_options == "") {
+                            let data = response.data;
+                            if (data.categories_options == "") {
+
+                                __this.parent().nextAll('.another-category-div').remove();
+
+                            }else{
+
+                                __this.parent().nextAll('.another-category-div').remove();
+
+                                let parentCategoryId = __this.parent().attr("id");
+                                let parentCategoryIdParts = parentCategoryId.split("parent_category_");
+                                var parentCategoryIdIndex = parentCategoryIdParts[1];
+                                let categorySelection = '<div id="parent_category_' + ++parentCategoryIdIndex + '" class="form-group col-md-12 text-left another-category-div"><h5>Choose another category</h5><select class="form-control sub-parent-id parent_id" name="sub_parent_id[]" required="true" ><option value="" style="display: none;" disabled selected>Select parent category</option>' + data.categories_options + '</select><div class="btn-group-xs float-right sub-parent-btn-group"><a class="btn btn-warning remove-sub-parent-category-button"><i class="fas fa-times"></i></div></div></div>';
+                          
+                                $(categorySelection).insertAfter("#" + parentCategoryId);
+
+                            }
+                            
+                        } else {
 
                             __this.parent().nextAll('.another-category-div').remove();
-
-                        }else{
-
-                            __this.parent().nextAll('.another-category-div').remove();
-
-                            let parentCategoryId = __this.parent().attr("id");
-                            let parentCategoryIdParts = parentCategoryId.split("parent_category_");
-                            var parentCategoryIdIndex = parentCategoryIdParts[1];
-                            let categorySelection = '<div id="parent_category_' + ++parentCategoryIdIndex + '" class="form-group col-md-12 text-left another-category-div"><h5>Choose another category</h5><select class="form-control sub-parent-id parent_id" name="sub_parent_id[]" required="true" ><option value="" style="display: none;" disabled selected>Select parent category</option>' + data.categories_options + '</select><div class="btn-group-xs float-right sub-parent-btn-group"><a class="btn btn-warning remove-sub-parent-category-button"><i class="fas fa-times"></i></div></div></div>';
-                      
-                            $(categorySelection).insertAfter("#" + parentCategoryId);
-
+                            
                         }
-                        
-                    } else {
-
+                    
+                    },
+                    error:function (response) {
                         __this.parent().nextAll('.another-category-div').remove();
-                        
                     }
-                
-                },
-                error:function (response) {
-                    __this.parent().nextAll('.another-category-div').remove();
-                }
-            });
+                });
+            }
 
         });
 
