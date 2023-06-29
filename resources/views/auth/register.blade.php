@@ -10,7 +10,7 @@
         align-items: center;
     }
     .multi-step-form-options-card-title{
-        font-family: 'Playfair Display', serif;
+        font-family: Arial, Helvetica, sans-serif;
     }
     .multi-step-form-options-card{
         width: 800px;
