@@ -462,11 +462,7 @@
 
         <div class="col-md-2 side-bar-container">
 
-          <div class="page-wrapper">
-
           @include("includes.sidebar")
-
-          </div>
 
         </div>
 
