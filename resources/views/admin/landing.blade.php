@@ -1,4 +1,4 @@
-@extends('layouts.master_landing')
+@extends('layouts.master_dashboard')
 
 @section('title')
 Choose-your-business
