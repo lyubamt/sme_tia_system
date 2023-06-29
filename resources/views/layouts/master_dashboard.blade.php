@@ -135,6 +135,11 @@
       .header-row{
         padding: 0px 15px 0px 15px;
       }
+      @media screen and (max-width: 657px){
+        .header-row{
+          padding: 0px 5px 0px 5px;
+        }
+      }
       .header-menu-dropdown{
         display: inline;
       }
