@@ -127,7 +127,7 @@
 
         <select class="form-control parent_id" id="parent_id" name="parent_id" required="true" >
 
-            <option value="0" {{ (old('parent_id', optional($transaction)->parent_id) == 0)?'selected':'' }}>NONE</option>
+            <option value="0" {{ (old('parent_id', optional($transaction)->parent_id) == 0)?'selected':'' }}>None</option>
 
         </select>
 
