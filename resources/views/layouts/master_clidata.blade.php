@@ -177,9 +177,6 @@
       h1,h2,h3,h4,h5,h6,p,label,a,div{
         font-family: Arial, Helvetica, sans-serif;
       }
-      .sell-buy-drop-down{
-        z-index: 638364849393938393;
-      }
       .sell-buy-button{
         font-size: 18px;
         min-width: 170px;
