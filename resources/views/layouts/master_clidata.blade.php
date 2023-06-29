@@ -71,6 +71,7 @@
         }
       }
       .side-bar-container{
+          position: fixed;
           height: 100vh;
           overflow-y: auto;
           padding: 0px 0px 10px 0px;
@@ -104,7 +105,6 @@
         margin: 0px;
         padding: 0px;
         margin-top: 5px;
-        overflow-y: auto;
       }
       @media screen and (max-width: 657px){
         .side-navigation-large{
@@ -112,7 +112,6 @@
         }
       }
       .side-navigation-list{
-        overflow-y: auto;
         list-style-type: none;
       }
       .side-navigation-item{
