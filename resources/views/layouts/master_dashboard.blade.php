@@ -183,7 +183,7 @@
       @media screen and (max-width: 657px){
         .sell-buy-button{
           font-size: 18px;
-          min-width: 90px;
+          min-width: 120px;
         }
       }
       .sell-buy-button:hover{
