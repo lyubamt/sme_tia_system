@@ -100,15 +100,17 @@
 <!-- navigation-wrapper-large -->
 <div class="side-navigation-large">
 
-  <h3 class="site-name">
-
-    @if (Session::has("businessName"))
-      <b>{{ session("businessName") }}</b>
-    @endif
-
-  </h3>
-
   <ul class="side-navigation-list">
+
+    <li class="side-navigation-item {{ $active_dashboard }}">
+      <h3 class="site-name">
+
+        @if (Session::has("businessName"))
+          <b>{{ session("businessName") }}</b>
+        @endif
+
+      </h3>
+    </li>
 
     <li class="side-navigation-item {{ $active_dashboard }}">
       <a class="side-navigation-item-link" href="{{ route('dashboard') }}">
