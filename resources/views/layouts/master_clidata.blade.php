@@ -73,6 +73,7 @@
       .side-bar-container{
           height: 100vh;
           padding: 0px 0px 30px 0px;
+          overflow: auto;
           margin: 0px;
       }
       @media screen and (max-width: 657px){
