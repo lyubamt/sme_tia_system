@@ -350,6 +350,16 @@
           display: none;
         }
       }
+      .tia-logo{
+        width: 100px;
+        height: 61px;
+      }
+      @media screen and (max-width: 657px){
+        .tia-logo{
+          width: 80px;
+          height: 49px;
+        }
+      }
 
     </style>
 
@@ -432,7 +442,7 @@
 
             <div class="col-3 text-right">
 
-              <img src="{{ url('img/new_tia.png')}}" alt="TIA LOGO" style="width: 100px;height: 61px;">
+              <img src="{{ url('img/new_tia.png')}}"  class="tia-logo" alt="TIA LOGO">
 
             </div>
 

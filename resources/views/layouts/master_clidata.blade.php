@@ -432,7 +432,7 @@
 
             <div class="col-3 text-right">
 
-              <img src="{{ url('img/new_tia.png')}}" alt="TIA LOGO" style="width: 100px;height: 61px;">
+              <img src="{{ url('img/new_tia.png')}}"  class="tia-logo" alt="TIA LOGO" style="width: 100px;height: 61px;">
 
             </div>
 
