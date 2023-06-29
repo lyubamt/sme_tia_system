@@ -230,7 +230,7 @@
 
     <li class="side-navigation-item {{ $active_expenses }}">
       <a class="side-navigation-item-link" href="{{ route('admin.expenses.expense.index') }}">
-        <i class="far fa-comment-alt-dollar"></i>
+        <i class="fas fa-comment-alt-dollar"></i>
         Expenses
       </a>
     </li>
