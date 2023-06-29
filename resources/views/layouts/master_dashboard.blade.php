@@ -180,6 +180,12 @@
         border: 1px solid #01579b;
         border-radius: 8px;
       }
+      @media screen and (max-width: 657px){
+        .sell-buy-button{
+          font-size: 18px;
+          min-width: 90px;
+        }
+      }
       .sell-buy-button:hover{
         background-color: #01579b;
         color: #fff;
