@@ -213,7 +213,8 @@ Dashboard
               </div><!-- card -->
 
             </div><!-- col -->
-            </div><!-- col -->
+            
+            
             <div class="col-lg-8 mg-t-20 mg-lg-t-0">
               <div class="card card-dashboard-four">
                 <div class="card-header">
